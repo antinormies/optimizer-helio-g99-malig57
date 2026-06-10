@@ -4,47 +4,47 @@ import android.content.pm.PackageManager
 import android.util.Log
 import rikka.shizuku.Shizuku
 
-class ShizukuManager {
+class ShizukuManager : CommandTransport {
 
-    interface Listener {
-        fun onBinderReady()
-        fun onBinderDead()
-        fun onPermissionResult(granted: Boolean)
-    }
+    override val name: String get() = "Shizuku"
 
-    private var listener: Listener? = null
-    private val binderReceivedListener = Shizuku.OnBinderReceivedListener {
-        listener?.onBinderReady()
-        checkAndRequestPermission()
-    }
-    private val binderDeadListener = Shizuku.OnBinderDeadListener {
-        listener?.onBinderDead()
-    }
-    private val permissionResultListener = Shizuku.OnRequestPermissionResultListener { requestCode, grantResult ->
-        if (requestCode == REQUEST_CODE) {
-            listener?.onPermissionResult(grantResult == PackageManager.PERMISSION_GRANTED)
-        }
-    }
-
-    val isShizukuAvailable: Boolean get() = try {
+    override val isAvailable: Boolean get() = try {
         Shizuku.getBinder()
         true
     } catch (_: Exception) {
         false
     }
 
-    val hasPermission: Boolean get() = runCatching {
+    override val hasPermission: Boolean get() = runCatching {
         Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED
     }.getOrDefault(false)
 
-    fun init(l: Listener) {
-        listener = l
+    private var listener: CommandTransport.Listener? = null
+    private val binderReceivedListener = Shizuku.OnBinderReceivedListener {
+        listener?.onConnected()
+        checkAndRequestPermission()
+    }
+    private val binderDeadListener = Shizuku.OnBinderDeadListener {
+        listener?.onDisconnected()
+    }
+    private val permissionResultListener = Shizuku.OnRequestPermissionResultListener { requestCode, grantResult ->
+        if (requestCode == REQUEST_CODE) {
+            if (grantResult == PackageManager.PERMISSION_GRANTED) {
+                listener?.onConnected()
+            } else {
+                listener?.onError("Shizuku permission denied")
+            }
+        }
+    }
+
+    override fun init(listener: CommandTransport.Listener) {
+        this.listener = listener
         Shizuku.addBinderReceivedListener(binderReceivedListener)
         Shizuku.addBinderDeadListener(binderDeadListener)
         Shizuku.addRequestPermissionResultListener(permissionResultListener)
     }
 
-    fun destroy() {
+    override fun destroy() {
         Shizuku.removeBinderReceivedListener(binderReceivedListener)
         Shizuku.removeBinderDeadListener(binderDeadListener)
         Shizuku.removeRequestPermissionResultListener(permissionResultListener)
@@ -53,7 +53,7 @@ class ShizukuManager {
 
     private fun checkAndRequestPermission() {
         if (hasPermission) {
-            listener?.onPermissionResult(true)
+            listener?.onConnected()
         } else if (!Shizuku.shouldShowRequestPermissionRationale()) {
             requestPermission()
         }
@@ -69,15 +69,17 @@ class ShizukuManager {
 
     fun handlePermissionResult(requestCode: Int, grantResult: Int) {
         if (requestCode == REQUEST_CODE) {
-            listener?.onPermissionResult(grantResult == PackageManager.PERMISSION_GRANTED)
+            if (grantResult == PackageManager.PERMISSION_GRANTED) {
+                listener?.onConnected()
+            }
         }
     }
 
-    fun runShellCommandAsync(
+    override fun runShellCommandAsync(
         command: String,
-        onOutput: (String) -> Unit = {},
-        onError: (String) -> Unit = {},
-        onComplete: (Int) -> Unit = {}
+        onOutput: (String) -> Unit,
+        onError: (String) -> Unit,
+        onComplete: (Int) -> Unit
     ) {
         Thread {
             try {
@@ -102,8 +104,7 @@ class ShizukuManager {
                 stdout.join()
                 stderr.join()
 
-                val exitCode = process.waitFor()
-                onComplete(exitCode)
+                onComplete(process.waitFor())
             } catch (e: Exception) {
                 onError("Error: ${e.message}")
                 onComplete(-1)
