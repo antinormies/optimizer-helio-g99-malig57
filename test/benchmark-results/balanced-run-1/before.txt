@@ -1,0 +1,69 @@
+========== BEFORE SNAPSHOT ==========
+Date: Wed Jun 10 15:57:11 WIB 2026
+
+--- CPU Governors ---
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu10/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu11/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu12/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu13/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu14/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu15/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu1/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu3/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu4/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu5/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu6/cpufreq/scaling_governor: sugov_ext
+/sys/devices/system/cpu/cpu7/cpufreq/scaling_governor: sugov_ext
+/sys/devices/system/cpu/cpu8/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu9/cpufreq/scaling_governor: 
+
+--- GPU Info ---
+
+--- Settings Global (key) ---
+Phenotype_flags=activity_starts_logging_enabled:alarm_manager_constants:alarm_manager_dummy_flags:always_on_display_constants:anomaly_config:anomaly_config_version:anomaly_detection_constants:app_idle_constants:app_standby_enabled:backup_agent_timeout_parameters:battery_stats_constants:battery_tip_constants:binder_calls_stats:ble_scan_balanced_interval_ms:ble_scan_balanced_window_ms:ble_scan_low_power_interval_ms:ble_scan_low_power_window_ms:blocking_helper_dismiss_to_view_ratio:blocking_helper_streak_limit:emergency_call_codes_data:emergency_gesture_power_button_cooldown_period_ms:gnss_satellite_blocklist:hybrid_sysui_battery_warning_flags:job_scheduler_constants:job_scheduler_quota_controller_constants:job_scheduler_time_controller_constants:location_background_throttle_interval_ms:location_ignore_settings_package_whitelist:network_watchlist_enabled:night_display_forced_auto_mode_available:notification_snooze_options:phenotype_test_setting:settings_use_external_provider_api:settings_use_psd_api:smart_replies_in_notifications_flags:sqlite_compatibility_wal_flags:sys_uidcpupower:text_classifier_constants:zram_enabled
+bluetooth_disabled_profiles=0
+enable_gpu_debug_layers=0
+fpsgo_support_status=enable
+zram_enabled=1
+
+--- Settings System (key) ---
+
+--- Settings Secure (key) ---
+aod_trigger_mode_touch=1
+assist_touch_gesture_enabled=1
+touch_exploration_enabled=0
+transsion_game_function_mode=2
+
+--- Properties (debug.*) ---
+[debug.hwui.skia_tracing_enabled]: [false]
+[debug.hwui.skia_use_perfetto_track_events]: [false]
+[debug.renderengine.backend]: [skiagl]
+[debug.renderengine.skia_tracing_enabled]: [false]
+[debug.renderengine.skia_use_perfetto_track_events]: [false]
+[debug.sf.default_touch_timer_ms]: [200]
+[debug.sf.disable_backpressure]: [1]
+[debug.sf.early.app.duration]: [20000000]
+[debug.sf.early.sf.duration]: [27600000]
+[debug.sf.earlyGl.app.duration]: [20000000]
+[debug.sf.earlyGl.sf.duration]: [27600000]
+[debug.sf.enable_gl_backpressure]: [0]
+[debug.sf.enable_hwc_vds]: [0]
+[debug.sf.enable_transaction_tracing]: [false]
+[debug.sf.hwc.min.duration]: [23000000]
+[debug.sf.late.app.duration]: [20000000]
+[debug.sf.late.sf.duration]: [27600000]
+[debug.sf.predict_hwc_composition_strategy]: [0]
+[debug.sf.set_binder_thread_rt]: [1]
+[debug.sf.treat_170m_as_sRGB]: [1]
+[debug.sf.use_phase_offsets_as_durations]: [1]
+
+--- Thermal Status ---
+Unknown command: get-status
+
+--- Memory ---
+MemTotal:        7866536 kB
+MemFree:          149956 kB
+SwapTotal:       4309304 kB
+SwapFree:        2378140 kB

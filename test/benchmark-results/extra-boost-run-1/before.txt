@@ -1,0 +1,261 @@
+========== BEFORE SNAPSHOT — Extra Boost ==========
+Date: $(date)
+
+--- CPU Governors ---
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu10/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu11/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu12/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu13/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu14/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu15/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu1/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu3/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu4/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu5/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu6/cpufreq/scaling_governor: sugov_ext
+/sys/devices/system/cpu/cpu7/cpufreq/scaling_governor: sugov_ext
+/sys/devices/system/cpu/cpu8/cpufreq/scaling_governor: 
+/sys/devices/system/cpu/cpu9/cpufreq/scaling_governor: 
+
+--- Settings Global (relevant) ---
+Phenotype_flags=activity_starts_logging_enabled:alarm_manager_constants:alarm_manager_dummy_flags:always_on_display_constants:anomaly_config:anomaly_config_version:anomaly_detection_constants:app_idle_constants:app_standby_enabled:backup_agent_timeout_parameters:battery_stats_constants:battery_tip_constants:binder_calls_stats:ble_scan_balanced_interval_ms:ble_scan_balanced_window_ms:ble_scan_low_power_interval_ms:ble_scan_low_power_window_ms:blocking_helper_dismiss_to_view_ratio:blocking_helper_streak_limit:emergency_call_codes_data:emergency_gesture_power_button_cooldown_period_ms:gnss_satellite_blocklist:hybrid_sysui_battery_warning_flags:job_scheduler_constants:job_scheduler_quota_controller_constants:job_scheduler_time_controller_constants:location_background_throttle_interval_ms:location_ignore_settings_package_whitelist:network_watchlist_enabled:night_display_forced_auto_mode_available:notification_snooze_options:phenotype_test_setting:settings_use_external_provider_api:settings_use_psd_api:smart_replies_in_notifications_flags:sqlite_compatibility_wal_flags:sys_uidcpupower:text_classifier_constants:zram_enabled
+adaptive_battery_management_enabled=1
+adaptive_refresh_rate=120
+android.os.adpf_hwui_gpu=true
+animation_frame_hold_force=0
+app_standby_enabled=1
+ble_scan_always_enabled=0
+ble_scan_balanced_interval_ms=730
+ble_scan_balanced_window_ms=183
+ble_scan_low_power_interval_ms=1400
+ble_scan_low_power_window_ms=140
+bluetooth_disabled_profiles=0
+buffer_hold_full_render=0
+com.android.graphics.surfaceflinger.flags.graphite_renderengine=true
+composition.type=asn
+cpu.fps=auto
+cpu_gpu_render_bridge_mode=0
+dalvik.vm.heapminfree=8m
+dalvik.vm.usejitprofiles=true
+debug.sf.refresh=120
+default_fps_override=0
+default_refresh_rate=120
+device_provisioning_mobile_data=1
+disable_app_profiler_pss_profiling=true
+display_render_ahead_limit=0
+display_vsync_smoothness_boost=0
+doze.pulse.schedule.resets=3
+doze.pulse.schedule=300s,900s,1800s
+dynamic_render_task_control=1
+enable_back_animation=0
+enable_global_frame_scheduler=0
+enable_gpu_debug_layers=0
+enable_gpu_renderer=true
+enable_render_cache_priority=1
+enable_render_thread_opt=1
+encoder.video.profile=high
+enforce_render_path_consistency=0
+forced_app_standby_for_small_battery_enabled=true
+fpsgo_support_status=enable
+frame_render_smoothness_enhancer=0
+gpu.compute_mode=multi
+gpu.fps=auto
+gpu.memory_limit=4096
+gpu_debug_layers=0
+gpu_mode=1
+gpu_renderer=1
+gpu_texture_cache_size=4096
+gpu_thread_frame_persist=0
+hardware_accelerated_rendering_enabled=1
+hardware_draw_thread_priority_boost=1
+hwui.print_config=false
+hwui.render_dirty_regions=true
+hwui.text_gamma_correction=lookup
+hwui.texture_cache_flushrate=0.4
+hwui.use.blacklist=true
+hwui.use_gpu_pixel_buffers=true
+hwui_frame_defer_disable=0
+job_scheduler_constants=
+job_scheduler_quota_controller_constants=max_job_count_per_rate_limiting_window=10,rate_limiting_window_ms=60000,max_job_count_active=75,max_session_count_active=75
+job_scheduler_time_controller_constants=
+kernel.sched_child_runs_first=0
+kernel.sched_compat_yield=1
+kernel.sched_features=24189
+kernel.sched_latency_ns=1000000
+kernel.sched_min_granularity_ns=100000
+kernel.sched_shares_ratelimit=256000
+kernel.sched_wakeup_granularity_ns=2000000
+log_fps_interval=0
+log_profile=0
+max_refresh_rate=120.0
+max_render_ahead_frames=0
+mobile_data1=0
+mobile_data2=0
+mobile_data=1
+mobile_data_always_on=0
+peak_refresh_rate=120.0
+persist.cpu.gov.performance=ondemand
+persist.gpu.pipeline_bypass_limiter=true
+persist.metadata_dynfps.disable=0
+persist.sampling_profiler=0
+persist.sys.auto_refresh_downscale=1
+persist.sys.autofps.mode=1
+persist.sys.composition.type=asn
+persist.sys.cpu.governor=ondemand
+persist.sys.cpu.renderthreads=4
+persist.sys.cpu_perf_mode=0
+persist.sys.display.refresh=120
+persist.sys.dynamic_fps.enable=1
+persist.sys.dynamic_fps_scaling=1
+persist.sys.force_sw_gles=0
+persist.sys.force_sw_vulkan=0
+persist.sys.fps.constant=0
+persist.sys.fpsctrl.enable=1
+persist.sys.gpu.governor=simple_ondemand
+persist.sys.gpu.rendering=true
+persist.sys.gpu.working_thread_priority=1
+persist.sys.minfree_12g=16384,20480,131072,384000,524288,819200
+persist.sys.minfree_6g=16384,20480,32768,131072,230400,286720
+persist.sys.minfree_8g=16384,20480,32768,131072,384000,524288
+persist.sys.minfree_def=16384,20480,32768,131072,230400,286720
+persist.sys.perf.topAppRenderThreadBoost.enable=true
+persist.sys.rendercomposer.enable=true
+persist.sys.smartfps=1
+persist.sys.ui.rendering=1
+persist.sys.use_gpu_fps_counter=0
+persist.vendor.audio.delta.refresh=true
+persist.vendor.dfps.level=1
+persist.vendor.power.dfps.level=1
+pre_render_pipeline_optimization=1
+profiler.debugmonitor=false
+profiler.force_disable_err_rpt=true
+profiler.force_disable_ulog=true
+profiler.hung.dumpdobugreport=false
+profiler.launch=false
+radio.add_power_save=1
+refresh_rate_switching_type=1
+render.enable_gpu_decoding=true
+render.enable_gpu_scaling=true
+render.max_fps=120
+render_engine_retries=0
+render_frame_batch_optimize=1
+render_pipeline_injection_override=0
+render_queue_policy=adaptive
+render_shadows_in_compositor=true
+render_thread_draw_queue_extend=0
+renderthread.skia.reduceopstasksplitting=false
+rs.gpu.renderscript=0
+sched.colocate.enable=1
+service.zram=0
+surfaceflinger_composition_mode=overlay
+sys.display-refresh=120
+thermal_policy_core_lock=0
+transition_animation_scale=1.0
+uclamp_min_high_scheduling_group=25
+uclamp_min_latency_sensitive=40
+uclamp_min_top_app=30
+ui_draw_batch_priority_boost=1
+ui_render_skip_limit=0
+ui_surface_render_frame_push=0
+usap_priority_boost=false
+user_refresh_rate=120.0
+vendor.boostfwk.transsion.frameprefetcher=0
+vendor.display.enable_optimize_refresh=1
+vidc.dec.120fps.enabled=1
+viewroot.profile_rendering=false
+wallpaper_render_priority=0
+wifi_boost_5g=1
+wifi_power_save=1
+window_animation_scale=1.0
+zram.default=0
+zram=0
+zram_enabled=0
+
+--- Properties (debug.* performance) ---
+[debug.composition.sync_mode]: [0]
+[debug.composition.type]: [asn]
+[debug.cpu.cooling.callback_freq_limit]: [0]
+[debug.cpuprio]: [20]
+[debug.cpurend.vsync]: [false]
+[debug.egl.buffcount]: [4]
+[debug.egl.callstack]: [0]
+[debug.egl.force_csaa]: [false]
+[debug.egl.force_fxaa]: [false]
+[debug.egl.force_msaa]: [false]
+[debug.egl.force_smaa]: [false]
+[debug.egl.force_ssaa]: [false]
+[debug.egl.force_taa]: [false]
+[debug.egl.force_txaa]: [false]
+[debug.egl.log_config]: [0]
+[debug.egl.msaa]: [0]
+[debug.egl.native_scaling]: [true]
+[debug.egl.prifiler]: [0]
+[debug.egl.profiler]: [0]
+[debug.egl.swapinterval]: [1]
+[debug.egl.traceGpuCompletion]: [0]
+[debug.gpu.composition_optimization_mode]: [adaptive]
+[debug.gpu.cooling.callback_freq_limit]: [0]
+[debug.gpu.debug_layers_on]: [0]
+[debug.gpu.mode]: [0]
+[debug.gpu.render.async]: [true]
+[debug.gpu.texture_cache_size]: [2048]
+[debug.gralloc.disable_ahardware_buffer]: [0]
+[debug.gralloc.enable_fb_ubwc]: [1]
+[debug.gralloc.gfx_ubwc_disable]: [0]
+[debug.gralloc.map_fb_memory]: [0]
+[debug.hwui.anim_pipeline]: [adaptive]
+[debug.hwui.app_memory_policy]: [false]
+[debug.hwui.capture_skp_enabled]: [false]
+[debug.hwui.capture_skp_frames]: [0]
+[debug.hwui.clip_surfaceviews]: [false]
+[debug.hwui.composition]: [1]
+[debug.hwui.disable_draw_defer]: [false]
+[debug.hwui.disable_draw_reorder]: [false]
+[debug.hwui.disable_gpu_cache]: [false]
+[debug.hwui.disable_msaa]: [true]
+[debug.hwui.disable_scissor_opt]: [false]
+[debug.hwui.disable_zrle]: [0]
+[debug.hwui.disabledither]: [true]
+[debug.hwui.drawing_enabled]: [true]
+[debug.hwui.drop_shadow_cache_size]: [20]
+[debug.hwui.dyn_fps]: [1]
+[debug.hwui.enable_bp_cache]: [true]
+[debug.hwui.enable_buffer_queue_pacing]: [1]
+[debug.hwui.enable_f16]: [true]
+
+--- Settings Secure (refresh/game) ---
+aod_trigger_mode_touch=1
+assist_touch_gesture_enabled=1
+game_auto_temperature_control=0
+game_bixby_block=1
+game_home_enable=0
+gamesdk_version=0
+touch_blocking_period=0.0
+touch_exploration_enabled=0
+transsion_game_function_mode=2
+
+--- Settings System (relevant) ---
+background_power_saving_enable=1
+dark_mode_when_power_save_off=2
+last_tran_refresh_mode_in_refresh_setting=10000
+min_refresh_rate=60.0
+peak_refresh_rate=120.00001
+pointer_speed=0
+power_save_night_mode_in_progress=0
+power_save_screen_off_time_in_progress=0
+tran_cpupower_mode=0
+tran_need_recovery_refresh_mode=10000
+tran_need_recovery_refresh_rate=10000
+tran_power_hbm_state=0
+tran_power_save_open_time=534093081
+tran_refresh_mode=10000
+tran_smart_button_double_longpress_target=com.transsion.gamespace.app
+vivo_gamethermal_switch=0
+
+--- Memory ---
+MemTotal:        7866536 kB
+MemFree:          189080 kB
+SwapTotal:       4309304 kB
+SwapFree:        2291688 kB

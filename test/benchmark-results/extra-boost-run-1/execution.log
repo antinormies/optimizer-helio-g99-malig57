@@ -1,0 +1,4 @@
+Failed to set property 'persist.gpu.pipeline_bypass_limiter' to 'true'.
+See dmesg for error reason.
+Argument expected to be 'default'
+Argument expected to be 'default'
