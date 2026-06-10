@@ -3,170 +3,298 @@ package io.github.antinormies.opt_heliog99
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import android.widget.*
+import android.util.Log
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SwitchCompat
+import androidx.core.view.WindowCompat
 import io.github.antinormies.opt_heliog99.config.AppConfig
 import io.github.antinormies.opt_heliog99.modules.ModuleOrchestrator
-import io.github.antinormies.opt_heliog99.shizuku.ShizukuManager
+import io.github.antinormies.opt_heliog99.native.VulkanBridge
+import io.github.antinormies.opt_heliog99.service.OptimizerService
+import io.github.antinormies.opt_heliog99.shizuku.CommandTransport
+import io.github.antinormies.opt_heliog99.shizuku.TransportManager
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var config: AppConfig
-    private lateinit var shizukuManager: ShizukuManager
+    private lateinit var transportManager: TransportManager
     private lateinit var orchestrator: ModuleOrchestrator
 
     private lateinit var statusText: TextView
+    private lateinit var gpuInfo: TextView
     private lateinit var logOutput: TextView
-    private lateinit var profileSwitch: SwitchCompat
+    private lateinit var profileGroup: RadioGroup
     private lateinit var vulkanSwitch: SwitchCompat
+    private lateinit var autoApplySwitch: SwitchCompat
     private lateinit var applyButton: Button
     private lateinit var clearButton: Button
     private lateinit var shizukuActionButton: Button
 
     private var isRunning = false
+    private var vulkanProbed = false
+    private var shizukuWasAvailable = false
+
+    companion object {
+        private const val TAG = "OptHelioG99"
+        private const val SHIZUKU_PKG = "moe.shizuku.privileged.api"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, true)
         setContentView(R.layout.activity_main)
 
         config = AppConfig(this)
-        shizukuManager = ShizukuManager()
-        orchestrator = ModuleOrchestrator(shizukuManager, config)
+        transportManager = TransportManager(this)
+        orchestrator = ModuleOrchestrator(transportManager, config)
 
         statusText = findViewById(R.id.shizuku_status)
+        gpuInfo = findViewById(R.id.gpu_info)
         logOutput = findViewById(R.id.log_output)
-        profileSwitch = findViewById(R.id.profile_switch)
+        profileGroup = findViewById(R.id.profile_group)
         vulkanSwitch = findViewById(R.id.vulkan_switch)
+        autoApplySwitch = findViewById(R.id.auto_apply_switch)
         applyButton = findViewById(R.id.apply_button)
         clearButton = findViewById(R.id.clear_button)
         shizukuActionButton = findViewById(R.id.shizuku_action_button)
-        shizukuActionButton.setOnClickListener {
-            openShizuku()
-        }
 
-        profileSwitch.isChecked = config.profile == AppConfig.Profile.PERFORMANCE
+        // Restore saved state
         vulkanSwitch.isChecked = config.optimizeVulkan
+        autoApplySwitch.isChecked = config.autoApplyOnBoot
 
-        profileSwitch.setOnCheckedChangeListener { _, isChecked ->
-            config.profile = if (isChecked) AppConfig.Profile.PERFORMANCE else AppConfig.Profile.BALANCED
-            updateProfileLabel()
+        when (config.profile) {
+            AppConfig.Profile.BATTERY -> profileGroup.check(R.id.profile_battery)
+            AppConfig.Profile.BALANCED -> profileGroup.check(R.id.profile_balanced)
+            AppConfig.Profile.PERFORMANCE -> profileGroup.check(R.id.profile_gaming)
         }
+
+        // Listeners
+        profileGroup.setOnCheckedChangeListener { _, checkedId ->
+            config.profile = when (checkedId) {
+                R.id.profile_battery -> AppConfig.Profile.BATTERY
+                R.id.profile_gaming -> AppConfig.Profile.PERFORMANCE
+                else -> AppConfig.Profile.BALANCED
+            }
+        }
+
         vulkanSwitch.setOnCheckedChangeListener { _, isChecked ->
             config.optimizeVulkan = isChecked
         }
 
+        autoApplySwitch.setOnCheckedChangeListener { _, isChecked ->
+            config.autoApplyOnBoot = isChecked
+            if (isChecked && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                requestPermissions(
+                    arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
+                    2002
+                )
+            }
+        }
+
+        shizukuActionButton.setOnClickListener { openShizuku() }
         applyButton.setOnClickListener { runOptimization() }
         clearButton.setOnClickListener { clearOptimizations() }
 
+        // Restore log
         val lastLog = config.lastLog
         if (lastLog.isNotBlank()) {
             logOutput.text = lastLog
         }
 
-        shizukuManager.init(object : ShizukuManager.Listener {
-            override fun onBinderReady() {
-                runOnUiThread { updateShizukuStatus() }
+        // Transport lifecycle
+        transportManager.init(object : CommandTransport.Listener {
+            override fun onConnected() {
+                runOnUiThread {
+                    updateTransportStatus()
+                    probeVulkan()
+                }
             }
 
-            override fun onBinderDead() {
-                runOnUiThread { updateShizukuStatus() }
+            override fun onDisconnected() {
+                runOnUiThread {
+                    shizukuWasAvailable = false
+                    updateTransportStatus()
+                    showToast("${transportManager.transportName} disconnected", Toast.LENGTH_SHORT)
+                }
             }
 
-            override fun onPermissionResult(granted: Boolean) {
-                runOnUiThread { updateShizukuStatus() }
+            override fun onError(message: String) {
+                runOnUiThread {
+                    updateTransportStatus()
+                    showToast(message, Toast.LENGTH_SHORT)
+                }
             }
         })
 
-        updateShizukuStatus()
+        updateTransportStatus()
+        probeVulkan()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateTransportStatus()
     }
 
     override fun onDestroy() {
-        shizukuManager.destroy()
+        transportManager.destroy()
         super.onDestroy()
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        shizukuManager.handlePermissionResult(requestCode, grantResults.firstOrNull() ?: -1)
     }
+
+    // --- Vulkan ---
+
+    private fun probeVulkan() {
+        if (vulkanProbed) return
+        vulkanProbed = true
+
+        Thread {
+            try {
+                val info = VulkanBridge.probeDevice()
+                runOnUiThread {
+                    val sb = StringBuilder()
+                    if (info.errorMessage.isNotEmpty()) {
+                        sb.appendLine("Error: ${info.errorMessage}")
+                    } else {
+                        sb.appendLine("GPU: ${info.deviceName}")
+                        sb.appendLine("Vulkan: ${info.apiVersion}  Driver: ${info.driverVersion}")
+                        sb.append("Compute: ${if (info.hasDedicatedComputeQueue) "yes" else "no"}")
+                        sb.append("  Max invocations: ${info.maxComputeWorkGroupInvocations}")
+                        if (info.isMaliG57) sb.append("  [Mali-G57 detected]")
+                        sb.appendLine()
+                        sb.append("Extensions: ${info.extensions.size}")
+                        val subgroup = info.extensions.any { it.contains("VK_EXT_subgroup_size_control") }
+                        if (subgroup) sb.append("  [subgroup_size_control available]")
+                        sb.appendLine()
+                    }
+                    gpuInfo.text = sb.toString()
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Vulkan probe failed: ${e.message}")
+                runOnUiThread {
+                    gpuInfo.text = "GPU: Vulkan probe failed: ${e.message}"
+                }
+            }
+        }.start()
+    }
+
+    // --- Shizuku ---
 
     private fun openShizuku() {
-        val shizukuPkg = "moe.shizuku.privileged.api"
         try {
-            packageManager.getPackageInfo(shizukuPkg, 0)
-            startActivity(packageManager.getLaunchIntentForPackage(shizukuPkg)!!)
+            packageManager.getPackageInfo(SHIZUKU_PKG, 0)
+            val intent = packageManager.getLaunchIntentForPackage(SHIZUKU_PKG)
+            if (intent != null) {
+                startActivity(intent)
+            } else {
+                showToast("Could not launch Shizuku app", Toast.LENGTH_SHORT)
+            }
         } catch (_: PackageManager.NameNotFoundException) {
+            showToast("Shizuku not installed. Opening Play Store...", Toast.LENGTH_LONG)
             try {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$shizukuPkg")))
+                startActivity(
+                    Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$SHIZUKU_PKG"))
+                )
             } catch (_: Exception) {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$shizukuPkg")))
+                startActivity(
+                    Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$SHIZUKU_PKG"))
+                )
             }
         }
     }
 
-    private fun updateShizukuStatus() {
-        val available = shizukuManager.isShizukuAvailable
-        val permitted = shizukuManager.hasPermission
-
-        when {
-            !available -> {
-                statusText.text = "\u26A0 Shizuku: NOT running"
-                shizukuActionButton.text = "Open Shizuku"
-                shizukuActionButton.visibility = android.view.View.VISIBLE
+    private fun updateTransportStatus() {
+        if (transportManager.isReady) {
+            if (!shizukuWasAvailable) {
+                showToast("${transportManager.transportName} ready", Toast.LENGTH_SHORT)
             }
-            !permitted -> {
-                statusText.text = "\u26A0 Shizuku: permission NOT granted"
-                shizukuActionButton.text = "Grant Permission"
-                shizukuActionButton.visibility = android.view.View.VISIBLE
-            }
-            else -> {
-                statusText.text = "\u2713 Shizuku: running"
-                shizukuActionButton.visibility = android.view.View.GONE
+            shizukuWasAvailable = true
+            statusText.text = "\u2713 ${transportManager.transportName}: ready"
+            shizukuActionButton.visibility = android.view.View.GONE
+        } else {
+            val shizuku = transportManager.shizuku
+            when {
+                !shizuku.isAvailable -> {
+                    statusText.text = "\u26A0 Shizuku: NOT running"
+                    shizukuActionButton.text = "Open Shizuku"
+                    shizukuActionButton.visibility = android.view.View.VISIBLE
+                }
+                !shizuku.hasPermission -> {
+                    statusText.text = "\u26A0 Shizuku: permission NOT granted"
+                    shizukuActionButton.text = "Grant Permission"
+                    shizukuActionButton.visibility = android.view.View.VISIBLE
+                }
+                else -> {
+                    statusText.text = "\u26A0 No transport ready"
+                    shizukuActionButton.visibility = android.view.View.GONE
+                }
             }
         }
 
-        applyButton.isEnabled = available && permitted && !isRunning
-        clearButton.isEnabled = available && permitted && !isRunning
+        applyButton.isEnabled = transportManager.isReady && !isRunning
+        clearButton.isEnabled = transportManager.isReady && !isRunning
     }
 
-    private fun updateProfileLabel() {
-        val label = if (profileSwitch.isChecked) "Profile: Performance" else "Profile: Balanced"
-        (profileSwitch.parent as? android.view.ViewGroup)?.let { parent ->
-            (parent.getChildAt(0) as? TextView)?.text = label
-        }
-    }
+    // --- Optimization ---
 
     private fun runOptimization() {
         if (isRunning) return
+
+        if (!transportManager.isReady) {
+            showToast("${transportManager.transportName} is not ready. Open Shizuku first.", Toast.LENGTH_LONG)
+            return
+        }
+
         isRunning = true
         applyButton.isEnabled = false
         clearButton.isEnabled = false
         logOutput.text = ""
 
-        val profile = if (profileSwitch.isChecked) AppConfig.Profile.PERFORMANCE else AppConfig.Profile.BALANCED
+        val profile = when (profileGroup.checkedRadioButtonId) {
+            R.id.profile_battery -> AppConfig.Profile.BATTERY
+            R.id.profile_gaming -> AppConfig.Profile.PERFORMANCE
+            else -> AppConfig.Profile.BALANCED
+        }
         val vulkan = vulkanSwitch.isChecked
+
+        config.profile = profile
+        config.optimizeVulkan = vulkan
+
+        showToast("Applying ${profile.label} profile...", Toast.LENGTH_SHORT)
 
         orchestrator.runAll(
             profile = profile,
             optimizeVulkan = vulkan,
             onModuleStart = { name ->
-                runOnUiThread { appendLog(">>> $name") }
+                runOnUiThread { appendLog(">>> [$name]") }
             },
             onLogLine = { line ->
-                runOnUiThread { appendLog(line) }
+                runOnUiThread { appendLog("  $line") }
             },
             onModuleComplete = { name, errors ->
-                runOnUiThread { appendLog("[$name done]") }
+                runOnUiThread {
+                    appendLog("[$name done, errors=$errors]")
+                }
             },
             onAllComplete = { summary ->
                 runOnUiThread {
                     appendLog("=== All done ===")
                     config.lastLog = summary
                     isRunning = false
-                    updateShizukuStatus()
+                    updateTransportStatus()
+                    showToast("Done: ${profile.label} applied", Toast.LENGTH_SHORT)
                 }
             }
         )
@@ -174,6 +302,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun clearOptimizations() {
         if (isRunning) return
+
+        if (!transportManager.isReady) {
+            showToast("${transportManager.transportName} is not ready.", Toast.LENGTH_SHORT)
+            return
+        }
+
         isRunning = true
         applyButton.isEnabled = false
         clearButton.isEnabled = false
@@ -187,15 +321,22 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread {
                     appendLog("=== Clear done ===")
                     isRunning = false
-                    updateShizukuStatus()
+                    updateTransportStatus()
+                    showToast("Optimizations cleared", Toast.LENGTH_SHORT)
                 }
             }
         )
     }
 
+    // --- UI helpers ---
+
     private fun appendLog(text: String) {
         logOutput.append("$text\n")
-        val scroll = logOutput.parent as? android.widget.ScrollView
+        val scroll = logOutput.parent as? ScrollView
         scroll?.fullScroll(android.view.View.FOCUS_DOWN)
+    }
+
+    private fun showToast(msg: String, duration: Int) {
+        Toast.makeText(this, msg, duration).show()
     }
 }

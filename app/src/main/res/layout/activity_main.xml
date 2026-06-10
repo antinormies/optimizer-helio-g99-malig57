@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    android:padding="16dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -14,8 +12,9 @@
         android:text="OptHelioG99"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="12dp" />
 
+    <!-- Shizuku Status -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +27,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="12dp">
+        android:layout_marginBottom="8dp">
 
         <TextView
             android:id="@+id/shizuku_status"
@@ -48,6 +47,33 @@
             android:textSize="12sp" />
     </LinearLayout>
 
+    <!-- Vulkan Device Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/section_bg"
+        android:padding="10dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPU Info"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/gpu_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Probing Vulkan..."
+            android:textSize="12sp"
+            android:typeface="monospace"
+            android:lineSpacingExtra="1dp" />
+    </LinearLayout>
+
     <!-- Settings Section -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,7 +81,7 @@
         android:orientation="vertical"
         android:background="@drawable/section_bg"
         android:padding="12dp"
-        android:layout_marginBottom="12dp">
+        android:layout_marginBottom="8dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,32 +91,54 @@
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
-        <LinearLayout
+        <!-- Profile: 3-way radio group -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <RadioGroup
+            android:id="@+id/profile_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:layout_marginBottom="8dp">
 
-            <TextView
+            <RadioButton
+                android:id="@+id/profile_battery"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Profile: Balanced"
-                android:textSize="14sp" />
+                android:text="Battery"
+                android:textSize="13sp" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/profile_switch"
-                android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/profile_balanced"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:checked="false" />
-        </LinearLayout>
+                android:layout_weight="1"
+                android:text="Balanced"
+                android:textSize="13sp"
+                android:checked="true" />
 
+            <RadioButton
+                android:id="@+id/profile_gaming"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Gaming"
+                android:textSize="13sp" />
+        </RadioGroup>
+
+        <!-- Vulkan toggle -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="4dp">
+            android:layout_marginTop="2dp">
 
             <TextView
                 android:layout_width="0dp"
@@ -106,6 +154,29 @@
                 android:checked="true" />
         </LinearLayout>
 
+        <!-- Auto-apply on boot -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Auto-apply on boot"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/auto_apply_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+        </LinearLayout>
+
+        <!-- Apply / Clear -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

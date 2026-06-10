@@ -16,6 +16,10 @@ class AppConfig(context: Context) {
         get() = prefs.getBoolean(VULKAN_KEY, true)
         set(value) = prefs.edit().putBoolean(VULKAN_KEY, value).apply()
 
+    var autoApplyOnBoot: Boolean
+        get() = prefs.getBoolean(AUTO_BOOT_KEY, false)
+        set(value) = prefs.edit().putBoolean(AUTO_BOOT_KEY, value).apply()
+
     var lastLog: String
         get() = prefs.getString(LOG_KEY, "")!!
         set(value) = prefs.edit().putString(LOG_KEY, value).apply()
@@ -28,9 +32,10 @@ class AppConfig(context: Context) {
         get() = prefs.getBoolean(RESTORE_KEY, false)
         set(value) = prefs.edit().putBoolean(RESTORE_KEY, value).apply()
 
-    enum class Profile(val value: String) {
-        BALANCED("balanced"),
-        PERFORMANCE("performance");
+    enum class Profile(val value: String, val label: String) {
+        BATTERY("battery", "Battery"),
+        BALANCED("balanced", "Balanced"),
+        PERFORMANCE("performance", "Gaming");
 
         companion object {
             fun fromValue(v: String) = entries.firstOrNull { it.value == v } ?: BALANCED
@@ -41,6 +46,7 @@ class AppConfig(context: Context) {
         private const val PREF_NAME = "opt_heliog99_config"
         private const val PROFILE_KEY = "profile"
         private const val VULKAN_KEY = "optimize_vulkan"
+        private const val AUTO_BOOT_KEY = "auto_apply_boot"
         private const val LOG_KEY = "last_log"
         private const val DRY_RUN_KEY = "dry_run"
         private const val RESTORE_KEY = "restore_first"
