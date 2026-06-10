@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         config = AppConfig(this)
         shizukuManager = ShizukuManager()
-        orchestrator = ModuleOrchestrator(shizukuManager)
+        orchestrator = ModuleOrchestrator(shizukuManager, config)
 
         statusText = findViewById(R.id.shizuku_status)
         logOutput = findViewById(R.id.log_output)

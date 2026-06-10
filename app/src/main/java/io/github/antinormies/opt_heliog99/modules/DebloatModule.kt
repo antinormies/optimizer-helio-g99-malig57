@@ -2,7 +2,10 @@ package io.github.antinormies.opt_heliog99.modules
 
 import io.github.antinormies.opt_heliog99.config.AppConfig
 
-class DebloatModule : Module {
+class DebloatModule(
+    private val dryRun: Boolean = true,
+    private val restoreFirst: Boolean = false
+) : Module {
 
     override val name = "Debloat"
 
@@ -124,8 +127,29 @@ class DebloatModule : Module {
 
         val modeLabel = if (perf) "full" else "conservative"
         cmds += "echo \"=== Debloat mode: $modeLabel ===\""
-        for (pkg in targets) {
-            cmds += "pm disable-user --user 0 $pkg 2>/dev/null || true"
+
+        // Restore first (re-enable previously disabled)
+        if (restoreFirst) {
+            cmds += "echo \"  restoring previously disabled packages...\""
+            for (pkg in targets) {
+                cmds += "pm enable $pkg 2>/dev/null || true"
+            }
+            cmds += "echo \"  restore done\""
+        }
+
+        // Dry-run or actual disable with error counting
+        if (dryRun) {
+            for (pkg in targets) {
+                cmds += "echo \"  [dry-run] would disable: $pkg\""
+            }
+            cmds += "echo \"  dry-run -- no packages were disabled\""
+            cmds += "echo \"  set dry_run=false in settings to actually disable\""
+        } else {
+            cmds += "disabled=0; errors=0"
+            for (pkg in targets) {
+                cmds += "if pm disable-user --user 0 $pkg 2>&1 | grep -q disabled; then disabled=\$((disabled + 1)); else errors=\$((errors + 1)); fi || true"
+            }
+            cmds += "echo \"  disabled: \$disabled packages, errors: \$errors\""
         }
 
         return cmds

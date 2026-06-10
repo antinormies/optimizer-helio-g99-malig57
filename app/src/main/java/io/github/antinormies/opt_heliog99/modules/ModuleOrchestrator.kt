@@ -4,15 +4,21 @@ import io.github.antinormies.opt_heliog99.config.AppConfig
 import io.github.antinormies.opt_heliog99.shizuku.ShizukuManager
 
 class ModuleOrchestrator(
-    private val shizukuManager: ShizukuManager
+    private val shizukuManager: ShizukuManager,
+    private val config: AppConfig? = null
 ) {
-    private val modules = listOf(
-        GpuModule(),
-        CpuModule(),
-        MemoryModule(),
-        DisplayModule(),
-        DebloatModule()
-    )
+    private val modules: List<Module> by lazy {
+        listOf(
+            GpuModule(),
+            CpuModule(),
+            MemoryModule(),
+            DisplayModule(),
+            DebloatModule(
+                dryRun = config?.dryRun ?: true,
+                restoreFirst = config?.restoreFirst ?: false
+            )
+        )
+    }
 
     fun runAll(
         profile: AppConfig.Profile,
