@@ -1,5 +1,8 @@
 package io.github.antinormies.opt_heliog99
 
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -21,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var vulkanSwitch: SwitchCompat
     private lateinit var applyButton: Button
     private lateinit var clearButton: Button
+    private lateinit var shizukuActionButton: Button
 
     private var isRunning = false
 
@@ -38,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         vulkanSwitch = findViewById(R.id.vulkan_switch)
         applyButton = findViewById(R.id.apply_button)
         clearButton = findViewById(R.id.clear_button)
+        shizukuActionButton = findViewById(R.id.shizuku_action_button)
+        shizukuActionButton.setOnClickListener {
+            openShizuku()
+        }
 
         profileSwitch.isChecked = config.profile == AppConfig.Profile.PERFORMANCE
         vulkanSwitch.isChecked = config.optimizeVulkan
@@ -85,14 +93,39 @@ class MainActivity : AppCompatActivity() {
         shizukuManager.handlePermissionResult(requestCode, grantResults.firstOrNull() ?: -1)
     }
 
+    private fun openShizuku() {
+        val shizukuPkg = "moe.shizuku.privileged.api"
+        try {
+            packageManager.getPackageInfo(shizukuPkg, 0)
+            startActivity(packageManager.getLaunchIntentForPackage(shizukuPkg)!!)
+        } catch (_: PackageManager.NameNotFoundException) {
+            try {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$shizukuPkg")))
+            } catch (_: Exception) {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=$shizukuPkg")))
+            }
+        }
+    }
+
     private fun updateShizukuStatus() {
         val available = shizukuManager.isShizukuAvailable
         val permitted = shizukuManager.hasPermission
 
-        statusText.text = when {
-            !available -> "Shizuku: NOT running — please start Shizuku"
-            !permitted -> "Shizuku: running — permission NOT granted"
-            else -> "Shizuku: running"
+        when {
+            !available -> {
+                statusText.text = "\u26A0 Shizuku: NOT running"
+                shizukuActionButton.text = "Open Shizuku"
+                shizukuActionButton.visibility = android.view.View.VISIBLE
+            }
+            !permitted -> {
+                statusText.text = "\u26A0 Shizuku: permission NOT granted"
+                shizukuActionButton.text = "Grant Permission"
+                shizukuActionButton.visibility = android.view.View.VISIBLE
+            }
+            else -> {
+                statusText.text = "\u2713 Shizuku: running"
+                shizukuActionButton.visibility = android.view.View.GONE
+            }
         }
 
         applyButton.isEnabled = available && permitted && !isRunning
