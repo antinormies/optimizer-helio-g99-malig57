@@ -3,6 +3,7 @@ name: Build Signed APK on Release
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -35,11 +36,29 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
+      - name: Locate built APK
+        run: |
+          APK=$(find app -name "*.apk" -path "*/release/*" ! -name "*unsigned*" ! -name "*debug*" 2>/dev/null | head -1)
+          if [ -z "$APK" ]; then
+            echo "No signed release APK found" >&2
+            exit 1
+          fi
+          echo "APK_PATH=$APK" >> $GITHUB_ENV
+          echo "Found APK at: $APK"
+
       - name: Upload APK to release
+        if: github.event_name == 'release'
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: app/build/outputs/apk/release/app-release.apk
+          file: ${{ env.APK_PATH }}
           asset_name: OptHelioG99-${{ github.event.release.tag_name }}.apk
           tag: ${{ github.event.release.tag_name }}
           overwrite: true
+
+      - name: Upload APK as artifact (manual run)
+        if: github.event_name != 'release'
+        uses: actions/upload-artifact@v4
+        with:
+          name: OptHelioG99-${{ github.sha }}
+          path: ${{ env.APK_PATH }}
