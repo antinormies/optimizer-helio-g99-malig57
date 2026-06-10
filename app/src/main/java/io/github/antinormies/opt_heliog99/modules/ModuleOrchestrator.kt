@@ -1,10 +1,10 @@
 package io.github.antinormies.opt_heliog99.modules
 
 import io.github.antinormies.opt_heliog99.config.AppConfig
-import io.github.antinormies.opt_heliog99.shizuku.ShizukuManager
+import io.github.antinormies.opt_heliog99.shizuku.CommandTransport
 
 class ModuleOrchestrator(
-    private val shizukuManager: ShizukuManager,
+    private val transport: CommandTransport,
     private val config: AppConfig? = null
 ) {
     private val modules: List<Module> by lazy {
@@ -69,7 +69,7 @@ class ModuleOrchestrator(
                 val cmd = cmds[cmdIndex]
                 cmdIndex++
 
-                shizukuManager.runShellCommandAsync(
+                transport.runShellCommandAsync(
                     command = cmd,
                     onOutput = { line ->
                         fullLog.appendLine("  $line")
@@ -122,7 +122,7 @@ class ModuleOrchestrator(
                 return
             }
             val cmd = clearCmds[idx++]
-            shizukuManager.runShellCommandAsync(
+            transport.runShellCommandAsync(
                 command = cmd,
                 onOutput = { onLogLine("  $it") },
                 onError = { onLogLine("  $it") },

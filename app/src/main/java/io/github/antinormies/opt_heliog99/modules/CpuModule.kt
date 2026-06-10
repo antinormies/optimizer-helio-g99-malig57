@@ -7,16 +7,23 @@ class CpuModule : Module {
     override val name = "CPU"
 
     override fun getCommands(profile: AppConfig.Profile, vulkan: Boolean): List<String> {
-        val perf = profile == AppConfig.Profile.PERFORMANCE
         val cmds = mutableListOf<String>()
 
         cmds += "settings put global activity_starts_logging_enabled 0"
 
-        if (perf) {
-            cmds += "cmd power set-fixed-performance-mode-enabled true"
-            cmds += "settings put global sem_enhanced_cpu_responsiveness 0"
-        } else {
-            cmds += "cmd power set-fixed-performance-mode-enabled false"
+        when (profile) {
+            AppConfig.Profile.BATTERY -> {
+                cmds += "cmd power set-fixed-performance-mode-enabled false"
+                cmds += "settings put global sem_enhanced_cpu_responsiveness 1"
+            }
+            AppConfig.Profile.BALANCED -> {
+                cmds += "cmd power set-fixed-performance-mode-enabled false"
+                cmds += "settings put global sem_enhanced_cpu_responsiveness 1"
+            }
+            AppConfig.Profile.PERFORMANCE -> {
+                cmds += "cmd power set-fixed-performance-mode-enabled true"
+                cmds += "settings put global sem_enhanced_cpu_responsiveness 0"
+            }
         }
 
         cmds += "setprop persist.sys.composition.type gpu"
@@ -30,13 +37,19 @@ class CpuModule : Module {
         // Dynamic sampling rate
         cmds += "settings put global dev.pm.dyn_samplingrate 1"
 
-        // Background boot services + zygote preload threads
-        if (perf) {
-            cmds += "settings put global persist.added_boot_bgservices 5"
-            cmds += "settings put global persist.zygote.preload_threads 4"
-        } else {
-            cmds += "settings put global persist.added_boot_bgservices 3"
-            cmds += "settings put global persist.zygote.preload_threads 2"
+        when (profile) {
+            AppConfig.Profile.BATTERY -> {
+                cmds += "settings put global persist.added_boot_bgservices 1"
+                cmds += "settings put global persist.zygote.preload_threads 1"
+            }
+            AppConfig.Profile.BALANCED -> {
+                cmds += "settings put global persist.added_boot_bgservices 3"
+                cmds += "settings put global persist.zygote.preload_threads 2"
+            }
+            AppConfig.Profile.PERFORMANCE -> {
+                cmds += "settings put global persist.added_boot_bgservices 5"
+                cmds += "settings put global persist.zygote.preload_threads 4"
+            }
         }
 
         // Pre-cooling disable (MTK thermal hints)
@@ -48,9 +61,23 @@ class CpuModule : Module {
         cmds += "settings put global vendor.perf.workloadclassifier.enable true"
 
         // uclamp hints (Android 12+ task boosting)
-        cmds += "settings put global uclamp_min_high_scheduling_group 25"
-        cmds += "settings put global uclamp_min_top_app 30"
-        cmds += "settings put global uclamp_min_latency_sensitive 40"
+        when (profile) {
+            AppConfig.Profile.BATTERY -> {
+                cmds += "settings put global uclamp_min_high_scheduling_group 10"
+                cmds += "settings put global uclamp_min_top_app 15"
+                cmds += "settings put global uclamp_min_latency_sensitive 20"
+            }
+            AppConfig.Profile.BALANCED -> {
+                cmds += "settings put global uclamp_min_high_scheduling_group 25"
+                cmds += "settings put global uclamp_min_top_app 30"
+                cmds += "settings put global uclamp_min_latency_sensitive 40"
+            }
+            AppConfig.Profile.PERFORMANCE -> {
+                cmds += "settings put global uclamp_min_high_scheduling_group 25"
+                cmds += "settings put global uclamp_min_top_app 30"
+                cmds += "settings put global uclamp_min_latency_sensitive 40"
+            }
+        }
 
         return cmds
     }

@@ -98,9 +98,8 @@ com.transsion.nephilim
 com.transsion.tranvoicecommand
 com.transsion.tranradionet
 com.transsion.cloudserver
-com.transsion.sk
+
 com.transsion.connectx.mirror.source
-com.transsion.ossettingsext
 com.transsion.aisupportercore
 com.transsion.avatar
 com.transsion.aicore.cv

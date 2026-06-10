@@ -7,12 +7,10 @@ class GpuModule : Module {
     override val name = "GPU"
 
     override fun getCommands(profile: AppConfig.Profile, vulkan: Boolean): List<String> {
-        val perf = profile == AppConfig.Profile.PERFORMANCE
         val cmds = mutableListOf<String>()
 
         cmds += "setprop debug.composition.type gpu"
         cmds += "settings put global composition.type gpu"
-        cmds += "settings put global persist.sys.composition.type gpu"
 
         // UBWC (Ultra Bandwidth Compression) for Mali
         cmds += "setprop debug.gralloc.gfx_ubwc_disable 0"
@@ -21,10 +19,7 @@ class GpuModule : Module {
         cmds += "settings put global vendor.gralloc.disable_wb_ubwc 0"
 
         cmds += "setprop debug.egl.hw 1"
-        cmds += "settings put global debug.egl.hw 1"
         cmds += "setprop debug.egl.swapinterval 1"
-        cmds += "settings put global persist.sys.egl.swapinterval 1"
-        cmds += "settings put global vendor.debug.egl.swapinterval 1"
         cmds += "setprop debug.gl.swapinterval 1"
         cmds += "setprop debug.gr.swapinterval 1"
         cmds += "setprop debug.egl.buffcount 4"
@@ -35,9 +30,7 @@ class GpuModule : Module {
         cmds += "settings put global persist.sys.force_msaa 0"
         cmds += "settings put global hw3d.force.msaa 0"
         cmds += "setprop debug.hwui.disable_msaa true"
-        cmds += "settings put global persist.sys.force_no_aa 1"
         cmds += "setprop debug.sf.disable_antialiasing 1"
-        cmds += "settings put global persist.debug.force_disable_msaa 1"
 
         // GPU pixel buffers
         cmds += "settings put global hwui.use_gpu_pixel_buffers true"
@@ -45,20 +38,29 @@ class GpuModule : Module {
 
         cmds += "settings put global force_gpu_rendering 1"
 
-        if (perf) {
-            cmds += "setprop debug.hwui.render_thread_count 8"
-            cmds += "settings put global persist.sys.cpu.renderthreads 8"
-            cmds += "setprop debug.skia.num_render_threads 8"
-            cmds += "setprop debug.hwui.target_cpu_time_percent 200"
-            cmds += "setprop debug.hwui.target_gpu_time_percent 200"
-            cmds += "settings put global disable_hw_overlays 1"
-            cmds += "settings put global disable_window_blurs 1"
-        } else {
-            cmds += "setprop debug.hwui.render_thread_count 4"
-            cmds += "settings put global persist.sys.cpu.renderthreads 4"
-            cmds += "setprop debug.skia.num_render_threads 4"
-            cmds += "setprop debug.hwui.target_cpu_time_percent 72"
-            cmds += "setprop debug.hwui.target_gpu_time_percent 40"
+        when (profile) {
+            AppConfig.Profile.BATTERY -> {
+                cmds += "setprop debug.hwui.render_thread_count 2"
+                cmds += "setprop debug.skia.num_render_threads 2"
+                cmds += "setprop debug.hwui.target_cpu_time_percent 50"
+                cmds += "setprop debug.hwui.target_gpu_time_percent 30"
+                cmds += "settings put global disable_hw_overlays 0"
+                cmds += "settings put global disable_window_blurs 0"
+            }
+            AppConfig.Profile.BALANCED -> {
+                cmds += "setprop debug.hwui.render_thread_count 4"
+                cmds += "setprop debug.skia.num_render_threads 4"
+                cmds += "setprop debug.hwui.target_cpu_time_percent 72"
+                cmds += "setprop debug.hwui.target_gpu_time_percent 40"
+            }
+            AppConfig.Profile.PERFORMANCE -> {
+                cmds += "setprop debug.hwui.render_thread_count 8"
+                cmds += "setprop debug.skia.num_render_threads 8"
+                cmds += "setprop debug.hwui.target_cpu_time_percent 200"
+                cmds += "setprop debug.hwui.target_gpu_time_percent 200"
+                cmds += "settings put global disable_hw_overlays 1"
+                cmds += "settings put global disable_window_blurs 1"
+            }
         }
 
         // Vulkan UI rendering hint
@@ -70,18 +72,16 @@ class GpuModule : Module {
             cmds += "setprop ro.hwui.use_vulkan 1"
         }
 
-        // Render ahead & dirty regions
+        // Render optimizations
         cmds += "setprop debug.hwui.skip_empty_damage true"
         cmds += "setprop debug.hwui.use_buffer_age true"
         cmds += "setprop debug.hwui.use_partial_updates true"
         cmds += "setprop debug.hwui.render_dirty_regions true"
-        cmds += "settings put global hwui.render_dirty_regions true"
 
         // SurfaceFlinger tuning
         cmds += "setprop debug.sf.enable_hgl 1"
         cmds += "setprop debug.sf.enable_egl_backpressure 1"
         cmds += "setprop debug.sf.latch_unsignaled 0"
-        cmds += "setprop debug.sf.auto_latch_unsignaled true"
         cmds += "setprop debug.sf.enable_layer_caching true"
         cmds += "setprop debug.sf.disable_backpressure 1"
         cmds += "setprop debug.sf.enable_gl_backpressure 0"

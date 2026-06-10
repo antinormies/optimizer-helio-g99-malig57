@@ -3,7 +3,7 @@ package io.github.antinormies.opt_heliog99.modules
 import io.github.antinormies.opt_heliog99.config.AppConfig
 
 class DebloatModule(
-    private val dryRun: Boolean = true,
+    private val dryRun: Boolean = false,
     private val restoreFirst: Boolean = false
 ) : Module {
 
@@ -88,9 +88,8 @@ class DebloatModule(
         "com.transsion.tranvoicecommand",
         "com.transsion.tranradionet",
         "com.transsion.cloudserver",
-        "com.transsion.sk",
+
         "com.transsion.connectx.mirror.source",
-        "com.transsion.ossettingsext",
         "com.transsion.aisupportercore",
         "com.transsion.avatar",
         "com.transsion.aicore.cv",
@@ -100,7 +99,7 @@ class DebloatModule(
         "com.transsion.aicore.cv.matting",
     )
 
-    private val googleApps = listOf(
+    private val riskyApps = listOf(
         "com.google.android.apps.googleassistant",
         "com.google.android.apps.maps",
         "com.google.android.apps.photos",
@@ -113,43 +112,66 @@ class DebloatModule(
     )
 
     override fun getCommands(profile: AppConfig.Profile, vulkan: Boolean): List<String> {
-        val perf = profile == AppConfig.Profile.PERFORMANCE
         val cmds = mutableListOf<String>()
 
-        val targets = mutableListOf<String>()
-        targets += commonBloat
-        targets += liveWallpapers
-
-        if (perf) {
-            targets += fullBloat
-            targets += googleApps
-        }
-
-        val modeLabel = if (perf) "full" else "conservative"
-        cmds += "echo \"=== Debloat mode: $modeLabel ===\""
-
-        // Restore first (re-enable previously disabled)
-        if (restoreFirst) {
-            cmds += "echo \"  restoring previously disabled packages...\""
-            for (pkg in targets) {
-                cmds += "pm enable $pkg 2>/dev/null || true"
+        when (profile) {
+            AppConfig.Profile.BATTERY,
+            AppConfig.Profile.BALANCED -> {
+                val targets = commonBloat + liveWallpapers
+                val mode = if (profile == AppConfig.Profile.BATTERY) {
+                    if (dryRun) "battery_dry" else "battery"
+                } else {
+                    if (dryRun) "balanced_dry" else "balanced"
+                }
+                cmds += "echo \"=== Debloat mode: $mode (${targets.size} packages) ===\""
+                if (restoreFirst) {
+                    cmds += "echo \"  restoring...\""
+                    for (pkg in commonBloat + liveWallpapers + fullBloat + riskyApps) {
+                        cmds += "pm enable $pkg 2>/dev/null || true"
+                    }
+                }
+                if (dryRun) {
+                    for (pkg in targets) {
+                        cmds += "echo \"  [dry-run] $pkg\""
+                    }
+                    cmds += "echo \"  dry-run: would disable ${targets.size} packages\""
+                } else {
+                    cmds += "d=0; e=0"
+                    for (pkg in targets) {
+                        cmds += "if pm disable-user --user 0 $pkg 2>&1 | grep -q disabled; then d=\$((d+1)); else e=\$((e+1)); fi || true"
+                    }
+                    cmds += "echo \"  disabled: \$d packages, errors: \$e\""
+                }
             }
-            cmds += "echo \"  restore done\""
-        }
-
-        // Dry-run or actual disable with error counting
-        if (dryRun) {
-            for (pkg in targets) {
-                cmds += "echo \"  [dry-run] would disable: $pkg\""
+            AppConfig.Profile.PERFORMANCE -> {
+                val targets = commonBloat + liveWallpapers + fullBloat + riskyApps
+                if (dryRun) {
+                    cmds += "echo \"=== Debloat mode: gaming_dry (${targets.size} packages) ===\""
+                    if (restoreFirst) {
+                        cmds += "echo \"  restoring...\""
+                        for (pkg in targets) {
+                            cmds += "pm enable $pkg 2>/dev/null || true"
+                        }
+                    }
+                    for (pkg in targets) {
+                        cmds += "echo \"  [dry-run] $pkg\""
+                    }
+                    cmds += "echo \"  dry-run: would disable ${targets.size} packages\""
+                } else {
+                    cmds += "echo \"=== Debloat mode: gaming (${targets.size} packages) ===\""
+                    if (restoreFirst) {
+                        cmds += "echo \"  restoring...\""
+                        for (pkg in targets) {
+                            cmds += "pm enable $pkg 2>/dev/null || true"
+                        }
+                    }
+                    cmds += "d=0; e=0"
+                    for (pkg in targets) {
+                        cmds += "if pm disable-user --user 0 $pkg 2>&1 | grep -q disabled; then d=\$((d+1)); else e=\$((e+1)); fi || true"
+                    }
+                    cmds += "echo \"  disabled: \$d packages, errors: \$e\""
+                }
             }
-            cmds += "echo \"  dry-run -- no packages were disabled\""
-            cmds += "echo \"  set dry_run=false in settings to actually disable\""
-        } else {
-            cmds += "disabled=0; errors=0"
-            for (pkg in targets) {
-                cmds += "if pm disable-user --user 0 $pkg 2>&1 | grep -q disabled; then disabled=\$((disabled + 1)); else errors=\$((errors + 1)); fi || true"
-            }
-            cmds += "echo \"  disabled: \$disabled packages, errors: \$errors\""
         }
 
         return cmds

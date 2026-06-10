@@ -7,27 +7,24 @@ class MemoryModule : Module {
     override val name = "Memory"
 
     override fun getCommands(profile: AppConfig.Profile, vulkan: Boolean): List<String> {
-        val perf = profile == AppConfig.Profile.PERFORMANCE
         val cmds = mutableListOf<String>()
 
-        // ZRAM
-        if (perf) {
-            cmds += "settings put global zram_enabled 0"
-            cmds += "settings put global service.zram 0"
-            cmds += "settings put global zram.default 0"
-            cmds += "settings put global zram 0"
-        } else {
-            cmds += "settings put global zram_enabled 1"
-        }
-
-        // App standby
-        cmds += "settings put global app_standby_enabled ${if (perf) 0 else 1}"
-
-        // LMK minfree (8GB variant)
-        if (perf) {
-            cmds += "settings put global persist.sys.minfree_8g 8192,12288,16384,65536,262144,393216"
-        } else {
-            cmds += "settings put global persist.sys.minfree_8g 16384,20480,32768,131072,384000,524288"
+        when (profile) {
+            AppConfig.Profile.BATTERY -> {
+                cmds += "settings put global zram_enabled 1"
+                cmds += "settings put global app_standby_enabled 1"
+                cmds += "settings put global persist.sys.minfree_8g 24576,32768,49152,196608,458752,655360"
+            }
+            AppConfig.Profile.BALANCED -> {
+                cmds += "settings put global zram_enabled 1"
+                cmds += "settings put global app_standby_enabled 1"
+                cmds += "settings put global persist.sys.minfree_8g 16384,20480,32768,131072,384000,524288"
+            }
+            AppConfig.Profile.PERFORMANCE -> {
+                cmds += "settings put global zram_enabled 0"
+                cmds += "settings put global app_standby_enabled 0"
+                cmds += "settings put global persist.sys.minfree_8g 8192,12288,16384,65536,262144,393216"
+            }
         }
 
         // I/O prefetcher
