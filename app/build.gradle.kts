@@ -1,6 +1,32 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
 }
+
+val keyStoreFile: String? = System.getenv("KEYSTORE_FILE")
+    ?: project.rootProject.file("keystore.properties")?.takeIf { it.exists() }?.let {
+        Properties().apply { load(it.inputStream()) }
+            .getProperty("keystore.file")
+    }
+
+val keyStorePassword: String? = System.getenv("KEYSTORE_PASSWORD")
+    ?: project.rootProject.file("keystore.properties")?.takeIf { it.exists() }?.let {
+        Properties().apply { load(it.inputStream()) }
+            .getProperty("keystore.password")
+    }
+
+val keyAliasValue: String? = System.getenv("KEY_ALIAS")
+    ?: project.rootProject.file("keystore.properties")?.takeIf { it.exists() }?.let {
+        Properties().apply { load(it.inputStream()) }
+            .getProperty("key.alias")
+    }
+
+val keyPasswordValue: String? = System.getenv("KEY_PASSWORD")
+    ?: project.rootProject.file("keystore.properties")?.takeIf { it.exists() }?.let {
+        Properties().apply { load(it.inputStream()) }
+            .getProperty("key.password")
+    }
 
 android {
     namespace = "io.github.antinormies.opt_heliog99"
@@ -25,10 +51,24 @@ android {
         }
     }
 
+    signingConfigs {
+        if (keyStoreFile != null) {
+            create("release") {
+                storeFile = file(keyStoreFile!!)
+                storePassword = keyStorePassword
+                keyAlias = keyAliasValue
+                keyPassword = keyPasswordValue
+            }
+        }
+    }
+
     buildTypes {
         release {
             optimization {
                 enable = false
+            }
+            if (keyStoreFile != null) {
+                signingConfig = signingConfigs.findByName("release")
             }
         }
     }

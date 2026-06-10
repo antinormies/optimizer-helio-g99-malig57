@@ -12,3 +12,7 @@ local.properties
 ktlint
 ktlint.bat
 docs/resources/*
+
+*.jks
+*.keystore
+keystore.properties
