@@ -25,6 +25,7 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
   echo ""
   echo "Profiles:"
   echo "  balanced    Balanced performance/power (default)"
+  echo "  performance PEAK — >70% CPU, 100% GPU for gaming (Honor of Kings, Genshin)"
   echo ""
   echo "Options:"
   echo "  --dry-run   Preview changes without applying"

@@ -1,0 +1,92 @@
+==========================================
+ OptHelioG99 Optimizer
+ Profile: performance
+ Device:  Infinix X6853
+ ADB:     /home/dani/Android/Sdk/platform-tools/adb
+ Dry-run: false
+==========================================
+
+>>> [gpu]
+[gpu] applying GPU / Vulkan / composition tuning...
+  composition.type = gpu
+  gralloc UBWC = enabled
+  egl.hw = 1
+  egl.swapinterval = 1
+  egl.buffcount = 4
+  MSAA = disabled
+  gpu_pixel_buffers = 1
+  hwui.render_thread_count = 8
+  skia.num_render_threads = 8
+  hwui target: cpu=200% gpu=200%
+  vulkan/gles force = off
+  render optimizations = enabled
+  surfaceflinger = tuned
+[gpu] done
+
+>>> [cpu]
+[cpu] applying CPU scheduler tuning...
+  activity_starts_logging = 0
+  fixed_performance_mode = true
+  sched.colocate = 1
+  dyn_samplingrate = 1
+  boot_bgservices = 2
+  zygote_preload_threads = 4
+  powerhal.interactive = 1
+  pre_cooling = disabled
+  vendor perf hints = 1
+  uclamp hints = set (25/30/40)
+[cpu] done
+
+>>> [memory]
+[memory] applying memory & background tuning...
+  zram = disabled
+  app_standby = 0
+  minfree (8G) = 8192,12288,16384,65536,262144,393216
+  io_prefetcher = enabled
+  cache.clean = 1
+  scrollingcache = 3
+  fstrim_interval = 86400000
+  purgeable_assets = 1
+  background process limits = removed
+  ram_expand = 0
+  app_restriction = true
+  spcm = disabled
+[memory] done
+
+>>> [display]
+[display] applying display & refresh rate tuning...
+  peak_refresh_rate = 120.0
+  min_refresh_rate = 120.0
+  user_refresh_rate = 120.0
+  window_animation_scale = 0.0
+  transition_animation_scale = 0.0
+  animator_duration_scale = 0.0
+  hardware_overlays = disabled
+  window_blurs = disabled
+  doze = tuned for balance
+  vsync phase offsets = 3ms
+  fps_divisor = 1
+[display] done
+
+>>> [debloat]
+[debloat] XOS bloatware management (mode: full)...
+  mode: full
+  disabled: 88 packages, errors: 4
+[debloat] done
+
+==========================================
+ Done — performance profile applied
+ Note: setprop changes are runtime only.
+ Reboot or run again to re-apply.
+==========================================
+=== VERIFICATION ===
+zram_enabled=0
+app_standby_enabled=0
+disable_hw_overlays=1
+disable_window_blurs=1
+window_animation_scale=0.0
+min_refresh_rate=120.0
+debug.hwui.render_thread_count=8
+debug.hwui.target_cpu_percent=200
+debug.hwui.target_gpu_percent=200
+disabled_pkgs=96
