@@ -25,9 +25,11 @@ class TransportManager(private val context: Context) : CommandTransport {
         shizuku.init(object : CommandTransport.Listener {
             override fun onConnected() {
                 if (shizuku.hasPermission) {
-                    active = shizuku
-                    Log.i(TAG, "Using Shizuku transport")
-                    listener?.onConnected()
+                    if (active !== adb) {
+                        active = shizuku
+                        Log.i(TAG, "Using Shizuku transport")
+                        listener?.onConnected()
+                    }
                 } else {
                     shizuku.requestPermission()
                 }
@@ -42,10 +44,22 @@ class TransportManager(private val context: Context) : CommandTransport {
             }
 
             override fun onError(message: String) {
-                Log.w(TAG, "Shizuku error: $message, trying ADB...")
-                tryAdbFallback()
+                if (active === shizuku) {
+                    Log.w(TAG, "Shizuku error: $message, trying ADB...")
+                    tryAdbFallback()
+                }
             }
         })
+
+        // Proactive: if Shizuku is unavailable, try ADB immediately
+        if (!shizuku.isAvailable) {
+            Log.i(TAG, "Shizuku not available, trying ADB immediately")
+            tryAdbFallback()
+        } else if (shizuku.hasPermission) {
+            active = shizuku
+            Log.i(TAG, "Using Shizuku transport (synchronous init)")
+            listener.onConnected()
+        }
     }
 
     private fun tryAdbFallback() {

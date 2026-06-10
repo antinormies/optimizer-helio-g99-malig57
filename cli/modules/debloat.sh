@@ -6,7 +6,18 @@
 #   Set dry_run=true in config to preview without disabling.
 
 CONFIG="${1:-$(dirname $0)/../config/profiles/balanced.conf}"
-ADB="${ADB:-adb}"
+if [ -z "${ADB+x}" ]; then
+  ADB="adb"
+fi
+
+# Command execution wrapper: works on-device (no ADB) or via PC ADB
+exec_cmd() {
+  if [ -n "$ADB" ]; then
+    $ADB shell "$@"
+  else
+    "$@"
+  fi
+}
 
 load_config() {
   local section="$1" key="$2"
@@ -125,7 +136,7 @@ com.google.android.apps.docs
 if [ "$RESTORE" = true ]; then
   echo "  restoring previously disabled packages..."
   for pkg in $COMMON_BLOAT $FULL_BLOAT $FULL_GOOGLE; do
-    $ADB shell pm enable "$pkg" 2>/dev/null
+    exec_cmd pm enable "$pkg" 2>/dev/null
   done
   echo "  restore done"
 fi
@@ -140,7 +151,7 @@ disable_pkg() {
     return
   fi
   local result
-  result=$($ADB shell pm disable-user --user 0 "$pkg" 2>&1)
+  result=$(exec_cmd pm disable-user --user 0 "$pkg" 2>&1)
   case "$result" in
     *"disabled"*)
       disabled_count=$((disabled_count + 1))

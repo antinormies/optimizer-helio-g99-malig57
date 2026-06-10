@@ -89,3 +89,12 @@ Java_io_github_antinormies_opt_1heliog99_native_VulkanBridge_nativeProbeDevice(J
     LOGI("nativeProbeDevice returning");
     return jInfo;
 }
+
+extern "C" JNIEXPORT jstring JNICALL
+Java_io_github_antinormies_opt_1heliog99_native_VulkanBridge_nativeOptimize(JNIEnv* env, jclass, jboolean performance) {
+    LOGI("nativeOptimize called");
+    VulkanBackend backend;
+    std::string log = backend.optimize(performance);
+    LOGI("nativeOptimize done");
+    return env->NewStringUTF(log.c_str());
+}

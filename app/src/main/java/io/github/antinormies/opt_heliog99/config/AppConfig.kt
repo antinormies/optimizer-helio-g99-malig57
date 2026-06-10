@@ -33,13 +33,9 @@ class AppConfig(context: Context) {
         set(value) = prefs.edit().putBoolean(RESTORE_KEY, value).apply()
 
     enum class Profile(val value: String, val label: String) {
-        BATTERY("battery", "Battery"),
         BALANCED("balanced", "Balanced"),
         PERFORMANCE("performance", "Gaming");
-
-        companion object {
-            fun fromValue(v: String) = entries.firstOrNull { it.value == v } ?: BALANCED
-        }
+    }
     }
 
     companion object {

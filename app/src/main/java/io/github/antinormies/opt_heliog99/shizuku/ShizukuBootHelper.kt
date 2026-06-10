@@ -42,9 +42,9 @@ object ShizukuBootHelper {
     private fun applyProfile(context: Context) {
         val config = AppConfig(context)
         val profile = config.profile
-        val vulkan = config.optimizeVulkan
+        val shellProfile = profile.value
 
-        Log.i(TAG, "Auto-applying profile: ${profile.value}, vulkan=$vulkan")
+        Log.i(TAG, "Auto-applying profile: $shellProfile")
 
         val manager = ShizukuManager()
         manager.init(object : CommandTransport.Listener {
@@ -53,30 +53,20 @@ object ShizukuBootHelper {
             override fun onError(message: String) {}
         })
 
-        val orchestrator = ModuleOrchestrator(manager, config)
+        val orchestrator = ModuleOrchestrator(context, manager)
         val fullLog = StringBuilder()
 
         orchestrator.runAll(
-            profile = profile,
-            optimizeVulkan = vulkan,
-            onModuleStart = { name ->
-                fullLog.appendLine(">>> $name")
-                Log.i(TAG, "Module: $name")
-            },
+            profile = shellProfile,
             onLogLine = { line ->
-                fullLog.appendLine("  $line")
+                fullLog.appendLine(line)
+                Log.i(TAG, line)
             },
-            onModuleComplete = { name, errors ->
-                val msg = "[$name done, errors=$errors]"
-                fullLog.appendLine(msg)
-                Log.i(TAG, msg)
-            },
-            onAllComplete = { summary ->
-                config.lastLog = summary
+            onComplete = {
+                config.lastLog = fullLog.toString()
                 Log.i(TAG, "=== Auto-apply complete ===")
+                manager.destroy()
             }
         )
-
-        manager.destroy()
     }
 }

@@ -1,134 +1,160 @@
 package io.github.antinormies.opt_heliog99.modules
 
-import io.github.antinormies.opt_heliog99.config.AppConfig
+import android.content.Context
+import android.util.Base64
+import android.util.Log
 import io.github.antinormies.opt_heliog99.shizuku.CommandTransport
+import java.io.File
 
 class ModuleOrchestrator(
-    private val transport: CommandTransport,
-    private val config: AppConfig? = null
+    private val context: Context,
+    private val transport: CommandTransport
 ) {
-    private val modules: List<Module> by lazy {
-        listOf(
-            GpuModule(),
-            CpuModule(),
-            MemoryModule(),
-            DisplayModule(),
-            DebloatModule(
-                dryRun = config?.dryRun ?: true,
-                restoreFirst = config?.restoreFirst ?: false
+    private var extracted = false
+
+    private fun listAssetFiles(): List<String> {
+        val am = context.assets
+        val files = mutableListOf<String>()
+        fun walk(ap: String) {
+            val entries = try { am.list(ap) } catch (_: Exception) { null }
+            if (entries.isNullOrEmpty()) {
+                files.add(ap)
+            } else {
+                for (e in entries) {
+                    walk(if (ap.isEmpty()) e else "$ap/$e")
+                }
+            }
+        }
+        walk("")
+        return files
+    }
+
+    private fun readAsset(path: String): ByteArray {
+        return try {
+            context.assets.open(path).use { it.readBytes() }
+        } catch (_: Exception) {
+            ByteArray(0)
+        }
+    }
+
+    private fun ensureExtracted(onReady: () -> Unit) {
+        if (extracted) {
+            onReady()
+            return
+        }
+
+        val files = listAssetFiles()
+        val dir = SCRIPTS_DIR
+        var idx = 0
+        var ok = true
+
+        fun next() {
+            if (!ok || idx >= files.size) {
+                extracted = true
+                onReady()
+                return
+            }
+
+            val ap = files[idx++]
+            val content = readAsset(ap)
+            if (content.isEmpty()) {
+                next()
+                return
+            }
+
+            val outFile = "$dir/$ap"
+            val parent = File(outFile).parent!!
+            val mkdir = "mkdir -p $parent; "
+            val b64 = Base64.encodeToString(content, Base64.NO_WRAP)
+            val cmd = "${mkdir}printf '%s' '$b64' | base64 -d > $outFile"
+
+            transport.runShellCommandAsync(
+                command = cmd,
+                onOutput = {},
+                onError = { line ->
+                    if (line.isNotBlank()) Log.e(TAG, "extract stderr: $line")
+                },
+                onComplete = { exitCode ->
+                    if (exitCode != 0) {
+                        Log.e(TAG, "extract FAILED: $ap (exit $exitCode)")
+                        ok = false
+                    }
+                    next()
+                }
             )
+        }
+
+        transport.runShellCommandAsync(
+            command = "mkdir -p $dir/modules $dir/config/profiles",
+            onOutput = {},
+            onError = { line ->
+                if (line.isNotBlank()) Log.e(TAG, "mkdir stderr: $line")
+            },
+            onComplete = {
+                idx = 0
+                next()
+            }
         )
     }
 
     fun runAll(
-        profile: AppConfig.Profile,
-        optimizeVulkan: Boolean,
-        onModuleStart: (String) -> Unit,
+        profile: String,
         onLogLine: (String) -> Unit,
-        onModuleComplete: (String, Int) -> Unit,
-        onAllComplete: (String) -> Unit
+        onComplete: (Int) -> Unit
     ) {
-        val fullLog = StringBuilder()
-        val runIndex = object {
-            var value = 0
-        }
+        onLogLine("=== OptHelioG99 Optimizer ===")
+        onLogLine("Profile: $profile")
+        onLogLine("")
 
-        fullLog.appendLine("=== OptHelioG99 Optimizer ===")
-        fullLog.appendLine("Profile: ${profile.value}")
-        fullLog.appendLine("Vulkan: ${if (optimizeVulkan) "enabled" else "disabled"}")
-        fullLog.appendLine()
+        ensureExtracted {
+            val cmd = "ADB=\"\" sh $SCRIPTS_DIR/optimize.sh $profile 2>&1"
 
-        fun runNextModule() {
-            if (runIndex.value >= modules.size) {
-                val summary = fullLog.toString()
-                onAllComplete(summary)
-                return
-            }
-
-            val module = modules[runIndex.value]
-            runIndex.value++
-            val cmds = module.getCommands(profile, optimizeVulkan)
-
-            onModuleStart(module.name)
-            fullLog.appendLine(">>> [${module.name}]")
-            onLogLine(">>> [${module.name}]")
-
-            var cmdIndex = 0
-            var errors = 0
-
-            fun runNextCommand() {
-                if (cmdIndex >= cmds.size) {
-                    val status = "done (errors: $errors)"
-                    fullLog.appendLine("[$status]")
-                    onLogLine("[$status]")
-                    onModuleComplete(module.name, errors)
-                    runNextModule()
-                    return
+            transport.runShellCommandAsync(
+                command = cmd,
+                onOutput = { line ->
+                    if (line.isNotBlank()) onLogLine("  $line")
+                },
+                onError = { line ->
+                    if (line.isNotBlank()) onLogLine("  ERROR: $line")
+                },
+                onComplete = { exitCode ->
+                    onLogLine("")
+                    onLogLine(if (exitCode == 0) "=== Done ===" else "=== Failed (exit $exitCode) ===")
+                    onComplete(exitCode)
                 }
-
-                val cmd = cmds[cmdIndex]
-                cmdIndex++
-
-                transport.runShellCommandAsync(
-                    command = cmd,
-                    onOutput = { line ->
-                        fullLog.appendLine("  $line")
-                        onLogLine("  $line")
-                    },
-                    onError = { line ->
-                        if (line.isNotBlank() && !line.contains("Error")) {
-                            fullLog.appendLine("  $line")
-                            onLogLine("  $line")
-                        }
-                    },
-                    onComplete = { exitCode ->
-                        if (exitCode != 0) errors++
-                        runNextCommand()
-                    }
-                )
-            }
-
-            runNextCommand()
+            )
         }
-
-        runNextModule()
     }
 
     fun clearAll(
         onLogLine: (String) -> Unit,
         onComplete: () -> Unit
     ) {
-        val clearCmds = listOf(
-            "cmd power set-fixed-performance-mode-enabled false",
-            "settings put global zram_enabled 1",
-            "settings put global app_standby_enabled 1",
-            "settings put global disable_hw_overlays 0",
-            "settings put global window_animation_scale 1.0",
-            "settings put global transition_animation_scale 1.0",
-            "settings put global animator_duration_scale 1.0",
-            "settings put global peak_refresh_rate 60.0",
-            "settings put global min_refresh_rate 60.0",
-            "settings put global force_gpu_rendering 0",
-            "setprop debug.composition.type default",
-        )
+        onLogLine("=== OptHelioG99 Clear Optimizations ===")
+        onLogLine("")
 
-        onLogLine(">>> Clearing all optimizations...")
-        var idx = 0
+        ensureExtracted {
+            val cmd = "ADB=\"\" sh $SCRIPTS_DIR/clear.sh 2>&1"
 
-        fun runNext() {
-            if (idx >= clearCmds.size) {
-                onLogLine("All cleared. Reboot recommended for full reset.")
-                onComplete()
-                return
-            }
-            val cmd = clearCmds[idx++]
             transport.runShellCommandAsync(
                 command = cmd,
-                onOutput = { onLogLine("  $it") },
-                onError = { onLogLine("  $it") },
-                onComplete = { runNext() }
+                onOutput = { line ->
+                    if (line.isNotBlank()) onLogLine("  $line")
+                },
+                onError = { line ->
+                    if (line.isNotBlank()) onLogLine("  ERROR: $line")
+                },
+                onComplete = { exitCode ->
+                    onLogLine("")
+                    onLogLine(if (exitCode == 0) "=== Clear done ===" else "=== Clear failed (exit $exitCode) ===")
+                    onComplete()
+                }
             )
         }
-        runNext()
+    }
+
+    companion object {
+        private const val TAG = "ModuleOrchestrator"
+        private const val SCRIPTS_DIR = "/data/local/tmp/opt_heliog99/scripts"
     }
 }

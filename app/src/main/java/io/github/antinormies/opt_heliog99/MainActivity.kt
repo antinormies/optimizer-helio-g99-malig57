@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         config = AppConfig(this)
         transportManager = TransportManager(this)
-        orchestrator = ModuleOrchestrator(transportManager, config)
+        orchestrator = ModuleOrchestrator(this, transportManager)
 
         statusText = findViewById(R.id.shizuku_status)
         gpuInfo = findViewById(R.id.gpu_info)
@@ -69,15 +69,13 @@ class MainActivity : AppCompatActivity() {
         autoApplySwitch.isChecked = config.autoApplyOnBoot
 
         when (config.profile) {
-            AppConfig.Profile.BATTERY -> profileGroup.check(R.id.profile_battery)
-            AppConfig.Profile.BALANCED -> profileGroup.check(R.id.profile_balanced)
             AppConfig.Profile.PERFORMANCE -> profileGroup.check(R.id.profile_gaming)
+            else -> profileGroup.check(R.id.profile_balanced)
         }
 
         // Listeners
         profileGroup.setOnCheckedChangeListener { _, checkedId ->
             config.profile = when (checkedId) {
-                R.id.profile_battery -> AppConfig.Profile.BATTERY
                 R.id.profile_gaming -> AppConfig.Profile.PERFORMANCE
                 else -> AppConfig.Profile.BALANCED
             }
@@ -227,7 +225,7 @@ class MainActivity : AppCompatActivity() {
             val shizuku = transportManager.shizuku
             when {
                 !shizuku.isAvailable -> {
-                    statusText.text = "\u26A0 Shizuku: NOT running"
+                    statusText.text = "\u26A0 Shizuku: NOT running\nTrying ADB..."
                     shizukuActionButton.text = "Open Shizuku"
                     shizukuActionButton.visibility = android.view.View.VISIBLE
                 }
@@ -263,38 +261,44 @@ class MainActivity : AppCompatActivity() {
         logOutput.text = ""
 
         val profile = when (profileGroup.checkedRadioButtonId) {
-            R.id.profile_battery -> AppConfig.Profile.BATTERY
             R.id.profile_gaming -> AppConfig.Profile.PERFORMANCE
             else -> AppConfig.Profile.BALANCED
         }
-        val vulkan = vulkanSwitch.isChecked
 
         config.profile = profile
-        config.optimizeVulkan = vulkan
+
+        val shellProfile = profile.value
 
         showToast("Applying ${profile.label} profile...", Toast.LENGTH_SHORT)
 
         orchestrator.runAll(
-            profile = profile,
-            optimizeVulkan = vulkan,
-            onModuleStart = { name ->
-                runOnUiThread { appendLog(">>> [$name]") }
-            },
+            profile = shellProfile,
             onLogLine = { line ->
-                runOnUiThread { appendLog("  $line") }
+                runOnUiThread { appendLog(line) }
             },
-            onModuleComplete = { name, errors ->
-                runOnUiThread {
-                    appendLog("[$name done, errors=$errors]")
-                }
-            },
-            onAllComplete = { summary ->
-                runOnUiThread {
-                    appendLog("=== All done ===")
-                    config.lastLog = summary
-                    isRunning = false
-                    updateTransportStatus()
-                    showToast("Done: ${profile.label} applied", Toast.LENGTH_SHORT)
+            onComplete = {
+                if (config.optimizeVulkan && vulkanProbed) {
+                    runOnUiThread { appendLog(">>> Vulkan native warmup...") }
+                    Thread {
+                        val log = VulkanBridge.optimize(
+                            performance = profile == AppConfig.Profile.PERFORMANCE
+                        )
+                        runOnUiThread {
+                            appendLog(log)
+                            config.lastLog = logOutput.text.toString()
+                            isRunning = false
+                            updateTransportStatus()
+                            showToast("Done: ${profile.label} (Vulkan ON)", Toast.LENGTH_SHORT)
+                        }
+                    }.start()
+                } else {
+                    runOnUiThread {
+                        config.lastLog = logOutput.text.toString()
+                        isRunning = false
+                        updateTransportStatus()
+                        val tag = if (config.optimizeVulkan) " (Vulkan skipped)" else ""
+                        showToast("Done: ${profile.label}$tag", Toast.LENGTH_SHORT)
+                    }
                 }
             }
         )

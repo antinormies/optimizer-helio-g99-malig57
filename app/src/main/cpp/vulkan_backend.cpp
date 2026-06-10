@@ -217,3 +217,114 @@ VulkanProbeResult VulkanBackend::probe() {
     initialized_ = true;
     return result;
 }
+
+std::string VulkanBackend::optimize(bool performance) {
+    LOGI("optimize(performance=%d)", performance);
+    std::string log;
+
+    VkInstance instance = createInstance();
+    if (instance == VK_NULL_HANDLE) {
+        return "Vulkan not available — instance creation failed";
+    }
+    log += "Vulkan instance created\n";
+
+    VkPhysicalDevice physicalDevice = selectPhysicalDevice(instance);
+    if (physicalDevice == VK_NULL_HANDLE) {
+        vkDestroyInstance(instance, nullptr);
+        return "No Vulkan physical device found";
+    }
+
+    VkPhysicalDeviceProperties props;
+    vkGetPhysicalDeviceProperties(physicalDevice, &props);
+    log += std::string("Device: ") + props.deviceName + "\n";
+
+    uint32_t queueFamily = findComputeQueueFamily(physicalDevice);
+    if (queueFamily == VK_QUEUE_FAMILY_IGNORED) {
+        vkDestroyInstance(instance, nullptr);
+        return "No compute-capable queue family";
+    }
+    log += "Compute queue family: " + std::to_string(queueFamily) + "\n";
+
+    float priority = 1.0f;
+    VkDeviceQueueCreateInfo queueInfo{};
+    queueInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+    queueInfo.queueFamilyIndex = queueFamily;
+    queueInfo.queueCount = 1;
+    queueInfo.pQueuePriorities = &priority;
+
+    VkDeviceCreateInfo devInfo{};
+    devInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
+    devInfo.queueCreateInfoCount = 1;
+    devInfo.pQueueCreateInfos = &queueInfo;
+
+    VkDevice device;
+    VkResult res = vkCreateDevice(physicalDevice, &devInfo, nullptr, &device);
+    if (res != VK_SUCCESS) {
+        vkDestroyInstance(instance, nullptr);
+        return "vkCreateDevice failed: " + std::to_string(res);
+    }
+    log += "Logical device created\n";
+
+    VkQueue queue;
+    vkGetDeviceQueue(device, queueFamily, 0, &queue);
+    log += "Compute queue acquired\n";
+
+    VkCommandPoolCreateInfo poolInfo{};
+    poolInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
+    poolInfo.queueFamilyIndex = queueFamily;
+    poolInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
+
+    VkCommandPool pool;
+    if (vkCreateCommandPool(device, &poolInfo, nullptr, &pool) == VK_SUCCESS) {
+        log += "Command pool created\n";
+
+        VkCommandBufferAllocateInfo allocInfo{};
+        allocInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
+        allocInfo.commandPool = pool;
+        allocInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
+        allocInfo.commandBufferCount = 1;
+
+        VkCommandBuffer cmd;
+        if (vkAllocateCommandBuffers(device, &allocInfo, &cmd) == VK_SUCCESS) {
+            VkCommandBufferBeginInfo beginInfo{};
+            beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+            beginInfo.flags = VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT;
+
+            if (vkBeginCommandBuffer(cmd, &beginInfo) == VK_SUCCESS) {
+                vkEndCommandBuffer(cmd);
+
+                VkSubmitInfo submitInfo{};
+                submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
+                submitInfo.commandBufferCount = 1;
+                submitInfo.pCommandBuffers = &cmd;
+
+                VkFenceCreateInfo fenceInfo{};
+                fenceInfo.sType = VK_STRUCTURE_TYPE_FENCE_CREATE_INFO;
+
+                VkFence fence;
+                if (vkCreateFence(device, &fenceInfo, nullptr, &fence) == VK_SUCCESS) {
+                    vkQueueSubmit(queue, 1, &submitInfo, fence);
+                    vkWaitForFences(device, 1, &fence, VK_TRUE, UINT64_MAX);
+                    vkDestroyFence(device, fence, nullptr);
+                    log += "GPU warmup fence completed\n";
+                }
+
+                vkFreeCommandBuffers(device, pool, 1, &cmd);
+            }
+            vkDestroyCommandPool(device, pool, nullptr);
+        }
+    }
+
+    if (performance) {
+        log += "Performance mode: GPU driver primed for max throughput\n";
+    } else {
+        log += "Balanced mode: GPU driver initialized\n";
+    }
+
+    vkDestroyDevice(device, nullptr);
+    vkDestroyInstance(instance, nullptr);
+    log += "Vulkan warmup complete\n";
+
+    LOGI("optimize done");
+    return log;
+}

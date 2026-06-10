@@ -19,5 +19,11 @@ object VulkanBridge {
         return nativeProbeDevice()
     }
 
+    fun optimize(performance: Boolean): String {
+        if (!loaded) return "Native library not loaded"
+        return nativeOptimize(performance)
+    }
+
     private external fun nativeProbeDevice(): VulkanDeviceInfo
+    private external fun nativeOptimize(performance: Boolean): String
 }

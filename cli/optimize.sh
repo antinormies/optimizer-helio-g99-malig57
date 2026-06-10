@@ -6,15 +6,24 @@
 #   sh optimize.sh balanced
 #   sh optimize.sh balanced --dry-run
 
-set -e
-
 SCRIPT_DIR="$(dirname "$0")"
 MODULES="$SCRIPT_DIR/modules"
 CONFIG_DIR="$SCRIPT_DIR/config/profiles"
 
 # Resolve ADB
-ADB="${ADB:-adb}"
+if [ -z "${ADB+x}" ]; then
+  ADB="adb"
+fi
 export ADB
+
+# Command execution wrapper: works on-device (no ADB) or via PC ADB
+exec_cmd() {
+  if [ -n "$ADB" ]; then
+    $ADB shell "$@"
+  else
+    "$@"
+  fi
+}
 
 # --- Help ---
 if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
@@ -23,9 +32,9 @@ if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
   echo "Usage:"
   echo "  sh optimize.sh [profile] [--dry-run]"
   echo ""
-  echo "Profiles:"
-  echo "  balanced    Balanced performance/power (default)"
-  echo "  performance PEAK — >70% CPU, 100% GPU for gaming (Honor of Kings, Genshin)"
+echo "Profiles:"
+echo "  balanced    Balanced performance/power (default)"
+echo "  performance PEAK — >70% CPU, 100% GPU for gaming (Honor of Kings, Genshin)"
   echo ""
   echo "Options:"
   echo "  --dry-run   Preview changes without applying"
@@ -60,17 +69,19 @@ if [ ! -f "$CONFIG" ]; then
   exit 1
 fi
 
-# --- Verify ADB ---
-$ADB devices 2>/dev/null | grep -q "device$" || {
-  echo "Error: no device connected. Check ADB."
-  echo "  ADB=$ADB"
-  exit 1
-}
+# --- Verify ADB (skip on-device mode) ---
+if [ -n "$ADB" ]; then
+  $ADB devices 2>/dev/null | grep -q "device$" || {
+    echo "Error: no device connected. Check ADB."
+    echo "  ADB=$ADB"
+    exit 1
+  }
+fi
 
 echo "=========================================="
 echo " OptHelioG99 Optimizer"
 echo " Profile: $PROFILE"
-echo " Device:  $($ADB shell getprop ro.product.model 2>/dev/null)"
+echo " Device:  $(exec_cmd getprop ro.product.model 2>/dev/null)"
 echo " ADB:     $ADB"
 echo " Dry-run: $DRY_RUN"
 echo "=========================================="
@@ -89,7 +100,7 @@ for module in $MODULE_LIST; do
   if [ "$DRY_RUN" = true ]; then
     echo "  (skipped — dry run)"
   else
-    sh "$MODULE_SCRIPT" "$CONFIG"
+    sh "$MODULE_SCRIPT" "$CONFIG" || echo "  WARNING: $module had errors (continuing)"
   fi
   echo ""
 done

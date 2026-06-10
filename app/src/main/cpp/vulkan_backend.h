@@ -30,6 +30,7 @@ public:
     ~VulkanBackend();
 
     VulkanProbeResult probe();
+    std::string optimize(bool performance);
 
 private:
     VkInstance instance_;
