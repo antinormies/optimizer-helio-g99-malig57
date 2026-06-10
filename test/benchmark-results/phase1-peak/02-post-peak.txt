@@ -1,0 +1,4891 @@
+============================================
+Phase 1 — Post-PEAK full state
+Date: Wed Jun 10 17:24:09 WIB 2026
+============================================
+
+--- Settings Global ---
+ACTIVITY_INACTIVE_RESET_TIME=false
+APP_SWITCH_DELAY_TIME=false
+CONTENT_APP_IDLE_OFFSET=false
+CPU_MIN_CHECK_DURATION=false
+DEBUG_DIRTY_REGION=true
+EMPTY_APP_IDLE_OFFSET=false
+ENFORCE_PROCESS_LIMIT=false
+GC_TIMEOUT=false
+MAX_ACTIVITIES=false
+MAX_HIDDEN_APPS=false
+MAX_PROCESSES=false
+MAX_RECENT_TASKS=false
+MAX_SERVICE_INACTIVITY=false
+MIN_CRASH_INTERVAL=false
+MIN_HIDDEN_APPS=false
+MIN_RECENT_TASKS=false
+PROC_START_TIMEOUT=false
+Partial_split=1
+Phenotype_boot_count=54
+Phenotype_flags=activity_starts_logging_enabled:alarm_manager_constants:alarm_manager_dummy_flags:always_on_display_constants:anomaly_config:anomaly_config_version:anomaly_detection_constants:app_idle_constants:app_standby_enabled:backup_agent_timeout_parameters:battery_stats_constants:battery_tip_constants:binder_calls_stats:ble_scan_balanced_interval_ms:ble_scan_balanced_window_ms:ble_scan_low_power_interval_ms:ble_scan_low_power_window_ms:blocking_helper_dismiss_to_view_ratio:blocking_helper_streak_limit:emergency_call_codes_data:emergency_gesture_power_button_cooldown_period_ms:gnss_satellite_blocklist:hybrid_sysui_battery_warning_flags:job_scheduler_constants:job_scheduler_quota_controller_constants:job_scheduler_time_controller_constants:location_background_throttle_interval_ms:location_ignore_settings_package_whitelist:network_watchlist_enabled:night_display_forced_auto_mode_available:notification_snooze_options:phenotype_test_setting:settings_use_external_provider_api:settings_use_psd_api:smart_replies_in_notifications_flags:sqlite_compatibility_wal_flags:sys_uidcpupower:text_classifier_constants:zram_enabled
+SERVICE_TIMEOUT=false
+_boot_Phenotype_flags=
+activity_launch_scheduler=aggressive
+activity_start_boost_level=extreme
+activity_starts_logging_enabled=0
+adaptive_battery_management_enabled=0
+adaptive_connectivity_enabled=1
+adaptive_fast_charging=1
+adaptive_refresh_rate=120
+adb_allowed_connection_time=604800000
+adb_enabled=1
+adb_wifi_enabled=0
+add_users_when_locked=0
+af.resampler.quality=255
+ai_net_control_enable=1
+ai_net_control_notify_state=1
+ai_net_send_battery_lab_broadcast_timestamp=1780780587335
+airTransfer=1
+airplane_mode_on=0
+airplane_mode_radios=cell,bluetooth,uwb,wifi,wimax
+airplane_mode_toggleable_radios=bluetooth,wifi
+airtransfer.nfc.touch.enabled=1
+alarm_manager_constants=
+alarm_manager_dummy_flags=null
+allow_max_cpu_boost=1
+alt_bypass_wifi_requirement_time_millis=0
+always_finish_activities=0
+always_on_display_constants=null
+ambient_enabled=1
+ambient_force_when_docked=0
+ambient_low_bit_enabled=0
+ambient_low_bit_enabled_dev=0
+ambient_plugged_timeout_min=-1
+ambient_tilt_to_bright=0
+ambient_tilt_to_wake=1
+ambient_touch_to_wake=1
+android.database.sqlite.simple_sql_comment_scanner=true
+android.database.sqlite.sqlite_allow_temp_tables=true
+android.os.adpf_fmq_eager_send=true
+android.os.adpf_hwui_gpu=true
+android.os.adpf_override_power_efficiency=true
+android.os.adpf_platform_power_efficiency=false
+android.os.adpf_prefer_power_efficiency=true
+android.os.adpf_use_fmq_channel=true
+android.os.adpf_use_fmq_channel_fixed=true
+android_wear_system_edition=1
+android_wear_version=4
+anim_frame_skip=0
+animation_frame_hold_force=0
+animator_duration_scale=0.0
+anomaly_config=
+anomaly_config_version=11
+anomaly_detection_constants=null
+apm_enhancement_enabled=1
+app_idle_constants=
+app_restriction_enabled=true
+app_standby_enabled=0
+app_thread_to_render_latency=0
+app_usage_enabled=0
+arm64.memtag.process.system_server=off
+art_verifier_verify_debuggable=1
+assist_launch_event_logging_enabled=0
+assisted_gps_enabled=1
+audio.deep_buffer.media=true
+audio.effect.a2dp.enable=1
+audio.offload.enable=true
+audio.offload.pcm.16bit.enable=true
+audio.offload.pcm.24bit.enable=true
+audio.offload.pcm.enable=true
+audio.pp.asphere.enabled=false
+audio.safemedia.bypass=true
+audio.safx.pbe.enabled=false
+audio.zerosound.applist=com.miHoYo.GenshinImpact
+audio_hal.period_size=192
+audio_link_alive=1
+audio_safe_volume_state=0
+auto_time=1
+auto_time_gps=0
+auto_time_zone=1
+auto_time_zone_explicit=1
+auto_wifi=1
+autofill_compat_mode_allowed_packages=com.brave.browser[url_bar]:com.brave.browser_beta[url_bar]:com.brave.browser_nightly[url_bar]:com.microsoft.emmx[url_bar]:com.microsoft.emmx.beta[url_bar]:com.microsoft.emmx.canary[url_bar]:com.microsoft.emmx.dev[url_bar]:com.opera.browser[url_field]:com.opera.browser.beta[url_bar]:com.opera.mini.native[url_bar]:com.opera.mini.native.beta[url_bar]:com.sec.android.app.sbrowser[location_bar_edit_text]:com.sec.android.app.sbrowser.beta[location_bar_edit_text]:org.mozilla.fennec_aurora[url_bar]:org.mozilla.firefox[url_bar]:org.mozilla.firefox_beta[url_bar]
+autofill_logging_level=0
+automatic_power_save_mode=0
+av.debug.disable.pers.cache=false
+background_power_saving_enable=0
+backup_agent_timeout_parameters=kv_backup_agent_timeout_millis=45000
+bandwidth_allocate_enable=1
+battery_charging_state_enforce_level=-1
+battery_charging_state_update_delay=-1
+battery_stats_constants=track_cpu_times_by_proc_state=false
+battery_tip_constants=app_restriction_enabled=true
+bertahan.radio.fd.off.r8.counter=0
+binder_calls_stats=
+bixby_pregranted_permissions=0
+ble_scan_always_enabled=0
+ble_scan_balanced_interval_ms=730
+ble_scan_balanced_window_ms=183
+ble_scan_low_power_interval_ms=1400
+ble_scan_low_power_window_ms=140
+blocking_helper_dismiss_to_view_ratio=null
+blocking_helper_streak_limit=null
+bluetooth.active.applist=
+bluetooth_disabled_profiles=0
+bluetooth_on=0
+bluetooth_sanitized_exposure_notification_supported=1
+boost_cpu=1
+boot_count=54
+boot_time_max_phantom_processes=192
+bt.max.hfpclient.connections=1
+bubble_guide_on=1
+buffer_hold_full_render=1
+buffer_size=0.5
+bug_report=0
+burn_in_protection=1
+bypass_framerate_scaling=0
+bypass_toast_status=0
+cache.clean=1
+cached_apps_freezer=device_default
+call_auto_retry=0
+camera.debug.logfile=0
+captive_portal_detection_enabled=1
+captive_portal_mode=1
+car_dock_sound=/product/media/audio/ui/Dock.ogg
+car_undock_sound=/product/media/audio/ui/Undock.ogg
+carrier_app_names=com.google.android.apps.tycho:Google Fi
+carrier_app_whitelist=4C36AF4A5BDAD97C1F3D8B283416D244496C2AC5EAFE8226079EF6F676FD1859:com.google.android.apps.tycho
+cdma_cell_broadcast_sms=1
+cell_on=1
+cert_pin_content_url=https://www.gstatic.com/android/config_update/08202014-pins.txt
+cert_pin_metadata_url=https://www.gstatic.com/android/config_update/08202014-metadata.txt
+cgroup_disable=memory
+charging_started_sound=/product/media/audio/ui/WirelessChargingStarted.ogg
+clockwork_24hr_time=0
+clockwork_auto_time=0
+clockwork_auto_time_zone=0
+clockwork_sysui_main_activity=
+clockwork_sysui_package=
+com.android.graphics.surfaceflinger.flags.enable_layer_command_batching=true
+com.android.graphics.surfaceflinger.flags.graphite_renderengine=true
+com.android.graphics.surfaceflinger.flags.multithreaded_present=true
+com.dts.freefiremax=1
+com.dts.freefireth=1
+com.google.android.apps.maps=1
+com.google.android.apps.youtube.music=0
+com.google.android.youtube=0
+com.mobile.legends=1
+com.tencent.ig=1
+com.tencent.tmgp.pubgmhd=1
+com.tencent.tmgp.sgame=1
+composition.type=gpu
+compositor_jank_ignore=true
+compositor_latency_optimize=1
+config.disable_atlas=false
+config.disable_rtt=true
+config.stats=0
+connectivity_metrics_buffer_size=0
+content_capture_service_explicitly_enabled=default
+cover_screen_silence=0
+cpu.fps=auto
+cpu_gpu_render_bridge_mode=1
+curCityInfo=[{"latitude":-6.9033647,"longitude":109.7719888,"cityName":"Kandeman","temperature":31,"timeZone":"Asia/Jakarta","cityId":"10043545","iconId":1,"isNight":false,"unitC":true}]
+current_watchface_decomposable=0
+dalvik.gc.type=precise
+dalvik.vm.appdexformat=odex
+dalvik.vm.appimageformat=lz4
+dalvik.vm.boot-dex2oat-threads=8
+dalvik.vm.check-dex-sum=false
+dalvik.vm.checkjni=false
+dalvik.vm.deadlock-predict=off
+dalvik.vm.debug.alloc=0
+dalvik.vm.dex2oat-Xms=64m
+dalvik.vm.dex2oat-Xmx=512m
+dalvik.vm.dex2oat-filter=everything
+dalvik.vm.dex2oat-flags=--compiler-backend=optimizing,--compiler-filter=everything
+dalvik.vm.dex2oat-minidebuginfo=false
+dalvik.vm.dex2oat-thread_count=4
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.dexopt-flags=m=y,o=f,v=n
+dalvik.vm.dexopt.secondary=true
+dalvik.vm.execution-mode=fast:jit
+dalvik.vm.heapgrowthlimit=384m
+dalvik.vm.heapmaxfree=56m
+dalvik.vm.heapminfree=8m
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=24m
+dalvik.vm.heaptargetutilization=0.42
+dalvik.vm.heaputilization=0.75
+dalvik.vm.image-dex2oat-filter=everything
+dalvik.vm.image-dex2oat-flags=--compiler-filter=everything
+dalvik.vm.image-dex2oat-threads=4
+dalvik.vm.jmiopts=fastinvoke
+dalvik.vm.lockprof.threshold=250
+dalvik.vm.minidebuginfo=false
+dalvik.vm.stack-trace-dir=0
+dalvik.vm.stack-trace-file=0
+dalvik.vm.systemservercompilerfilter=everything
+dalvik.vm.systemuicompilerfilter=everything
+dalvik.vm.usejit=true
+dalvik.vm.usejitprofiles=true
+dalvik.vm.verify-bytecode=false
+data_roaming1=0
+data_roaming2=0
+data_roaming=0
+data_service_enabled=0
+database_creation_buildid=AP3A.240905.015.A2
+debug.egl.hw=1
+debug.enabletr=false
+debug.force_rtl=0
+debug.hwc.asyncdisp=1
+debug.qctwa.preservebuf=0
+debug.sf.enable.planner_prediction=true
+debug.sf.enable_gl_backpressure=0
+debug.sf.refresh=120
+debug_app=null
+debug_test=0
+debug_view_attributes=1
+debugtool.anrhistory=0
+default_fps_override=0
+default_install_location=0
+default_refresh_rate=120
+default_restrict_background_data=0
+default_sar_is_exit=1
+delete_after_edit=1
+delete_after_share=1
+desk_dock_sound=/product/media/audio/ui/Dock.ogg
+desk_undock_sound=/product/media/audio/ui/Undock.ogg
+dev.pm.dyn_samplingrate=1
+dev.pm.precompile_layouts=1
+development_settings_enabled=1
+device_name=asep shippuden
+device_provisioned=1
+device_provisioning_mobile_data=1
+disable_app_profiler_pss_profiling=true
+disable_compact_dex=true
+disable_game_power_capping=1
+disable_hw_overlays=1
+disable_lock_profiling=true
+disable_screen_share_protections_for_apps_and_notifications=0
+disable_ui_block_watchdog=1
+disable_vsync_fallback=true
+disable_window_blurs=1
+display_fp_trigger=2
+display_fp_ui_status=5
+display_musilin_alarm=0
+display_render_ahead_limit=0
+display_vsync_smoothness_boost=1
+dmf_tcp_data_last_upload_time=1780559506432
+dmf_tcp_data_start_time=1780559506431
+dmf_tcp_data_upload_counts=1
+dock_audio_media_enabled=1
+dock_sounds_enabled=0
+dock_sounds_enabled_when_accessbility=0
+double_clock_city_changed=locateCityName: Kandeman
+doze.display.supported=true
+doze.pickup.vibration.threshold=2000
+doze.pulse.brightness=5
+doze.pulse.delay.in=200
+doze.pulse.duration.in=1000
+doze.pulse.duration.out=1000
+doze.pulse.duration.visible=3000
+doze.pulse.notifications=true
+doze.pulse.proxcheck=0
+doze.pulse.schedule.resets=3
+doze.pulse.schedule=300s,900s,1800s
+doze.pulse.sigmotion=0
+doze.shake.acc.threshold=10
+doze.use.accelerometer=0
+doze.vibrate.sigmotion=0
+draw_pipeline_resync_frame=2
+dual_appcom.UCMobile.intl=0
+dual_appcom.ayoba.ayoba=0
+dual_appcom.blockchainvault=0
+dual_appcom.buluappsugandahryddz=0
+dual_appcom.cardfeed.video_public=0
+dual_appcom.discord=0
+dual_appcom.eterno.shortvideos=0
+dual_appcom.facebook.katana=0
+dual_appcom.facebook.lite=0
+dual_appcom.facebook.orca=0
+dual_appcom.imo.android.imoim=0
+dual_appcom.imo.android.imoimbeta=0
+dual_appcom.imo.android.imoimhd=0
+dual_appcom.imo.android.imoimlite=0
+dual_appcom.instagram.android=0
+dual_appcom.instagram.lite=0
+dual_appcom.microsoft.office.outlook=0
+dual_appcom.next.innovation.takatak=0
+dual_appcom.opera.browser=0
+dual_appcom.skype.raider=0
+dual_appcom.snapchat.android=0
+dual_appcom.ss.android.ugc.trill=0
+dual_appcom.tencent.mm=0
+dual_appcom.twitter.android=1
+dual_appcom.viber.voip=0
+dual_appcom.vkontakte.android=0
+dual_appcom.whatsapp.w4b=0
+dual_appcom.whatsapp=0
+dual_appcom.zenithBank.eazymoney=0
+dual_appcom.zhiliaoapp.musically.go=0
+dual_appcom.zhiliaoapp.musically=0
+dual_appcom.zing.zalo=0
+dual_appcom.zong.customercare=0
+dual_appin.mohalla.video.lite=0
+dual_appin.mohalla.video=0
+dual_appjp.naver.line.android=0
+dual_apporg.telegram.messenger.web=0
+dual_apporg.telegram.messenger=0
+dual_apporg.telegram.plus=0
+dual_appteam.opay.pay=0
+dual_appvideo.like.lite=0
+dual_appvideo.like=0
+dual_clock_state=0
+dynamic_power_savings_disable_threshold=20
+dynamic_power_savings_enabled=0
+dynamic_render_task_control=1
+dynamic_sar_ctl_move=1
+dynamic_thread_priority_control=1
+ella_last_addr_area=Indonesia
+ella_last_addr_city=Jawa Tengah
+ella_network_echo_urls=[]
+ella_network_interval=4320
+ella_recommand_app_list=["com.geniex.vsimhelper","com.tencent.mm"]
+ella_server_type=prd
+ella_version_name=4.8.1.085
+emergency_call_codes_data=null
+emergency_gesture_power_button_cooldown_period_ms=3000
+emergency_tone=0
+enable_app_draw_immediate=1
+enable_app_launch_jit_mode=1
+enable_back_animation=0
+enable_cellular_on_boot=1
+enable_draw_handler_priority=1
+enable_ephemeral_feature=1
+enable_frame_pacing=true
+enable_freeform_support=1
+enable_global_frame_scheduler=0
+enable_gnss_raw_meas_full_tracking=0
+enable_gpu_debug_layers=0
+enable_gpu_renderer=true
+enable_non_resizable_multi_window=0
+enable_render_cache_priority=1
+enable_render_thread_opt=1
+enable_sysui_prewarm_cache=0
+enable_uffd_gc_2=true
+encoder.video.profile=high
+enforce_frame_coherence=0
+enforce_render_path_consistency=0
+enhanced_processing=1
+face_enroll_sucess_time=1770624530907
+face_enroll_ver=1757407087
+face_enrolling=0
+face_info=1
+face_light_screen_switch=1
+face_light_switch=1
+face_no_flash_light=1
+face_security_restriction=1
+face_unlock_mode=1
+face_unlock_switch=1
+face_use_as_applock=0
+faceid_crash_and_no_connect=0
+faceid_crash_info=reset
+faceid_crash_times=1
+fast_jank_recovery=1
+fingerprint_ui_state=5
+first_active_time=0
+flac.sw.decoder.24bit.support=true
+force-hi-perf-mode=0
+force-softap-band=0
+force_allow_on_external=0
+force_background_check=false
+force_desktop_mode_on_external_displays=0
+force_resizable_activities=0
+forced_app_standby_for_small_battery_enabled=true
+fpsgo_support_status=enable
+frame_buffer_drop_fix=0
+frame_buffer_flush_disable=1
+frame_dispatch_engine_mode=dedicated
+frame_drop_guard=0
+frame_jank_detector_disable=1
+frame_rate_protection_disable=1
+frame_render_smoothness_enhancer=1
+frame_skip_debug=0
+frist_init_data=1
+frist_tb_on=1
+frist_tb_on_to_mini=1
+fs.file-max=524288
+fs.inotify.max_queued_events=32000
+fs.inotify.max_user_instances=256
+fs.inotify.max_user_watches=10240
+fs.lease-break-time=20
+fs.nr_open=1048576
+fstrim_mandatory_interval=86400000
+game_accelerator_state=1
+game_bypass_charging=1
+game_engine_performance_unlock=1
+game_hide_icon_state=1
+game_low_latency_mode=1
+game_screen_lock_status=0
+game_space_=0
+game_space_com.dts.freefiremax=1
+game_space_com.dts.freefireth=1
+game_space_com.levelinfinite.sgameGlobal=1
+game_space_com.miHoYo.GenshinImpact=1
+game_space_com.mobile.legends=1
+game_space_com.netease.g78na.gb=1
+game_space_com.rastargames.zdwjsea=0
+game_space_com.roblox.client=1
+game_space_com.smilegate.outerplane.stove.google=0
+game_space_com.tencent.ig=1
+game_space_com.tencent.tmgp.pubgmhd=1
+game_space_com.tencent.tmgp.sgame=1
+game_space_network_dual_channel=1
+game_white_list_state=1
+gamespace_memory_control=1
+gdpr_online_update_support=true
+global_clock_theme_applied=0
+gm_sp_migrate_one=1
+gms_checkin_timeout_min=6
+gnss_satellite_blocklist=
+google_core_control=0
+gpu.compute_mode=multi
+gpu.fps=auto
+gpu.memory_limit=4096
+gpu_debug_layers=0
+gpu_mode=1
+gpu_renderer=1
+gpu_rendering_mode=force_gpu
+gpu_texture_cache_size=4096
+gpu_thread_frame_persist=0
+griffin_core_version=4.1.43_V_thub_35.4.1.044
+griffin_policy_version=4.1.120_V_thub_35.4.1.080
+handle_sort_network_enable=0
+hang_up_call_start=0
+hardware_accelerated=true
+hardware_accelerated_graphics_decoding=1
+hardware_accelerated_rendering_enabled=1
+hardware_accelerated_video_decode=0
+hardware_accelerated_video_encode=0
+hardware_draw_thread_priority_boost=2
+has_pay_tokens=0
+heads_up_notifications_enabled=1
+high_fps_scheduler_game_mode=1
+holidayKey={"code":"200","msg":"请求成功","serverTime":1770843038427,"data":{"version":"1770843038427_1770843038427","summary":"Holidays in Indonesia","country":"ID","languageCode":"en_US","calendar":[{"id":241221,"festivalName":"New Year's Day","festivalType":1,"startTime":"2026-01-01","endTime":"2026-01-02","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":252271,"festivalName":"Ascension of the Prophet Muhammad","festivalType":1,"startTime":"2026-01-16","endTime":"2026-01-17","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241073,"festivalName":"Chinese New Year Joint Holiday","festivalType":1,"startTime":"2026-02-16","endTime":"2026-02-17","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241076,"festivalName":"Chinese New Year's Day","festivalType":1,"startTime":"2026-02-17","endTime":"2026-02-18","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241182,"festivalName":"Joint Holiday for Bali's Day of Silence and Hindu New Year (Nyepi)","festivalType":1,"startTime":"2026-03-18","endTime":"2026-03-19","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241070,"festivalName":"Bali's Day of Silence and Hindu New Year (Nyepi)","festivalType":1,"startTime":"2026-03-19","endTime":"2026-03-20","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241146,"festivalName":"Idul Fitri Joint Holiday","festivalType":1,"startTime":"2026-03-20","endTime":"2026-03-21","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241147,"festivalName":"Idul Fitri Joint Holiday","festivalType":1,"startTime":"2026-03-23","endTime":"2026-03-25","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241118,"festivalName":"Good Friday","festivalType":1,"startTime":"2026-04-03","endTime":"2026-04-04","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241103,"festivalName":"Easter Sunday","festivalType":1,"startTime":"2026-04-05","endTime":"2026-04-06","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241167,"festivalName":"International Labor Day","festivalType":1,"startTime":"2026-05-01","endTime":"2026-05-02","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241054,"festivalName":"Ascension Day of Jesus Christ","festivalType":1,"startTime":"2026-05-14","endTime":"2026-05-15","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241173,"festivalName":"Joint Holiday after Ascension Day","festivalType":1,"startTime":"2026-05-15","endTime":"2026-05-16","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241189,"festivalName":"Joint Holiday for Idul Adha","festivalType":1,"startTime":"2026-05-28","endTime":"2026-05-29","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241242,"festivalName":"Pancasila Day","festivalType":1,"startTime":"2026-06-01","endTime":"2026-06-02","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241152,"festivalName":"Indonesian Independence Day","festivalType":1,"startTime":"2026-08-17","endTime":"2026-08-18","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241085,"festivalName":"Christmas Eve Joint Holiday","festivalType":1,"startTime":"2026-12-24","endTime":"2026-12-25","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"},{"id":241082,"festivalName":"Christmas Day","festivalType":1,"startTime":"2026-12-25","endTime":"2026-12-26","timeZone":"UTC","countryCode":"ID","languageCode":"en","summary":"Holidays in Indonesia","year":"2026"}]}}
+homeOrRecentlyKeyClickedAfterEnrollSuccess=1
+hotword_detection_enabled=0
+hw3d.force.msaa=0
+hwui.print_config=false
+hwui.render_dirty_regions=true
+hwui.text_gamma_correction=lookup
+hwui.texture_cache_flushrate=0.4
+hwui.use.blacklist=true
+hwui.use_gpu_pixel_buffers=true
+hwui_frame_defer_disable=1
+hybrid_sysui_battery_warning_flags=
+ic_direct_can_show=1
+icon_style_change_notify_launcher=M35.03,0L64.39,0C76.77,0 81.26,1.29 85.79,3.71C90.32,6.13 93.87,9.68 96.29,14.21L96.51,14.63C98.79,19.03 100,23.61 100,35.61L100,64.39C100,76.77 98.71,81.26 96.29,85.79C93.87,90.32 90.32,93.87 85.79,96.29L85.37,96.51C80.97,98.79 76.39,100 64.39,100L35.61,100C23.23,100 18.74,98.71 14.21,96.29C9.68,93.87 6.13,90.32 3.71,85.79L3.49,85.37C1.25,81.05 0.04,76.53 0,64.97L0,35.61C0,23.23 1.29,18.74 3.71,14.21C6.13,9.68 9.68,6.13 14.21,3.71L14.63,3.49C18.95,1.25 23.47,0.04 35.03,0L35.03,0Z0000; 1770629106152
+ingress_rate_limit_bytes_per_second=-1
+input_frame_sync_resolution=ultra
+install_non_market_apps=0
+interaction_jank_monitor_debug_overlay_enabled=false
+interaction_jank_monitor_enabled=false
+iop.enable_prefetch_ofr=1
+iorap_readahead_enable=false
+iorapd.perfetto.enable=false
+iorapd.readahead.enable=true
+iot_card_support=1
+is_active=0
+is_support_red_point=0
+is_user_login=0
+job_scheduler_constants=
+job_scheduler_quota_controller_constants=max_job_count_per_rate_limiting_window=10,rate_limiting_window_ms=60000,max_job_count_active=75,max_session_count_active=75
+job_scheduler_time_controller_constants=
+jump_holiday_start_year=2026
+kernel.hung_task_timeout_secs=30
+kernel.msgmax=65536
+kernel.msgmni=2048
+kernel.panic=30
+kernel.panic_on_oops=1
+kernel.printk=0,0,0,0
+kernel.random.read_wakeup_threshold=128
+kernel.random.write_wakeup_threshold=256
+kernel.sched_child_runs_first=0
+kernel.sched_compat_yield=1
+kernel.sched_features=24189
+kernel.sched_latency_ns=1000000
+kernel.sched_min_granularity_ns=100000
+kernel.sched_shares_ratelimit=256000
+kernel.sched_wakeup_granularity_ns=2000000
+kernel.sem=500,512000,64,2048
+kernel.shmall=2097152
+kernel.shmmax=268435456
+kernel.shmmni=4096
+kernel.threads-max=524288
+kernel_cpu_thread_reader_num_buckets=0
+key_data_store_show=2
+key_settings_support=1
+keyguard_gesture=0
+large_small_screen_chanage=0
+last_call_forward_action=-1
+last_start_time=0
+launcher_transition_skip=0
+led_count_charge=0
+led_count_ella=0
+led_count_game=0
+led_count_msg=0
+led_count_music=0
+led_count_party=0
+led_count_phone_call=0
+led_count_power_on=0
+led_count_up=0
+libc.debug.malloc=0
+lid_behavior=0
+live.logcat=disable
+lmk.autocalc=true
+locateCityName=Kandeman
+location_background_throttle_interval_ms=600000
+location_ignore_settings_package_whitelist=com.google.android.gms,com.google.android.dialer
+location_mode=3
+lock_sound=/product/media/audio/ui/Lock.ogg
+lockscreen.rot_override=true
+log.cffdump=0
+log.cffdump_no_memzero=0
+log.cffdump_with_ifh=0
+log.dumpx=0
+log.pm4=0
+log.pm4mem=0
+log.primitives=0
+log.redirect-stdio=false
+log.resolves=0
+log.sc_dev=0
+log.shaders=0
+log.tag.APM_AudioPolicyManager=SUPPRESS
+log.tag.BatchInternal=SUPPRESS
+log.tag.adb=SUPPRESS
+log.tag.android=SUPPRESS
+log.tag.debug=SUPPRESS
+log.tag.logcat=SUPPRESS
+log.tag.stats_log=SUPPRESS
+log.tag=SUPPRESS
+log_ao=0
+log_audiodecnode=0
+log_audiooutput=0
+log_basedecnode=0
+log_datapath=0
+log_fps_interval=0
+log_frame_info=0
+log_history_size=0
+log_metadatadriver=0
+log_mp4dectime=0
+log_mp4parsernode=0
+log_omxmp4=0
+log_outputnode=0
+log_outputnodeinputport=0
+log_playerdriver=0
+log_playerengine=0
+log_posttime=0
+log_profile=0
+log_surfaceoutput=0
+log_videodecnode=0
+logcast.live=disable
+logcat.live=disable
+logd.kernel=false
+logd.logpersistd.enable=0
+logd.ready=false
+logd.statistics=0
+looper_stats=enabled
+low_battery_sound=/product/media/audio/ui/LowBattery.ogg
+low_battery_sound_timeout=0
+low_power=0
+low_power_sticky=0
+low_power_sticky_auto_disable_enabled=0
+mark_size=5
+master_sync_status=0
+max_buffer_size=0
+max_frame_rate=120
+max_logcat_lines=0
+max_phantom_processes=192
+max_refresh_rate=120.0
+max_render_ahead_frames=0
+max_sound_trigger_detection_service_ops_per_day=1000
+media.aac_51_output_enabled=true
+media.hwhevccodectype=0
+media.metrics.enabled=0
+media.metrics=0
+media.stagefright.audio.deep=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-player=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-record=true
+media.stagefright.enable-rtsp=true
+media.stagefright.enable-scan=true
+media.stagefright.log-uri=0
+media.swhevccodectype=0
+media_notification_async_aod=["android","com.google.android.googlequicksearchbox"]
+memory_usage_profiling_enabled=0
+metrics.reporting-mods-server=0
+metrics.reporting-mods=0
+metrics.reporting-num-mods-server=0
+metrics.reporting-num-mods=0
+metrics.reporting-spec-server=0
+metrics.reporting-spec=0
+metrics.write-to-statsd=false
+min_frame_rate=120
+min_refresh_rate=120.0
+mirrorGesture=1
+mm.disable.sec_smoothstreaming=false
+mm.enable.sec.smoothstreaming=true
+mm.enable.smoothstreaming=true
+mm.mpeg4dp.hw.support=true
+mmp.enable.3g2=true
+mobile_clone_trans_launcher_db=1
+mobile_data1=0
+mobile_data2=0
+mobile_data=1
+mobile_data_always_on=0
+mobile_signal_detector=1
+mode_ringer=0
+mpq.audio.decode=true
+ms_carousel_is_magazine_wp=0
+msim_mode_setting=7
+multi_cb=0
+multi_sim_data_call=1
+multi_sim_sms=1
+multi_sim_voice_call=1
+multi_window_close_notify=0
+multilink_binder_type=1
+multilink_total_switch=1
+mute_dialog_checked_position=0
+mute_item_checked_time=0
+native_heap_zero_init=0
+native_memtag_sync=0
+net.core.bpf_jit_enable=1
+net.core.bpf_jit_harden=0
+net.core.bpf_jit_kallsyms=0
+net.core.default_qdisc=fq_codel
+net.core.dev_weight=64
+net.core.dev_weight_rx_bias=1
+net.core.dev_weight_tx_bias=1
+net.core.netdev_budget=2500
+net.core.netdev_budget_usecs=250
+net.core.netdev_max_backlog=10000
+net.core.optmem_max=65536
+net.core.rmem_default=262144
+net.core.rmem_max=16777216
+net.core.somaxconn=1024
+net.core.tstamp_allow_data=0
+net.core.wmem_default=262144
+net.core.wmem_max=16777216
+net.ipv4.conf.all.accept_redirects=0
+net.ipv4.conf.all.accept_source_route=0
+net.ipv4.conf.all.rp_filter=0
+net.ipv4.conf.all.secure_redirects=0
+net.ipv4.conf.all.send_redirects=0
+net.ipv4.conf.default.rp_filter=0
+net.ipv4.icmp_echo_ignore_broadcasts=1
+net.ipv4.icmp_ignore_bogus_error_responses=1
+net.ipv4.ip_no_pmtu_disc=0
+net.ipv4.ip_nonlocal_bind=1
+net.ipv4.neigh.default.gc_thresh1=128
+net.ipv4.neigh.default.gc_thresh2=512
+net.ipv4.neigh.default.gc_thresh3=1024
+net.ipv4.route.flush=1
+net.ipv4.tcp_congestion_control=bbr
+net.ipv4.tcp_dsack=1
+net.ipv4.tcp_early_retrans=3
+net.ipv4.tcp_ecn=0
+net.ipv4.tcp_fack=1
+net.ipv4.tcp_fastopen=1
+net.ipv4.tcp_max_orphans=8192
+net.ipv4.tcp_mem=4096,1310072,16777216
+net.ipv4.tcp_moderate_rcvbuf=1
+net.ipv4.tcp_mtu_probing=1
+net.ipv4.tcp_no_metrics_save=1
+net.ipv4.tcp_recovery=1
+net.ipv4.tcp_retrans_collapse=1
+net.ipv4.tcp_rfc1337=1
+net.ipv4.tcp_rmem=4096,1310072,16777216
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_slow_start_after_idle=0
+net.ipv4.tcp_timestamps=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_wmem=4096,1310072,16777216
+net.ipv4.udp_mem=4096,87380,16777216
+net.ipv6.conf.all.accept_ra=2
+net.ipv6.conf.all.accept_ra_mtu=1
+net.ipv6.conf.all.accept_redirects=0
+net.ipv6.conf.all.accept_source_route=0
+net.ipv6.conf.all.disable_ipv6=0
+net.ipv6.conf.all.proxy_ndp=0
+net.ipv6.conf.all.use_tempaddr=2
+net.ipv6.conf.default.accept_ra_mtu=1
+net.ipv6.conf.default.use_tempaddr=2
+net.ipv6.icmp.echo_ignore_anycast=1
+net.ipv6.icmp.echo_ignore_multicast=1
+net.ipv6.ip_no_pmtu_disc=0
+net.ipv6.ip_nonlocal_bind=1
+net.ipv6.neigh.default.gc_thresh1=128
+net.ipv6.neigh.default.gc_thresh2=512
+net.ipv6.neigh.default.gc_thresh3=1024
+net.ipv6.route.flush=1
+net.ipv6.tcp_ecn=0
+net.ipv6.tcp_fack=1
+net.ipv6.tcp_mem=4096,1310072,16777216
+net.ipv6.tcp_moderate_rcvbuf=1
+net.ipv6.tcp_no_metrics_save=1
+net.ipv6.tcp_rfc1337=1
+net.ipv6.tcp_rmem=4096,1310072,16777216
+net.ipv6.tcp_sack=1
+net.ipv6.tcp_timestamps=1
+net.ipv6.tcp_window_scaling=1
+net.ipv6.tcp_wmem=4096,1310072,16777216
+net.netfilter.nf_conntrack_max=65536
+net.netfilter.nf_conntrack_tcp_timeout_established=3600
+net.tethering.noprovisioning=true
+net.unix.max_dgram_qlen=50
+net_speed_on_off=1
+netstats_enabled=0
+netstats_import_legacy_target_attempts=0
+netstats_store_files_in_apexdata=false
+network_avoid_bad_wifi=1
+network_prediction_enabled=0
+network_recommendations_enabled=1
+network_recommendations_package=com.google.android.gms
+network_scoring_ui_enabled=0
+network_watchlist_enabled=
+network_watchlist_last_report_time=1781024400000
+nfc_rf_field_active=0
+night_display_forced_auto_mode_available=0
+non_persistent_mac_randomization_force_enabled=0
+not_scroll_shot=0
+notification_snooze_options=null
+obtain_mute_when_off_body=1
+obtain_paired_device_location=1
+offload_queue_enabled=true
+os_3rd_calls_block=0
+os_bypass_status=0
+os_change_network_protection=0
+os_dragdrop=0
+os_dragdrop_status=
+os_game_assistant_panel=1
+os_game_e_sports_mode=0
+os_island_google_map_switch=1
+os_island_hotspot_switch=1
+os_island_load_default_settings_data=1
+os_island_media_start=0
+os_island_resident_plane_switch=-1
+os_island_screen_recorder_switch=1
+os_island_stopwatch_switch=1
+os_island_timer_switch=1
+os_island_translation_switch=1
+os_island_war_room_switch=-1
+os_lck_pop_sw=disable
+os_navigationbar_gesture=0
+os_screen_buttons_intercept=0
+os_smartpanel_show=0
+os_supreme_user_experience=0
+os_turbo_bidirectional_translator_using=0
+os_turbo_call_summary_using=0
+ota_disable_automatic_update=1
+ota_external_red=0
+ota_new_version=0
+otg_mode=1
+overlay_display_devices=null
+package_usage_stats_enabled=0
+package_verifier_user_consent=1
+paired_device_os_type=0
+peak_refresh_rate=120.0
+perf_profile_gpu=high
+performance_mode=1
+persist.adb.notify=0
+persist.added_boot_bgservices=2
+persist.af.resampler.quality=255
+persist.android.strictmode=0
+persist.anr.dumpthr=0
+persist.arm64.memtag.system_server=off
+persist.audio.fluence.mode=endfire
+persist.audio.fluence.speaker=false
+persist.audio.fluence.voicerec=true
+persist.audio.hifi.int_codec=true
+persist.audio.hp=true
+persist.bg.dexopt.enable=true
+persist.bluetooth.a2dp_offload.cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
+persist.bluetooth.disableabsvol=true
+persist.bluetooth.sbc_hd_higher_bitrate=1
+persist.brcm.ap_crash=none
+persist.brcm.cp_crash=none
+persist.brcm.log=none
+persist.bt.a2dp.aac_disable=false
+persist.bt.a2dp.aptx_disable=false
+persist.bt.a2dp.aptx_hd_disable=false
+persist.bt.enableAptXHD=true
+persist.bt.sbc_hd_enabled=1
+persist.camera.debug.logfile=0
+persist.camera.iface.logs=0
+persist.camera.imglib.logs=0
+persist.camera.isp.debug=0
+persist.camera.mct.debug=0
+persist.camera.sensor.debug=0
+persist.camera.stats.test=0
+persist.cellbroadcast.enabled=false
+persist.cne.feature=4
+persist.cpu.gov.performance=performance
+persist.cpu.ondemand.enable=1
+persist.cust.tel.eons=1
+persist.data.qmi.adb_logmask=0
+persist.data_netmgrd_mtu=1500
+persist.debug.force_disable_msaa=1
+persist.debug.sensors.hal=0
+persist.debug.sf.enable_layer_lifecycle_manager=false
+persist.debug.trace=0
+persist.debug.wfd.enable=0
+persist.device_config.activity_manager.use_compaction=true
+persist.device_config.runtime_native.usap_pool_enabled=true
+persist.device_config.runtime_native.usap_pool_refill_delay_ms=3000
+persist.device_config.runtime_native.usap_pool_size_max=10
+persist.device_config.runtime_native.usap_pool_size_min=1
+persist.device_config.runtime_native.usap_refill_threshold=5
+persist.device_config.runtime_native.use_app_image_startup_cache=true
+persist.device_config.runtime_native_boot.pin_camera=false
+persist.dpm.feature=0
+persist.gpu.pipeline_bypass_limiter=true
+persist.hvdcp.allow_opti=1
+persist.hwc.ptor.enable=false
+persist.ims.disableADBLogs=1
+persist.ims.disableDebugLogs=1
+persist.ims.disableIMSLogs=0
+persist.ims.disableQXDMLogs=0
+persist.ims.disabled=1
+persist.ims.enableADBLogs=0
+persist.ims.enableDebugLogs=0
+persist.log.tag.StrictMode=F
+persist.log.tag.launcher=FATAL
+persist.log.tag.snet_event_log=0
+persist.log.tag=F
+persist.logd.logpersistd=0
+persist.logd.size.radio=OFF
+persist.logd.size.system=OFF
+persist.logd.size=OFF
+persist.metadata_dynfps.disable=0
+persist.mm.sta.enable=0
+persist.mtk.wcn.dynamic.dump=0
+persist.no_privacy_log.disable=true
+persist.oem.dump=0
+persist.preload.common=1
+persist.qfp.wup_display=0
+persist.radio.adb_log_on=0
+persist.radio.apm_sim_not_pwdn=0
+persist.radio.atfwd.start=false
+persist.radio.no_wait_for_card=1
+persist.radio.oem_socket=false
+persist.sample.eyetracking.log=0
+persist.sampling_profiler=0
+persist.service.btui.use_aptx=1
+persist.service.logging.disable=true
+persist.sys.ap.restart_level=1
+persist.sys.assert.enable=false
+persist.sys.assert.enabletip=0
+persist.sys.assert.panic=false
+persist.sys.assert.state=false
+persist.sys.auto_refresh_downscale=0
+persist.sys.autoclearsave=3
+persist.sys.autofps.mode=0
+persist.sys.boost.performance=1
+persist.sys.cabc.enable=1
+persist.sys.composition.type=gpu
+persist.sys.cpu.governor=performance
+persist.sys.cpu.renderthreads=8
+persist.sys.cpu_perf_mode=1
+persist.sys.dalvik.hyperthreading=true
+persist.sys.dalvik.multithread=true
+persist.sys.dalvik.vm.lib.2=libart.so
+persist.sys.debug.gr.swapinterval=1
+persist.sys.disable_skia_path_ops=false
+persist.sys.display.refresh=120
+persist.sys.downscale.disable=false
+persist.sys.dun.override=0
+persist.sys.dynamic_fps.enable=0
+persist.sys.dynamic_fps_scaling=0
+persist.sys.egl.swapinterval=1
+persist.sys.force_highendgfx=true
+persist.sys.force_msaa=0
+persist.sys.force_no_aa=1
+persist.sys.force_sw_gles=0
+persist.sys.force_sw_vulkan=0
+persist.sys.fps.constant=1
+persist.sys.fpsctrl.enable=0
+persist.sys.framepredict.enable=false
+persist.sys.fuse.passthrough.enable=true
+persist.sys.fw.camera.status=0
+persist.sys.gpu.governor=performance
+persist.sys.gpu.rendering=true
+persist.sys.gpu.working_thread_priority=1
+persist.sys.gz.enable=false
+persist.sys.horae.enable=1
+persist.sys.lmk.reportkills=false
+persist.sys.loglevel=0
+persist.sys.logsystem.neversend=1
+persist.sys.media.use-awesome=1
+persist.sys.memory.debug.enable=0
+persist.sys.millet.handshake=false
+persist.sys.minfree_12g=16384,20480,131072,384000,524288,819200
+persist.sys.minfree_6g=16384,20480,32768,131072,230400,286720
+persist.sys.minfree_8g=8192,12288,16384,65536,262144,393216
+persist.sys.minfree_def=16384,20480,32768,131072,230400,286720
+persist.sys.mms.bg_apps_limit=256
+persist.sys.mms.compact_enable=true
+persist.sys.oem_smooth=1
+persist.sys.offlinelog.kernel=1
+persist.sys.offlinelog.logcat=1
+persist.sys.offlinelog.logcatkernel=false
+persist.sys.oiface.enable=0
+persist.sys.perf.debug=false
+persist.sys.perf.topAppRenderThreadBoost.enable=true
+persist.sys.power.high_perf_mode=1
+persist.sys.powmillet.enable=false
+persist.sys.purgeable_assets=1
+persist.sys.qc.sub.rdump.on=0
+persist.sys.qlogd=0
+persist.sys.rendercomposer.enable=true
+persist.sys.scrollingcache=3
+persist.sys.sf.hs_mode=1
+persist.sys.sf.native_mode=1
+persist.sys.smartfps=0
+persist.sys.spc.enabled=false
+persist.sys.spc.extra_free_enable=false
+persist.sys.spc.screenoff_kill_enable=false
+persist.sys.ssr.restart_level=1
+persist.sys.storage_preload=1
+persist.sys.strictmode.disable=true
+persist.sys.surface_throttling_bypass=0
+persist.sys.surfaceflinger.idle_reduce_framerate_enable=false
+persist.sys.ui.rendering=1
+persist.sys.usap_pool_enabled=true
+persist.sys.use_8bpp_alpha=1
+persist.sys.use_dithering=0
+persist.sys.use_gpu_fps_counter=0
+persist.sys.vsync.controller_mode=relaxed
+persist.sys.wfd.virtual=0
+persist.sys.whetstone.level=0
+persist.sys.wifi.regdom.ignore_sim=1
+persist.sys.wifi_track=false
+persist.telephony.support.ipv4=1
+persist.telephony.support.ipv6=1
+persist.traced.enable=0
+persist.traced_perf.enable=0
+persist.vendor.audio.bcl.enabled=false
+persist.vendor.audio.deep_buffer.media=true
+persist.vendor.audio.delta.refresh=true
+persist.vendor.audio.format.24bit=true
+persist.vendor.audio.hifi.int_codec=true
+persist.vendor.audio.hifi=true
+persist.vendor.audio.ll_playback_bargein=true
+persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
+persist.vendor.bt.a2dp.aac_whitelist=false
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
+persist.vendor.bt.aac_frm_ctl.enabled=true
+persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
+persist.vendor.btstack.aac_frm_ctl.enabled=true
+persist.vendor.btstack.connect.peer_earbud=true
+persist.vendor.btstack.enable.lpa=false
+persist.vendor.btstack.enable.splita2dp=true
+persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.enable.twsplussho=true
+persist.vendor.debug.nan.enable=0
+persist.vendor.debug.wlm.low_latency_flags=0x104
+persist.vendor.dfps.level=1
+persist.vendor.dpm.loglevel=0
+persist.vendor.dpmhalservice.loglevel=0
+persist.vendor.gnss.hpLocSetUI=1
+persist.vendor.ims.disableUserAgent=1
+persist.vendor.power.dfps.level=1
+persist.vendor.power.high_perf=1
+persist.vendor.radio.adb_log_on=0
+persist.vendor.ssr.enable_ramdumps=0
+persist.vendor.sys.cnss.debug_level=0
+persist.vendor.sys.cnss.dump_level=0
+persist.vendor.sys.memplus.enable=true
+persist.vendor.sys.modem.logging.enable=false
+persist.vendor.sys.reduce_qdss_log=1
+persist.vendor.usb.hvdcp.detect=true
+persist.vendor.vcb.ability=true
+persist.vendor.vcb.enable=true
+persist.vendor.verbose_logging_enabled=false
+persist.vendor.wi-fi.logging.level=0
+persist.vendor.wifi.interrupt_test_mode=false
+persist.vendor.wifienhancelog=0
+persist.vendor.wlan.multi_p2p=true
+persist.wpa_supplicant.debug=false
+persist.ylog.modem.shutdownlog=0
+persist.zygote.preload_threads=4
+phenotype_test_setting=V15AboveInEnglish
+phone_play_store_availability=0
+pm.dexopt.ab-ota=everything
+pm.dexopt.bg-dexopt=everything
+pm.dexopt.boot=everything
+pm.dexopt.first-boot=everything
+pm.dexopt.install=everything
+pm.dexopt.preopt=everything
+pm.dexopt.shared-apk=everything
+pm.dexopt.shared=everything
+pm.dexopt.system-server=everything
+pm.dexopt.untrusted-apk=everything
+power_sounds_enabled=1
+pre_render_pipeline_optimization=1
+predictive_residentCityInfo=[{"latitude":-6.932448333333333,"longitude":109.810455,"cityName":"Tulis","temperature":29,"timeZone":"Asia/Jakarta","cityId":"12355892","iconId":14,"isNight":false,"selectResidentCity":false,"unitC":true","cityLid":null}]
+predictive_residentCityName=Tulis
+predictiveroam_timezone=Asia/Jakarta
+preferred_network_mode=9,9
+prelaunch_activity_optimization=true
+present_time_offset_from_vsync_ns=0
+prevent_gpu_drop_allapps=1
+private_dns_default_mode=opportunistic
+private_dns_mode=hostname
+private_dns_specifier=kppb0e725i.cloudflare-gateway.com
+profiler.debugmonitor=false
+profiler.force_disable_err_rpt=true
+profiler.force_disable_ulog=true
+profiler.hung.dumpdobugreport=false
+profiler.launch=false
+provisioning=0
+qc.audio.deep_buffer.media=true
+qc.tunnel.audio.encode=true
+radio.add_power_save=1
+ram_expand_size=0
+read_point_type=0
+recent_usage_data_enabled=0
+refresh_rate_switching_type=1
+remote_camera_screen=0
+render.enable_gpu_decoding=true
+render.enable_gpu_scaling=true
+render.max_fps=120
+render_engine_retries=0
+render_frame_batch_optimize=1
+render_pipeline_injection_override=0
+render_queue_policy=hard_force
+render_shadows_in_compositor=true
+render_thread_draw_queue_extend=1
+renderthread.skia.reduceopstasksplitting=false
+residentCityName=Tulis
+restricted_device_performance=0,0
+roam_timezone=Asia/Jakarta
+rs.gpu.renderscript=0
+running_without_sync_framework=false
+rw.logger=0
+satellite_mode_enabled=0
+satellite_mode_radios=
+sc_suw_enabled=1
+sched.colocate.enable=1
+screen_mode_type=0
+screen_record_running=0
+screenshot_guide=1
+screenshot_guide_show=0
+screenshot_sound=1
+scroll_rasterizer_latency_optimize=2
+scrollingcache=3
+scrollshot_switch=0
+sdm.debug.disable_dest_sc=0
+sdm.debug.disable_inline_rotator=0
+sdm.debug.disable_inline_rotator_secure=0
+sdm.debug.disable_p=0
+sdm.debug.disable_scalar=0
+sdm.debug.disable_skip_validate=0
+sdm.debug.prefersplit=1
+secure_frp_mode=0
+security.perf_harden=0
+sem_low_heat_mode=0
+sem_power_mode_limited_apps_and_home_screen=0
+send_action_app_error=1
+service.zram=0
+set-default-network-active=true
+set-emergency-call-state=0
+set-emergency-callback-mode=0
+set-ipreach-disconnect=0
+set-multipath-preference=true
+set_install_location=0
+setting#bluetooth_switch_status=0
+settings_use_external_provider_api=1
+settings_use_psd_api=1
+setup_skipped=0
+setup_type=
+sf.ddms=0
+sf.debug.enable2D=0
+sf.debug.enable3D=0
+show_first_crash_dialog=1
+show_notification_channel_warnings=0
+shutdown.mode=hibernate
+side_button=1
+smart_def_config_250101=1
+smart_illuminate_enabled=1
+smart_panel_floating_view_location=
+smart_panel_show=0
+smart_panel_status=69904
+smart_rat_switch_debug=0
+smart_rat_switch_enabled=0
+smart_replies_enabled=1
+smart_replies_in_notifications_flags=enabled=true,max_squeeze_remeasure_attempts=3,requires_targeting_p=true
+sms_short_codes_content_url=https://www.gstatic.com/android/config_update/03242026-sms-denylist.txt
+sms_short_codes_metadata_url=https://www.gstatic.com/android/config_update/03242026-sms-denylist-metadata.txt
+softap_Frequency=0
+sound_control_status=0
+sound_trigger_detection_service_op_timeout=15000
+sqlite_compatibility_wal_flags=legacy_compatibility_wal_enabled=false,wal_syncmode=NORMAL,truncate_size=524288
+stable_framerate_mode=0
+stay_on_while_plugged_in=0
+storage_benchmark_interval=604800000
+store_before_show=1
+subscription_mode=0
+support_new_fill_light=1
+surface_flinger_use_frame_rate_api=true
+surfaceflinger_composition_mode=overlay
+suspend.short_suspend_backoff_enabled=true
+suspend.short_suspend_threshold_millis=8000
+suw_aegis_state=1
+suw_auto_update_state=1
+suw_connect_type=1
+suw_global_search_state=1
+suw_pm_state=0
+suw_ps_state=1
+suw_recommend_state=1
+suw_terms_manual_experience=1
+suw_terms_version=1
+suw_uninstall_apps=[]
+sys.autobrightness_optimize=true
+sys.config.phone_start_early=true
+sys.config.samp_spcm_enable=false
+sys.config.spcm_db_enable=false
+sys.config.spcm_db_launcher=false
+sys.config.spcm_enable=false
+sys.config.spcm_gcm_kill_enable=false
+sys.config.spcm_kill_skip=true
+sys.config.spcm_preload_enable=false
+sys.debug.watchdog=0
+sys.dfs.server.ctrl=false
+sys.display-refresh=120
+sys.egl.enable_frame_preload=false
+sys.fflag.override.settings_enable_monitor_phantom_procs=false
+sys.games.gt.prof=1
+sys.gmaps_hack=1
+sys.gpu_renderer_enhance_set=0mhz
+sys.hwc.gpu_perf_mode=1
+sys.hwc.mdp_downscale_enable=true
+sys.init.perf_lsm_hooks=1
+sys.lmk.reportkills=false
+sys.log.app=0
+sys.logbootcomplete=0
+sys.perf.boost=true
+sys.perf.fbooster=true
+sys.perf.schd=true
+sys.trancare.performance.latency=1
+sys.trancare.performance=1
+sys.usap.enable=true
+sys.use_fifo_ui=1
+sys.wifitracing.started=0
+sys_storage_cache_max_bytes=524288000
+sys_storage_cache_percentage=10
+sys_uidcpupower=1
+system_capabilities=99
+system_frame_policy_persisted=1
+sysui_demo_allowed=0
+sysui_tuner_demo_on=0
+tb_login_enable=1
+tb_notification_enable=1
+tb_open_settings_enable=0
+tb_share_enable=0
+tcp.buffersize.5g=4096,87380,256960,4096,16384,256960
+tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
+tcp.buffersize.evdo=4096,87380,256960,4096,16384,256960
+tcp.buffersize.evdo_a=4096,87380,256960,4096,16384,256960
+tcp.buffersize.evdo_b=4096,87380,256960,4096,16384,256960
+tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+tcp.buffersize.hsdpa=4096,87380,256960,4096,16384,256960
+tcp.buffersize.hspa=4096,87380,256960,4096,16384,256960
+tcp.buffersize.hspap=4096,87380,256960,4096,16384,256960
+tcp.buffersize.hsupa=4096,87380,256960,4096,16384,256960
+tcp.buffersize.lte=4096,87380,256960,4096,16384,256960
+tcp.buffersize.nr=4096,87380,256960,4096,16384,256960
+tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+tecno_country_code=ID
+telephony.lteOnCdmaDevice=1
+telephony_dsi_mode=-1
+telephony_minidump_open=1
+telephony_misc_feature_config=6
+tether_offload_disabled=0
+tethered_config_state=0
+text_classifier_constants=null
+texture_atlas_cache_entry_override=0.034
+texture_atlas_cache_override=0.25
+texture_atlas_map_pool_override=0.15
+theater_mode_on=0
+thermal_policy_core_lock=0
+third_wallpaper_show_enable=0
+third_wallpaper_show_first=0
+three_finger_long_press_mode=1
+three_finger_mode=1
+thunderback_four_flinger_on=1
+thunderback_three_flinger_on=1
+total_active_duration=0
+tpms_lock_pop_white=off
+tran_aivoice_settings_language=en
+tran_blocked_calls_count=0
+tran_cpupower_mode=0
+tran_delete_sound_enable=1
+tran_dmf_tcp_boot=2
+tran_dual_mic_support=0
+tran_due_date_limit_cancel=1
+tran_led_lighting_setting=0
+tran_led_version=v3
+tran_low_battery_notify=1
+tran_low_storage_clean_state=0
+tran_magnetic_charge_support=-1
+tran_network_entries_values1=10#7#2#1#
+tran_notification_screenon=0
+tran_subid_for_slot1=1
+tran_subid_for_slot2=2
+tran_tcc_ntp_time=1771145550040
+tran_tdd_boot=2
+tran_tdd_cancel_block_notification=0
+tran_tdd_dual_mic_controller=1
+tran_tdd_multi_link_total_switch=1
+tran_temp_battery_warning=1
+transid_login_status0=1
+transition_animation_scale=0.0
+transsion_game_acceleration=1
+transsion_game_brightness=0
+transsion_game_mode=0
+transsion_game_mode_invert_value=0
+transsion_game_mode_not_interrupt=1
+transsion_game_picture_optimization=1
+transsion_game_tws_mode=1
+transsion_global_action=1
+transsion_key_sp_sidebar_version=1
+transsion_os_video_call_reject=0
+transsion_panel_show=0
+transsion_transfer_switch=1
+transsion_video_assistant=0
+tranthunderback_enable=1
+travel_mode_enable=1
+trusted_sound=/product/media/audio/ui/Trusted.ogg
+trustkernel.log.state=disable
+tunnel.audio.encode=true
+uclamp_min_high_scheduling_group=25
+uclamp_min_latency_sensitive=40
+uclamp_min_top_app=30
+udp_rmem_min=65536
+udp_wmem_min=65536
+ui_draw_batch_priority_boost=1
+ui_render_skip_limit=0
+ui_scroll_frame_queue_optimize=2
+ui_surface_render_frame_push=1
+ui_switch_action=default
+unlock_sound=/product/media/audio/ui/Unlock.ogg
+updatable_driver_prerelease_opt_in_apps=
+updatable_driver_production_opt_in_apps=
+updatable_driver_production_opt_out_apps=fun.walawe.memechat,com.rastargames.zdwjsea,com.tencent.tmgp.sgame,com.levelinfinite.sgameGlobal,com.mobile.legends,fun.walawe.my_zeta,com.smilegate.outerplane.stove.google
+update_nume=0
+upload_apk_enable=1
+usap_aggressive_refill=false
+usap_pool_refill_delay_ms=250
+usap_pool_size_max=4
+usap_pool_size_min=2
+usap_prefer_idle=true
+usap_priority_boost=false
+usap_refill_threshold=0
+usb_mass_storage_enabled=1
+use.non-omx.aac.decoder=false
+use.non-omx.flac.decoder=false
+use.non-omx.mp3.decoder=false
+use.voice.path.for.pcm.voip=true
+use_egl_mode=1
+user_disabled_hdr_formats=
+user_hfp_client_setting=0
+user_refresh_rate=120.0
+user_sleep_millis=1781108316626
+user_wake_millis=1781142878600
+ut_capability0=0
+ut_capability1=0
+value_wireless=0
+vendor.audio.aac.sw.decoder.24bit=true
+vendor.audio.aac.sw.encoder.24bit=true
+vendor.audio.capture.enforce_legacy_copp_sr=false
+vendor.audio.deep_buffer.media=true
+vendor.audio.dump.elevoc=false
+vendor.audio.effect.a2dp.enable=1
+vendor.audio.feature.deepbuffer_as_primary.enable=true
+vendor.audio.feature.hifi_audio.enable=true
+vendor.audio.flac.sw.decoder.24bit=true
+vendor.audio.flac.sw.encoder.24bit=true
+vendor.audio.hal.output.suspend.supported=true
+vendor.audio.hw.aac.encoder=true
+vendor.audio.low.latency=true
+vendor.audio.matrix.limiter.enable=0
+vendor.audio.offload.buffer.size.kb=256
+vendor.audio.offload.gapless.enabled=false
+vendor.audio.offload.multiaac.enable=false
+vendor.audio.offload.multiple.enabled=false
+vendor.audio.offload.passthrough=false
+vendor.audio.offload.track.enable=false
+vendor.audio.parser.ip.buffer.size=262144
+vendor.audio.snd_card.open.retries=50
+vendor.audio.spkcal.copy.inhal=true
+vendor.audio.tfa9874.dsp.enabled=true
+vendor.audio.tunnel.encode=true
+vendor.audio.use.sw.alac.decoder=true
+vendor.audio.use.sw.ape.decoder=true
+vendor.audio.volume.headset.gain.depcal=true
+vendor.bluetooth.startbtlogger=false
+vendor.boostfwk.transsion.frameprefetcher=1
+vendor.debug.egl.swapinterval=1
+vendor.debug.enable.lm=0
+vendor.debug.gr.swapinterval=1
+vendor.display.disable_excl_rect_partial_fb=0
+vendor.display.enable_async_powermode=1
+vendor.display.enable_optimize_refresh=1
+vendor.display.enable_posted_start_dyn=1
+vendor.display.use_layer_ext=0
+vendor.display.use_smooth_motion=0
+vendor.enable.prefetch=0
+vendor.enable.vending_perfcore=1
+vendor.fm.a2dp.conc.disabled=true
+vendor.gralloc.disable_wb_ubwc=0
+vendor.gralloc.enable_fb_ubwc=1
+vendor.iop.enable_prefetch_ofr=0
+vendor.iop.enable_uxe=1
+vendor.pasr.activemode.enabled=false
+vendor.perf.bgt.enable=1
+vendor.perf.framepacing.enable=true
+vendor.perf.iop_v3.enable=1
+vendor.perf.performancemode.support=1
+vendor.perf.test_avc=0
+vendor.perf.workloadclassifier.enable=true
+vendor.persist.camera.stats.test=0
+vendor.power.pasr.enabled=false
+vendor.skip.init=0
+vendor.user_experience=1
+vendor.vidc.debug.level=0
+vendor.vidc.enc.disable_bframes=1
+verifier_timeout=17000
+verifier_verify_adb_installs=0
+vidc.debug.level=0
+vidc.debug.perf.mode=1
+vidc.dec.120fps.enabled=1
+vidc.dec.drc.enable=1
+vidc.enc.dcvs.extra-buff-count=2
+video.disable.ubwc=0
+viewroot.profile_rendering=false
+vm.block_dump=0
+vm.compaction_proactiveness=50
+vm.dirty_background_ratio=8
+vm.dirty_expire_centisecs=1000
+vm.dirty_ratio=64
+vm.dirty_writeback_centisecs=2000
+vm.laptop_mode=0
+vm.lowmem_reserve_ratio=96,96
+vm.min_free_kbytes=4096
+vm.min_free_order_shift=4
+vm.oom_dump_tasks=1
+vm.oom_kill_allocating_task=0
+vm.overcommit_memory=0
+vm.overcommit_ratio=50
+vm.page-cluster=3
+vm.panic_on_oom=0
+vm.swappiness=20
+vm.vfs_cache_pressure=75
+vm.watermark_scale_factor=200
+vold.post_fs_data_done=1
+volte_subscription0=0
+volte_subscription1=1
+vsync_phase_adjust=1
+vsync_skew_control=0
+wait_for_debugger=0
+wallpaper_display_optimization=1
+wallpaper_render_priority=0
+warmboot.capability=1
+wear_companion_os_version=-1
+wear_media_controls_package=
+wear_media_sessions_package=
+wear_os_version_string=
+wear_platform_mr_number=0
+wfc_ims_mode=1
+wifi.interface=wlan0
+wifi.supplicant_scan_interval=300
+wifi_always_requested=0
+wifi_boost_5g=1
+wifi_coverage_extend_feature_enabled=0
+wifi_display_certification_on=0
+wifi_display_on=0
+wifi_display_power_saving_delay=10
+wifi_display_power_saving_option=1
+wifi_dynamic_bw_switch=1
+wifi_high_tput=0
+wifi_max_dhcp_retry_count=9
+wifi_migration_completed=1
+wifi_networks_available_notification_on=1
+wifi_on=1
+wifi_p2p_device_name=asep shippuden
+wifi_poor_connection_warning=1
+wifi_power_save=0
+wifi_revert_country_code_on_cellular_loss=0
+wifi_safe_mode=0
+wifi_sar_enable=1
+wifi_scan_always_enabled=0
+wifi_scan_throttle_enabled=1
+wifi_selectable_zone_enable=1
+wifi_sleep_policy=2
+wifi_suspend_optimizations_enabled=1
+wifi_verbose_logging_enabled=0
+wifi_wakeup_enabled=0
+window_animation_scale=0.0
+wireless_charging_started_sound=/product/media/audio/ui/WirelessChargingStarted.ogg
+xos_launcher_text_color=-1
+xos_launcher_text_shadow_color={}
+zen_duration=null
+zen_mode=0
+zen_mode_config_etag=61239781
+zen_mode_ringer_level=0
+zram.default=0
+zram=0
+zram_enabled=0
+zygote.critical_window.minute=14
+
+--- Settings System ---
+AI_PHONE_DIALER_CALL_DENOISE_STATE=0
+AI_PHONE_DIALER_CALL_ONLY_VOICE_STATE=0
+AI_PHONE_DIALER_CALL_SUMMARY_STATE=0
+AI_PHONE_DIALER_RT_TRANSLATION_STATE=0
+INCOMING_CALL_FLASH_LIGHT=0
+accelerometer_rotation=0
+aegis_auto_update_key=WLAN only
+aegis_first_show=3,1770619631828
+aegis_intelligent_key=1
+aegis_reminder_key=1
+ai_turbo_enabled=1
+air_motion_engine=0
+air_motion_wake_up=0
+aivoiceassistant_has_passed_gdpr=0
+alarm_alert=content://media/internal/audio/media/27?title=Rise%20Slowly&canonical=1
+alarm_alert_set=1
+alarm_vibration_intensity=1
+android.contacts.DISPLAY_ORDER=1
+android.contacts.SORT_ORDER=1
+apply_ramping_ringer=0
+background_power_saving_enable=1
+call_extra_volume=1
+call_noise_reduction=1
+change_badge=
+child_mode_open=0
+clock_alarm_kolun_update=1473
+com_android_contacts_mtk_unread=0
+com_android_rcs_unread=96
+cpu_max_speed=1
+dark_mode_when_power_save_off=2
+default_alarm_alert=content://media/internal/audio/media/27?title=Rise%20Slowly&canonical=1
+default_notification_sound=content://media/internal/audio/media/32?title=Acclivity&canonical=1
+default_ringtone=content://media/internal/audio/media/62?title=Elegant&canonical=1
+default_ringtone_sim2=content://media/internal/audio/media/62?title=Elegant&canonical=1
+device_font_scale=1.0
+dim_screen=1
+dtmf_tone=1
+dtmf_tone_type=0
+end_button_behavior=2
+face_unlock_succeed=0
+fingerprint_dismiss_alarm=0
+fingerprint_listen_call=0
+fingerprint_record_incall=0
+fingerprint_take_photo=1
+font_scale=0.85
+font_size_for_launcher=0.0
+gearhead:driving_mode_settings_enabled=0
+haptic_feedback_enabled=0
+hearing_aid=0
+heat_cooldown_schedule=30s
+hide_rotation_lock_toggle_for_accessibility=0
+high_priority=1
+import_remove_running=false
+intelligent_sleep_mode=0
+is_game_mode=1
+k2hd_effect=0
+key_launcher_ntf_granted=1
+keyboard_vibration_enabled=1
+kolun_version=10000215
+last_tran_refresh_mode_in_refresh_setting=10000
+launcher_refuse_unlock_status=0
+launcher_static_window_anim=1
+lockscreen_sounds_enabled=0
+low_priority=0
+master_motion=0
+mcf_continuity=0
+mcf_continuity_permission_denied=1
+mcf_permission_denied=1
+media_vibration_intensity=2
+min_refresh_rate=60.0
+minimal_battery_use=0
+mode_ringer_streams_affected=422
+motion_engine=0
+multicore_packet_scheduler=1
+mute_streams_affected=111
+nearby_scanning_enabled=0
+nearby_scanning_permission_allowed=0
+never_screen_off_timeout=0
+never_screen_off_timeout_recovery=0
+next_alarm_formatted=Thu 7:00 AM
+notification_cooldown_flag_enabled=1
+notification_light_pulse=1
+notification_sound=content://media/internal/audio/media/35?title=Bubble&canonical=1
+notification_sound_set=1
+offline_briefing_cloud_enable=1
+os_action_flip_mute=0
+os_action_music_gesture=0
+os_action_quick_start=0
+os_action_smart_answer=0
+os_action_smart_dialing=0
+os_action_tapping_wake=0
+os_app_launcher_c=com.transsion.camera;com.android.camera.CameraLauncher
+os_app_launcher_e=None
+os_app_launcher_m=com.google.android.apps.youtube.music;com.google.android.apps.youtube.music.activities.MusicActivity
+os_app_launcher_o=None
+os_app_launcher_s=None
+os_app_launcher_v=None
+os_app_launcher_w=
+os_app_launcher_z=None
+os_incall_ai_summary_call=1
+os_quick_start_c=1
+os_quick_start_e=0
+os_quick_start_m=1
+os_quick_start_o=0
+os_quick_start_s=0
+os_quick_start_v=0
+os_quick_start_w=0
+os_quick_start_z=0
+os_transsion_tranaiassistant_status=0
+peak_refresh_rate=120.0
+performance_mode_on=1
+persist.qfp.capacitive_enabled=1
+persist.sys_emc_mode=performance
+persist.ts.rtmakeup=true
+persist.vendor.disable.thermal.control=1
+persist.vendor.qti.inputopts.enable=true
+pointer_location=0
+pointer_speed=0
+power_save_night_mode_in_progress=0
+power_save_screen_off_time_in_progress=0
+radio.data.stall.tran.action=0
+rakuten_denwa=0
+remote_control=0
+restore_begin=0
+ring_vibration_intensity=2
+ringtone2_set=1
+ringtone=content://media/internal/audio/media/74?title=Pursue&canonical=1
+ringtone_set=1
+ringtone_sim2=content://media/internal/audio/media/74?title=Pursue&canonical=1
+screen_auto_brightness_adj=0.0
+screen_brightness=2
+screen_brightness_mode=1
+screen_off_timeout=600000
+screen_off_timeout_recovery=600000
+send_security_reports=0
+setting_show_az_most_used_app=1
+settings_app_unread=0
+show_inadvertent=1
+show_key_presses=0
+show_touches=0
+sound_effects_enabled=0
+speed_mode=1
+split_screen_rotate=1
+switch_resolution_by_mode=Default
+system_locales=en-US
+t_opid=9c9d982871a2a7e73aa0ef6e0ebf3eedc9859b9b33241a003725dfc6eded85bc
+themed_icons_state=0
+thread_priority_highest=FOREGROUND
+tran_ai_voice_reduction_setting=0
+tran_animate_brightness_start_time=22205719
+tran_animate_brightness_start_value=0.050723393
+tran_animate_brightness_time=0.5
+tran_animate_brightness_update=0
+tran_board_temperature=43.352
+tran_cached_contact_info_version=5488
+tran_cpupower_mode=1
+tran_ella_configchanged="EN_US"
+tran_emergency_contact_finished=0
+tran_is_media_vibration_init=1
+tran_need_recovery_refresh_mode=10000
+tran_need_recovery_refresh_rate=10000
+tran_os_dialer_is_calling=0
+tran_os_dialer_is_showing_incall_ui=0
+tran_outdoor_boost_mode_brightness=1
+tran_outdoor_boost_mode_call=1
+tran_outdoor_boost_mode_keepalive=1
+tran_outdoor_boost_mode_lockscreen=1
+tran_power_hbm_state=0
+tran_power_save_open_time=534093081
+tran_refresh_mode=10000
+tran_resolution_size_0=1260x2800
+tran_settings_alarm=50
+tran_settings_hbm_inspire_count_millis=0
+tran_settings_hbm_inspire_last_day=1781055813392
+tran_settings_high_brightness_mode_support=0
+tran_settings_long_battery_action_gesture=1
+tran_settings_long_battery_mode=0
+tran_settings_long_battery_super_ps_overlay=0
+tran_settings_music=90
+tran_settings_notification=140
+tran_settings_ring=100
+tran_settings_shutdown_pwd_on=1
+tran_settings_volume_update_type=1
+tran_settings_wakeup_details=android.policy:POWER
+tran_smart_button_double_longpress_target=com.transsion.gamespace.app
+tran_smart_button_mode=2
+tran_smart_button_normal_double_click_switch=0
+tran_smart_button_vibrate=1
+tran_voice_command_status=0,
+trans_dynamic_applied_json={"android.theme.customization.adaptive_icon_shape":"com.theme.icondefaultshape","android.theme.customization.system_palette":"14C764","android.theme.customization.accent_color":"14C764","_applied_timestamp":1770458177038,"android.theme.customization.color_source":"preset","android.theme.customization.color_index":"2","android.theme.customization.theme_style":"RAINBOW","android.theme.customization.trans_color_type":"PRESET_COLOR","android.theme.customization.preset_name":"preset_brand_green"}
+transsion_default_lock_wallpaper=
+transsion_default_wallpaper=
+transsion_in_can_auto_call_record=0
+transsion_lock_wallpaper_callingpackge=com.android.wallpaperpicker
+transsion_turbo_assistant=0
+tty_mode=0
+tube_amp_effect=0
+user_experience=1
+user_rotation=0
+user_screen_off_timeout_override=0
+vibrate_when_ringing=0
+vibration_notification=1
+vibration_sim1=1
+vibration_sim2=1
+vivo_gamethermal_switch=0
+voice_wakeup_mode=1
+volume_alarm=13
+volume_alarm_speaker=5
+volume_bluetooth_sco=7
+volume_music=13
+volume_music_ble_broadcast=2
+volume_music_ble_headset=2
+volume_music_bt_a2dp=7
+volume_music_bt_a2dp_hp=2
+volume_music_earpiece=14
+volume_music_headphone=10
+volume_music_headset=10
+volume_music_remote_submix=14
+volume_music_speaker=10
+volume_music_usb_headset=10
+volume_notification=13
+volume_notification_speaker=9
+volume_ring=13
+volume_ring_speaker=6
+volume_system=15
+volume_voice=11
+volume_voice_earpiece=15
+volume_voice_speaker=13
+wallpaper_display_optimization=1
+wifi_assistant=1
+wifi_channel_utilization=0
+
+--- Settings Secure ---
+App_Lock_Cache=1781083567299
+accessibility_button_mode=1
+accessibility_captioning_enabled=1
+accessibility_captioning_font_scale=0.5
+accessibility_display_daltonizer_saturation_level=7
+accessibility_display_inversion_enabled=null
+accessibility_display_magnification_enabled=0
+accessibility_display_magnification_scale=2.0
+accessibility_enabled=0
+accessibility_magnification_capability=3
+accessibility_shortcut_target_service=
+active_unlock_provider=null
+active_unlock_target=null
+adaptive_connectivity_enabled=1
+adaptive_sleep=0
+android_id=8498fb37e2ba9abe
+anr_show_background=0
+aod_fingerprint_display=1
+aod_hide_view_notify_power=1
+aod_is_show=0
+aod_trigger_mode_touch=1
+apm_wifi_enabled_notification=1
+applock_hide_notification=1
+assist_long_press_home_enabled=1
+assist_touch_gesture_enabled=1
+assistant=
+audio_device_inventory=7,98:34:8C:7A:78:2F,0,0,0,32,3|8,98:34:8C:7A:78:2F,0,0,0,128,3|7,B4:86:55:F4:D8:FA,0,0,0,16,0|8,B4:86:55:F4:D8:FA,0,0,0,128,0
+autofill_field_classification=1
+autofill_service=com.google.android.gms/.autofill.service.AutofillService
+autofill_service_search_uri=https://play.google.com/store/apps/collection/promotion_30029f7_autofillservices_apps
+autofill_user_data_max_category_count=20
+aware_enabled=0
+aware_lock_enabled=0
+backup_enabled:com.android.calllogbackup=1
+backup_enabled:com.android.providers.telephony=1
+backup_enabled=0
+backup_encryption_opt_in_displayed=1
+backup_manager_constants=key_value_backup_interval_milliseconds=43200000
+backup_transport=com.google.android.gms/.backup.BackupTransportService
+bluetooth_addr_valid=1
+bluetooth_address=7C:8B:C1:39:B7:1A
+bluetooth_name=asep shippuden
+bugreport_in_power_menu=0
+camera_double_tap_power_gesture_disabled=1
+charging_sounds_enabled=1
+charging_vibration_enabled=1
+clock_seconds=null
+cloud_clear_appList=[{"appId":"notebook","name":"Buku catatan","packageName":"com.transsion.notebook"}]
+cloud_server_backup_switch_cache=1
+cloud_space_data=
+cloud_sync_status=1
+com.google.android.gms.tapandpay.tokenization.CACHED_BACKUP_STATUS=1
+com.transsion.applock.lock.roandom=0.49687651471159744
+com.transsion.applock.lock.type=pattern
+com.transsion.applock.lock.value=####
+com.transsion.securecard_android.permission-group.CALENDAR=0
+com.transsion.securecard_android.permission-group.CALL_LOG=0
+com.transsion.securecard_android.permission-group.CONTACTS=0
+com.transsion.securecard_android.permission-group.SMS=0
+com.xui.xhide.lock.roandom=0.4573111539592818
+com.xui.xhide.lock.type=pattern
+com.xui.xhide.lock.value=44-116-4030-809766532-40-11255117-21-117-67
+config_first_init=1
+config_update_certificate=MIID4TCCAsmgAwIBAgIJAMsyDT+FwMuvMA0GCSqGSIb3DQEBBQUAMIGGMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4gVmlldzETMBEGA1UECgwKR29vZ2xlIEluYzEQMA4GA1UECwwHQW5kcm9pZDEjMCEGCSqGSIb3DQEJARYUc2VjdXJpdHlAYW5kcm9pZC5jb20wHhcNMTIwOTEwMjA0NDQxWhcNMTIxMDEwMjA0NDQxWjCBhjELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxEzARBgNVBAoMCkdvb2dsZSBJbmMxEDAOBgNVBAsMB0FuZHJvaWQxIzAhBgkqhkiG9w0BCQEWFHNlY3VyaXR5QGFuZHJvaWQuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwuFNNPal1QpUSH8MU5T+BSSbCv/jTU8pbRKwYfq4ZmsjG1BxX8GJS/itdHr5IgG5YGSRpB9JkWJTAne54Qv2xX3ck8yMySjOKbsCuF3Qnrv1HiM1w0PmMvPC5GvDJz9alrrsq6uj40Hd5ina8pTKieYO1PNIf1MByBnrq/615cPOwb4UAYUwx4ChFG8aUNoChgYk0Ain7YoX4Pw7/tXIiVArsPWRbtzXVaMNWONRUM3SGVT5NO67LEEk0vIkDVjmGnJaDkkF+yqAr24ekl2qdMQb9cEnc1wNCMtVdyxUelZoVxFnot3m4ZhYIPzGI2E88TJ6c30Qs1ocHuPXW8KfGQIDAQABo1AwTjAdBgNVHQ4EFgQUXlT7Zj4V/hHVbyL54kmRYizK/powHwYDVR0jBBgwFoAUXlT7Zj4V/hHVbyL54kmRYizK/powDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEAE5D6pMFMJMwVTtrzZXExgn6r2q7LugmdIpaoFjiU/Iv/bk3VvhDU5jjE54G/fqi/g415yowkFQ02/ZkrTm/q3anvWsppN3NEns2YDi4moEhwLZcCVBzhjkppHGgkLHadzlJZdUFLnzZbDuiZrDNPEkjldVejF1qGt6LbW6d8xNmscerUdKJSUqryOi3U8SXjlTWu5d/hmajQLEe7VJ3y8q5rEsCfsb15EyYxNLfTZuf4PXVU/+kSciTyJxkPZAaz2J1zXQegzC+k3gzNnovlHYlDc5EaVnprsBgOCkaWQfjr6/5YyJysM96WMjndIjyFZSHnj9yF4j7JDwB9qEfxvA==
+contextual_search_package=com.google.android.googlequicksearchbox
+credential_service=com.google.android.gms/com.google.android.gms.auth.api.credentials.credman.service.PasswordAndPasskeyService
+credential_service_primary=com.google.android.gms/com.google.android.gms.auth.api.credentials.credman.service.PasswordAndPasskeyService
+custom_theme_name=H39
+custom_theme_type=1
+dark_theme_custom_end_time=21600000000
+dark_theme_custom_start_time=79200000000
+default_device_input_method=null
+default_input_method=com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME
+default_voice_input_method=com.google.android.tts/com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService
+device_state_rotation_lock=
+disable_start_launcher_early=0
+dnd_settings_migrated=1
+double_tap_to_wake=1
+doze_enabled=1
+doze_pulse_on_double_tap=null
+doze_pulse_on_pick_up=0
+doze_tap_gesture=null
+dropbox:data_app_anr=disabled
+dropbox:data_app_crash=disabled
+dropbox:data_app_wtf=disabled
+enabled_input_methods=com.facemoji.lite.transsion/com.baidu.simeji.SimejiIME:com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME;1594443099;-199613326:com.google.android.tts/com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService:com.transsion.sk/.inputservice.TInputMethodService
+enabled_notification_listeners=com.transsion.smartpanel/com.transsion.common.NotificationListener:com.google.android.projection.gearhead/com.google.android.gearhead.notifications.SharedNotificationListenerManager$ListenerService:com.transsion.kolun.aiservice/com.transsion.kolun.plugin.smartnotification.schedule.NotificationMonitor
+face_active_state=1
+face_unlock_allow_show_notifications=0
+face_unlock_attention_required=1
+face_unlock_dismisses_keyguard=null
+face_unlock_re_enroll=0
+facelock_detection_threshold=0.0
+facelock_liveliness_recognition_threshold=2.2
+facelock_max_center_movement=10.0
+fingerprint_enroll_status=0
+fingerprint_reset_password=0
+fingerprint_use_as_applock=1
+fingerprint_use_as_unlock=1
+fingerprint_use_as_xhide=1
+flashlight_available=1
+flashlight_enabled=0
+font_weight_adjustment=0
+game_auto_temperature_control=0
+game_bixby_block=1
+game_home_enable=0
+gamesdk_version=0
+high_priority=null
+hush_gesture_used=0
+icon_blacklist=null
+immersive_mode_confirmations=confirmed
+input_methods_subtype_history=com.facemoji.lite.transsion/com.baidu.simeji.SimejiIME;-354622095:com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME;-199613326
+install_non_market_apps=1
+is_horizontal_style=0
+key_fingerprint_animi_key=fp_anim_01
+keyguard_clock_height=257
+keyguard_slice_uri=null
+known_trust_agents_initialized=1
+last_setup_shown=eclair_1
+location_mode=3
+location_time_zone_detection_enabled=1
+lock_screen_allow_private_notifications=0
+lock_screen_custom_clock_face={"clockId":"DIGITAL_CLOCK_LEFT_SLIM_MINUTE_DATE","seedColor":-1570,"metadata":{"appliedTimestamp":1770625651820},"seedColorType":"WALLPAPER","clockDataType":{"darkLightColor":-1}}
+lock_screen_show_notifications=1
+lock_screen_show_only_unseen_notifications=1
+lock_screen_show_qr_code_scanner=0
+lockscreen.disabled=0
+lockscreen.options=enable_facelock
+lockscreen_show_controls=0
+lockscreen_show_wallet=0
+long_press_timeout=400
+low_storage_check=1
+mandatory_biometrics_requirements_satisfied=1
+manual_ringer_toggle_count=4
+media_button_receiver=com.google.android.youtube/com.google.android.libraries.youtube.player.ui.mediasession.MediaButtonIntentReceiverProvider$DefaultMediaButtonIntentReceiver,0,1
+migrated_auto_revocation_settings=1
+mms_backup_enabled=1
+mms_backup_in_progress=0
+mms_backup_last_completed=1781066310165
+mock_location=0
+mount_play_not_snd=1
+mount_ums_autostart=0
+mount_ums_notify_enabled=1
+mount_ums_prompt=1
+multi_press_timeout=300
+music_app_package=
+nas_settings_updated=1
+navigation_mode=2
+nearby_sharing_component=com.google.android.gms/com.google.android.gms.nearby.sharing.main.MainActivity
+nfc_payment_default_component=com.transsion.settings.nfc/com.transsion.nfc.wallet.service.ApduService
+nfc_payment_foreground=1
+night_display_activated=0
+night_display_last_activated_time=2026-02-17T00:59:30.805499
+notification_badging=1
+notification_bubbles=1
+notification_history_enabled=null
+notification_icon_x=1
+num_rotation_suggestions_accepted=3
+odi_captions_enabled=0
+odi_captions_volume_ui_enabled=1
+offline_device_lock_setting=0
+one_handed_mode_activated=0
+one_handed_mode_enabled=0
+open_mode_panel_cl=2:com.whatsapp.w4b:1398:1770632522312
+original_show_taps=0
+os_finish_share=image/jpeg:com.transsion.screencapture:com.whatsapp.w4b:1780650910212
+os_resolver_click=content://com.transsion.filemanagerx.fileprovider/external_path/Download/Agentic_Design_Patterns.pdf,:application/pdf,:cn.wps.moffice.lite.abroad.transsion,:true,:once,:0,:com.transsion.filemanagerx,:1596,:1780985574663
+os_start_resolver=application/pdf:cn.wps.moffice.lite.abroad.transsion:1780985573360
+os_start_share=image/jpeg:com.transsion.screencapture:1780650910232
+os_whitelist_provider=com.transsion.smartmessage,com.whatsapp,com.google.android.gm,com.gbwhatsapp,com.whatsapp.w4b,org.telegram.messenger,com.imo.android.imoim,com.viber.voip,com.google.android.gm.lite,jp.naver.line.android,com.zing.zalo,com.tencent.wework,com.alibaba.android.rimet,com.tencent.mobileqq,com.tencent.mm,com.zhiliaoapp.musically,com.zhiliaoapp.musically.go,com.twitter.android,com.ss.android.lark,com.ss.android.lark.transsion
+package_verifier_state=1
+pai_selection_page_complete=0
+play_bio_auth_opt_in_displayed_in_non_suw=1
+play_determined_choice_program=0
+play_determined_dma_eligibility=0
+power_menu_locked_show_content=1
+print_service_search_uri=https://play.google.com/store/apps/collection/promotion_3000abc_print_services
+pubkey_blacklist=410f36363258f30b347d12ce4863e433437806a8,c4f9663716cd5e71d6950b5f33ce041c95b435d1,e23b8d105f87710a68d9248050ebefc627be4ca6,7b2e16bc39bcd72b456e9f055d1de615b74945db,e8f91200c65cee16e039b9f883841661635f81c5,0129bcd5b448ae8d2496d1c3e19723919088e152,d33c5b41e45cc4b3be9ad6952c4ecc2528032981,e12d89f56d2276f830e6ceafa66c725c0b41a932,d9f5c6ce57ffaa39cc7ed172bd53e0d307834bd1,3ecf4bbbe46096d514bb539bb913d77aa4ef31bf,685eec0a39f668ae8fd8964f987476b4504fd2be,0e502d4dd1e160368a31f06a810431ba6f72c041,93d1532229cc2abd21dff597ee320fe4246f3d0c,f57179faea10c5438cb0c6e1cc277b6e0db2ff54,077ac7de8da558643a06c5369e554faeb3dfa166,e58e315baaeeaac6e72ec9573670ca2f254ec347,384d0c1dc477a7b3f86786d018519f589f1e9e25,c1f9f2894f2e8521507c089f362d5cd9feff7e21,11f75f354126c2c849f53f29cf929604233cf869,e0e90e95afab970b897bfb503f72cb4c06cfb4f3,7923d58d0fe03ce6abadae271a6d94f414d1a873
+qs_auto_tiles=wallet,cast,hotspot,custom(com.google.android.apps.wellbeing/.screen.ui.GrayscaleTileService),night
+refresh_rate_mode=2
+remote_lock_setting=0
+rtt_calling_mode=0
+scene_can_show=1
+screen_record_forbid_heads_up=0
+screen_record_hit=1
+screen_record_state=0
+screensaver_activate_on_dock=0
+screensaver_activate_on_sleep=0
+screensaver_default_component=com.android.deskclock/com.android.deskclock.Screensaver
+screensaver_enabled=0
+secure_overlay_settings=0
+selected_input_method_subtype=1594443099
+selected_spell_checker=
+selected_spell_checker_subtype=0
+send_action_app_error=0
+serial_blacklist=
+share_finish=0:-1:2:3:1:-1:-1:1780650910232
+show_ime_with_hard_keyboard=0
+show_qr_code_scanner_setting=com.transsion.scanningrecharger/.view.activity.textrecognized.TextRecognizedActivity
+show_zen_settings_suggestion=0
+silence_gesture=0
+sk_switch=1
+sk_switch_notice=1
+skip_gesture=0
+sleep_timeout=-1
+smart_panel_can_show=1
+smartspace=0
+snoozed_schedule_condition_provider=
+speak_password=1
+ssl_session_cache=file
+status_bar_show_vibrate_icon=0
+stylus_handwriting_enabled=1
+swipe_bottom_to_notification_enabled=0
+sync_parent_sounds=1
+sysui_do_not_disturb=null
+sysui_nav_bar=null
+sysui_nav_bar_left=null
+sysui_nav_bar_right=null
+sysui_qs_tiles=osflashlight,ringer,custom(com.google.android.as/com.google.android.apps.miphone.aiai.captions.quicksetting.CaptionsTileService),rotation,screenshot,dark,custom(com.transsion.screenrecorder/.service.ScreenRecordTileService),dnd,custom(com.transsion.airtransfer/.service.TransferTileService),custom(com.transsion.batterylab/.PowerBoostTile),qr_code_scanner,wallet,custom(com.transsion.pcconnect/com.transsion.iotservice.multiscreen.pc.helper.IconService),tran_led,tran_outdoor_boost,custom(com.google.android.gms/.nearby.sharing.SharingTileService),custom(com.google.android.apps.wellbeing/.screen.ui.GrayscaleTileService),night
+sysui_tuner_version=4
+sysui_volume_down_silent=null
+sysui_volume_up_silent=null
+tap_duration_threshold=0.0
+theft_detection_lock_setting=0
+theft_detection_lock_supported=1
+theft_protection_default_on=0
+theme_customization_overlay_packages={"android.theme.customization.adaptive_icon_shape":"com.theme.icondefaultshape_h39","android.theme.customization.system_palette":"14C764","android.theme.customization.accent_color":"14C764","_applied_timestamp":1770458177038,"android.theme.customization.color_source":"preset","android.theme.customization.color_index":"2","android.theme.customization.theme_style":"RAINBOW","android.theme.customization.trans_color_type":"PRESET_COLOR","android.theme.customization.preset_name":"preset_brand_green"}
+touch_blocking_period=0.0
+touch_exploration_enabled=0
+tran_ambient_lux=-1.0
+tran_cts_start=1780751410003
+tran_outdoor_boost_mode_sleeping_state=0
+tran_select_input=com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME
+trancare_server_log_updated=1
+transsion-opcode-background=-1
+transsion_game_function_mode=2
+trust_agents_initialized=1
+tts_default_pitch=106
+tts_default_rate=102
+tts_default_synth=com.google.android.tts
+ui_night_mode=2
+ui_night_mode_custom_type=-1
+ui_night_mode_override_off=0
+ui_night_mode_override_on=0
+unknown_sources_default_reversed=1
+usb_audio_automatic_routing_disabled=0
+usb_migration_expected_version=1
+usb_migration_state=0
+usb_migration_state_version=1
+user_full_data_backup_aware=1
+user_refresh_rate=120.0
+user_setup_complete=1
+user_setup_personalization_state=0
+voice_interaction_service=
+voice_recognition_service=com.google.android.tts/com.google.android.apps.speech.tts.googletts.service.GoogleTTSRecognitionService
+volume_hush_gesture=1
+wake_gesture_enabled=0
+whitelist_config=def_value
+wifi_apm_state=1
+wind_down_first_time_setup=1
+zen_duration=null
+zen_settings_suggestion_viewed=0
+zen_settings_updated=1
+
+--- Properties ---
+[Build.BRAND]: [MTK]
+[aaudio.mmap_exclusive_policy]: [2]
+[aaudio.mmap_policy]: [2]
+[apex.all.ready]: [true]
+[audio.offload.disable]: [true]
+[bluetooth.profile.a2dp.source.enabled]: [true]
+[bluetooth.profile.asha.central.enabled]: [true]
+[bluetooth.profile.avrcp.target.enabled]: [true]
+[bluetooth.profile.bas.client.enabled]: [true]
+[bluetooth.profile.gatt.enabled]: [true]
+[bluetooth.profile.hfp.ag.enabled]: [true]
+[bluetooth.profile.hid.device.enabled]: [true]
+[bluetooth.profile.hid.host.enabled]: [true]
+[bluetooth.profile.map.server.enabled]: [true]
+[bluetooth.profile.opp.enabled]: [true]
+[bluetooth.profile.pan.nap.enabled]: [true]
+[bluetooth.profile.pan.panu.enabled]: [true]
+[bluetooth.profile.pbap.server.enabled]: [true]
+[bluetooth.profile.sap.server.enabled]: [true]
+[bootreceiver.enable]: [1]
+[build.version.extensions.ad_services]: [20]
+[build.version.extensions.r]: [21]
+[build.version.extensions.s]: [21]
+[build.version.extensions.t]: [21]
+[build.version.extensions.u]: [21]
+[build.version.extensions.v]: [21]
+[cache_key.bluetooth.bluetooth_adapter_get_connection_state]: [-801738179073971929]
+[cache_key.bluetooth.bluetooth_adapter_get_profile_connection_state]: [-801738179073971931]
+[cache_key.bluetooth.bluetooth_adapter_get_state]: [-801738179073971935]
+[cache_key.bluetooth.bluetooth_adapter_is_offloaded_filtering_supported]: [-801738179073971930]
+[cache_key.bluetooth.bluetooth_device_get_bond_state]: [-801738179073971928]
+[cache_key.bluetooth.bluetooth_map_get_connection_state]: [-801738179073971927]
+[cache_key.bluetooth.bluetooth_sap_get_connection_state]: [-801738179073971926]
+[cache_key.display_info]: [7715209170257122695]
+[cache_key.get_packages_for_uid]: [7715209170257121889]
+[cache_key.has_system_feature]: [7715209170257112124]
+[cache_key.is_compat_change_enabled]: [7715209170257122785]
+[cache_key.is_interactive]: [7715209170257122563]
+[cache_key.is_power_save_mode]: [7715209170257112802]
+[cache_key.is_user_unlocked]: [7715209170257112324]
+[cache_key.location_enabled]: [7715209170257112140]
+[cache_key.os_has_feature]: [7715209170257112147]
+[cache_key.package_info]: [7715209170257122786]
+[cache_key.system_server.account_user_data]: [7715209170257122659]
+[cache_key.system_server.accounts_data]: [7715209170257122783]
+[cache_key.system_server.connectionless_stylus_handwriting]: [7715209170257112329]
+[cache_key.system_server.device_policy_manager_caches]: [7715209170257112138]
+[cache_key.system_server.get_credential_type]: [7715209170257112141]
+[cache_key.system_server.get_night_mode]: [7715209170257112136]
+[cache_key.system_server.stylus_handwriting]: [7715209170257112328]
+[cache_key.system_server.text_selection.has]: [-1715997976123117763]
+[cache_key.telephony.phone_account_to_subid]: [-7864028496669037149]
+[cache_key.telephony.subscription_manager_service]: [-7864028496669037166]
+[camera.disable_zsl_mode]: [1]
+[dalvik.vm.appimageformat]: [lz4]
+[dalvik.vm.dex2oat-Xms]: [64m]
+[dalvik.vm.dex2oat-Xmx]: [512m]
+[dalvik.vm.dex2oat-max-image-block-size]: [524288]
+[dalvik.vm.dex2oat-minidebuginfo]: [true]
+[dalvik.vm.dex2oat-resolve-startup-strings]: [true]
+[dalvik.vm.dexopt.secondary]: [true]
+[dalvik.vm.dexopt.thermal-cutoff]: [2]
+[dalvik.vm.enable_pr_dexopt]: [true]
+[dalvik.vm.heapgrowthlimit]: [256m]
+[dalvik.vm.heapmaxfree]: [8m]
+[dalvik.vm.heapminfree]: [2m]
+[dalvik.vm.heapsize]: [512m]
+[dalvik.vm.heapstartsize]: [16m]
+[dalvik.vm.heaptargetutilization]: [0.75]
+[dalvik.vm.image-dex2oat-Xms]: [64m]
+[dalvik.vm.image-dex2oat-Xmx]: [64m]
+[dalvik.vm.isa.arm.features]: [default]
+[dalvik.vm.isa.arm.variant]: [cortex-a55]
+[dalvik.vm.isa.arm64.features]: [default]
+[dalvik.vm.isa.arm64.variant]: [cortex-a55]
+[dalvik.vm.madvise.artfile.size]: [4294967295]
+[dalvik.vm.madvise.odexfile.size]: [104857600]
+[dalvik.vm.madvise.vdexfile.size]: [104857600]
+[dalvik.vm.minidebuginfo]: [true]
+[dalvik.vm.mtk-stack-trace-file]: [/data/anr/mtk_traces.txt]
+[dalvik.vm.ps-min-first-save-ms]: [150000]
+[dalvik.vm.usap_pool_enabled]: [true]
+[dalvik.vm.usap_pool_refill_delay_ms]: [3000]
+[dalvik.vm.usap_pool_size_max]: [3]
+[dalvik.vm.usap_pool_size_min]: [1]
+[dalvik.vm.usap_refill_threshold]: [1]
+[dalvik.vm.useartservice]: [true]
+[dalvik.vm.usejit]: [true]
+[db.log.detailed]: [0]
+[db.log.slow_query_threshold]: [0]
+[debug.MB.inner.running]: [0]
+[debug.MB.running]: [0]
+[debug.OVRManager.cpuLevel]: [4]
+[debug.OVRManager.gpuLevel]: [4]
+[debug.OVRPlugin.systemDisplayFrequency]: [120]
+[debug.app.performance_restricted]: [false]
+[debug.assert]: [0]
+[debug.atrace.app_number]: [0]
+[debug.atrace.tags.enableflags]: [false]
+[debug.c2.use_dmabufheaps]: [1]
+[debug.choreographer.callback]: [0]
+[debug.choreographer.low_latency]: [1]
+[debug.choreographer.skipwarning]: [100]
+[debug.choreographer.zero_jitter]: [1]
+[debug.composition.sync_mode]: [0]
+[debug.composition.type]: [gpu]
+[debug.config.media.video.ais.support]: [true]
+[debug.config.media.video.frc.support]: [true]
+[debug.cpu.cooling.callback_freq_limit]: [0]
+[debug.cpufreq.max_freq]: [5000000]
+[debug.cpufreq.min_freq]: [5000000]
+[debug.cpuprio]: [20]
+[debug.cpurend.vsync]: [false]
+[debug.data.performance.enhance]: [1]
+[debug.debuggerd.disable]: [0]
+[debug.dev.ssrm.turbo]: [true]
+[debug.disable.hwacc]: [0]
+[debug.disable.sched.pre_cooling]: [false]
+[debug.disable_FragmentIndex]: [true]
+[debug.disable_client_composition_cache]: [0]
+[debug.disable_sched_boost]: [false]
+[debug.display.cabc.level]: [3]
+[debug.display.peak_refresh_rate]: [120.0]
+[debug.display.render_frame_rate_is_physical_refresh_rate]: [true]
+[debug.doze.component]: [0]
+[debug.egl.buffcount]: [4]
+[debug.egl.callstack]: [0]
+[debug.egl.force_csaa]: [false]
+[debug.egl.force_fxaa]: [false]
+[debug.egl.force_msaa]: [false]
+[debug.egl.force_smaa]: [false]
+[debug.egl.force_ssaa]: [false]
+[debug.egl.force_taa]: [false]
+[debug.egl.force_txaa]: [false]
+[debug.egl.hw]: [1]
+[debug.egl.log_config]: [0]
+[debug.egl.msaa]: [0]
+[debug.egl.native_scaling]: [true]
+[debug.egl.prifiler]: [0]
+[debug.egl.profiler]: [0]
+[debug.egl.swapinterval]: [1]
+[debug.egl.traceGpuCompletion]: [0]
+[debug.enable-force-120hz]: [true]
+[debug.enable-force-gpu-rendering]: [false]
+[debug.enable.gamed]: [0]
+[debug.enable.hwacc]: [1]
+[debug.enable.sglscale]: [1]
+[debug.enable.wl_log]: [0]
+[debug.enable_scissor_optimization]: [true]
+[debug.feedback.bugreport]: [0]
+[debug.feedback.bugreport.copy]: [1]
+[debug.feedback.log.capture]: [0]
+[debug.feedback.taglog.time]: [0]
+[debug.forceAutoTextureCompression]: [1]
+[debug.force_fps]: [120]
+[debug.force_rtl]: [false]
+[debug.fps.divisor]: [1]
+[debug.fps.governor]: [relaxed]
+[debug.fps.max]: [120]
+[debug.frame.pacing]: [120.0]
+[debug.generate-debug-info]: [false]
+[debug.gfx.driver]: [1]
+[debug.gl.swapinterval]: [1]
+[debug.gles.layers]: [EGL_KHR_gl_texture_cubemap_image,EGL_KHR_gl_texture_3D_image,EGL_KHR_gl_renderbuffer_image]
+[debug.gpu.composition_optimization_mode]: [aggressive]
+[debug.gpu.cooling.callback_freq_limit]: [0]
+[debug.gpu.debug_layers_on]: [0]
+[debug.gpu.mode]: [0]
+[debug.gpu.render.async]: [true]
+[debug.gpu.texture_cache_size]: [2048]
+[debug.gr.numframebuffers]: [3]
+[debug.gr.swapinterval]: [1]
+[debug.gralloc.disable_ahardware_buffer]: [0]
+[debug.gralloc.enable_fb_ubwc]: [1]
+[debug.gralloc.gfx_ubwc_disable]: [0]
+[debug.gralloc.map_fb_memory]: [0]
+[debug.hal_client_domain]: [default]
+[debug.hang.count]: [0]
+[debug.heat_suppression]: [0]
+[debug.hwc.asyncdisetprop]: [1]
+[debug.hwc.bq_count]: [5]
+[debug.hwc.compose_level]: [0]
+[debug.hwc.composition.type]: [asn]
+[debug.hwc.debug_composition_cache]: [0]
+[debug.hwc.debug_level]: [0]
+[debug.hwc.debug_overlay]: [0]
+[debug.hwc.debug_view]: [0]
+[debug.hwc.disabletonemapping]: [false]
+[debug.hwc.dynThreshold]: [3.5]
+[debug.hwc.dynThresholdYuv]: [2.0]
+[debug.hwc.fakevsync]: [0]
+[debug.hwc.force_gpu]: [0]
+[debug.hwc.force_gpu_reset_on_change]: [true]
+[debug.hwc.force_gpu_reset_on_hotplug]: [true]
+[debug.hwc.force_gpu_reset_on_vsync]: [true]
+[debug.hwc.gpu_perf_mode]: [1]
+[debug.hwc.logvsync]: [0]
+[debug.hwc.max_fps]: [120]
+[debug.hwc.mdpThreshold]: [5.0]
+[debug.hwc.nodirtyregion]: [0]
+[debug.hwc.otf]: [0]
+[debug.hwc.showfps]: [0]
+[debug.hwc.swapchain]: [1]
+[debug.hwc.winupdate]: [0]
+[debug.hwc_dump_en]: [0]
+[debug.hwui.anim_pipeline]: [zero_latency]
+[debug.hwui.app_memory_policy]: [false]
+[debug.hwui.capture_skp_enabled]: [false]
+[debug.hwui.capture_skp_frames]: [0]
+[debug.hwui.clip_surfaceviews]: [false]
+[debug.hwui.composition]: [1]
+[debug.hwui.disable_draw_defer]: [false]
+[debug.hwui.disable_draw_reorder]: [false]
+[debug.hwui.disable_gpu_cache]: [false]
+[debug.hwui.disable_msaa]: [true]
+[debug.hwui.disable_scissor_opt]: [false]
+[debug.hwui.disable_zrle]: [0]
+[debug.hwui.disabledither]: [true]
+[debug.hwui.drawing_enabled]: [true]
+[debug.hwui.drop_shadow_cache_size]: [20]
+[debug.hwui.dyn_fps]: [1]
+[debug.hwui.enable_bp_cache]: [true]
+[debug.hwui.enable_buffer_queue_pacing]: [1]
+[debug.hwui.enable_f16]: [true]
+[debug.hwui.enable_partial_updates]: [true]
+[debug.hwui.fb_size_percent]: [100]
+[debug.hwui.filter_test_overhead]: [false]
+[debug.hwui.force_cpu_layers]: [0]
+[debug.hwui.force_flush_of_tiles]: [0]
+[debug.hwui.force_gpu_filter_bicubic]: [0]
+[debug.hwui.force_gpu_for_2d]: [0]
+[debug.hwui.force_gpu_for_layer_tests]: [0]
+[debug.hwui.force_gpu_render]: [0]
+[debug.hwui.fps]: [120]
+[debug.hwui.fps_divisor]: [1]
+[debug.hwui.frame_rate]: [120]
+[debug.hwui.frame_time_budget_ns]: [8333333]
+[debug.hwui.frame_time_limit]: [8]
+[debug.hwui.gradient_cache_size]: [10]
+[debug.hwui.initialize_gl_always]: [true]
+[debug.hwui.jank_threshold]: [100]
+[debug.hwui.layer]: [0]
+[debug.hwui.layer_cache_size]: [14]
+[debug.hwui.layer_stats]: [0]
+[debug.hwui.level]: [0]
+[debug.hwui.msaa_sample_count]: [1]
+[debug.hwui.overdraw]: [false]
+[debug.hwui.path_cache_size]: [10]
+[debug.hwui.perf_mode]: [1]
+[debug.hwui.perfetto_profile_mode]: [none]
+[debug.hwui.profile]: [false]
+[debug.hwui.profile.maxframes]: [0]
+[debug.hwui.profiler]: [0]
+[debug.hwui.refresh_rate_forced]: [120.0]
+[debug.hwui.render_ahead]: [false]
+[debug.hwui.render_dirty_region_size]: [1]
+[debug.hwui.render_dirty_regions]: [true]
+[debug.hwui.render_priority]: [1]
+[debug.hwui.render_thread]: [true]
+[debug.hwui.render_thread_count]: [8]
+[debug.hwui.render_throttle]: [0]
+[debug.hwui.renderer.batch]: [true]
+[debug.hwui.renderer_mode]: [force_full]
+[debug.hwui.renderscript]: [0]
+[debug.hwui.shadow.renderer]: [monolithic]
+[debug.hwui.shadow_renderer]: [graphite]
+[debug.hwui.shape_cache_size]: [5]
+[debug.hwui.show_dirty_regions]: [false]
+[debug.hwui.show_draw_calls]: [0]
+[debug.hwui.show_draw_order]: [0]
+[debug.hwui.show_fps]: [0]
+[debug.hwui.show_layer_bounds]: [0]
+[debug.hwui.show_layer_grid]: [0]
+[debug.hwui.show_layers_updates]: [false]
+[debug.hwui.show_non_rect_clip]: [hide]
+[debug.hwui.show_perfetto]: [0]
+[debug.hwui.show_phases]: [0]
+[debug.hwui.show_render_thread_time]: [0]
+[debug.hwui.show_timings]: [0]
+[debug.hwui.skia_atrace_enabled]: [0]
+[debug.hwui.skia_tracing_enabled]: [false]
+[debug.hwui.skia_use_perfetto_track_events]: [false]
+[debug.hwui.skip_eglmanager_telemetry]: [true]
+[debug.hwui.skip_empty_damage]: [true]
+[debug.hwui.skp_filename]: [false]
+[debug.hwui.target_cpu_freq_percent]: [200]
+[debug.hwui.target_cpu_time_percent]: [200]
+[debug.hwui.target_gpu_freq_percent]: [200]
+[debug.hwui.target_gpu_time_percent]: [200]
+[debug.hwui.target_power_time_percent]: [200]
+[debug.hwui.texture_cache_size]: [50]
+[debug.hwui.trace]: [0]
+[debug.hwui.trace_gpu_resources]: [false]
+[debug.hwui.use_buffer_age]: [true]
+[debug.hwui.use_d2d]: [1]
+[debug.hwui.use_d2d_for_layer_draws]: [1]
+[debug.hwui.use_dvfs]: [0]
+[debug.hwui.use_gl_surface_for_screenshots]: [0]
+[debug.hwui.use_gl_trace]: [0]
+[debug.hwui.use_gpu_pixel_buffers]: [true]
+[debug.hwui.use_hint_manager]: [true]
+[debug.hwui.use_partial_updates]: [true]
+[debug.hwui.use_renderscript]: [0]
+[debug.hwui.use_small_cache]: [1]
+[debug.hwui.webview_overlays_enabled]: [true]
+[debug.ioprio]: [0]
+[debug.javafx.animation.frame]: [120.0]
+[debug.javafx.animation.framerate]: [120.0]
+[debug.javafx.animation.fullspeed]: [true]
+[debug.kill_allocating_task]: [0]
+[debug.level]: [0]
+[debug.lldb-rpc-server]: [0]
+[debug.logcat.enable]: [false]
+[debug.max_freq_limit]: [5000000000]
+[debug.mdlogger.Running]: [0]
+[debug.mdp.ctl.enable_a_llcc]: [true]
+[debug.mdpcomp.4k2kSplit]: [1]
+[debug.mdpcomp.logs]: [0]
+[debug.mdpcomp.maxpermixer]: [7]
+[debug.media.codec2]: [1]
+[debug.media.video.frc]: [true]
+[debug.media.video.vpp]: [false]
+[debug.mediatek.appgamepq_compress]: [1]
+[debug.mediatek.composition.type]: [asn]
+[debug.mediatek.disp_decompress]: [0]
+[debug.min_freq_limit]: [5000000000]
+[debug.mono.log]: [none]
+[debug.mtk_tflite.target_nnapi]: [33]
+[debug.multicore.processing]: [1]
+[debug.oculus.gpuLevel]: [4]
+[debug.oculus.refreshRate]: [120.0]
+[debug.onetrace.native.tag]: [0]
+[debug.onetrace.tag]: [0]
+[debug.onetrace.version]: [0]
+[debug.overlayui.enable]: [0]
+[debug.perfetto.sdk_sysprop_guard_generation]: [0]
+[debug.perfhudes]: [1]
+[debug.performance]: [false]
+[debug.performance.accoustic.force]: [true]
+[debug.performance.cap]: [120]
+[debug.performance.disturb]: [false]
+[debug.performance.force_fps]: [3]
+[debug.performance.force_high_fps]: [true]
+[debug.performance.gpu_boost]: [1]
+[debug.performance.profile]: [0]
+[debug.performance.tuning]: [1]
+[debug.performance_schema]: [2]
+[debug.performance_schema_digests_size]: [75000]
+[debug.performance_schema_max_memory_classes]: [1000]
+[debug.performance_schema_max_socket_classes]: [110]
+[debug.profiler.target_performance_percent]: [0]
+[debug.qsg.renderer]: [0]
+[debug.qsg_renderer]: [qsggl]
+[debug.redroid.fps]: [120.0]
+[debug.refresh_rate.min_fps]: [120.0]
+[debug.refresh_rate.view_override]: [120.0]
+[debug.renderengine.backend]: [skiagl]
+[debug.renderengine.blur_algorithm]: [true]
+[debug.renderengine.capture_filename]: [0]
+[debug.renderengine.capture_skia_ms]: [0]
+[debug.renderengine.frame_interval_ns]: [8333333]
+[debug.renderengine.graphite]: [true]
+[debug.renderengine.graphite_preview_optin]: [true]
+[debug.renderengine.present_thread_priority]: [highest]
+[debug.renderengine.restore_blur_step]: [true]
+[debug.renderengine.skia_tracing_enabled]: [false]
+[debug.renderengine.skia_use_perfetto_track_events]: [false]
+[debug.renderengine.vsync_enforce_mode]: [relaxed]
+[debug.renderer.process]: [1]
+[debug.renderer.process_compound]: [1]
+[debug.renderthread.reduceopstasksplitting]: [false]
+[debug.rs.debug]: [0]
+[debug.rs.default-CPU-buffer]: [32768]
+[debug.rs.forcecompat]: [0]
+[debug.rs.max-freq]: [5000000000]
+[debug.rs.max-threads]: [6]
+[debug.rs.min-freq]: [5000000000]
+[debug.rs.min-perf_percent]: [100]
+[debug.rs.precision]: [rs_fp_full]
+[debug.rs.profile]: [0]
+[debug.rs.reduce]: [0]
+[debug.rs.reduce-split-accum]: [0]
+[debug.rs.rsov]: [0]
+[debug.rs.script]: [0]
+[debug.rs.shader]: [0]
+[debug.rs.shader.attributes]: [0]
+[debug.rs.shader.uniforms]: [0]
+[debug.rs.visual]: [0]
+[debug.scenegraph.batching_performance]: [1]
+[debug.sched.colocate.enable]: [0]
+[debug.sdm.support_writeback]: [1]
+[debug.sf.auto_latch_unsignaled]: [true]
+[debug.sf.ddms]: [0]
+[debug.sf.default_touch_timer_ms]: [200]
+[debug.sf.disable_antialiasing]: [1]
+[debug.sf.disable_backpressure]: [0]
+[debug.sf.disable_client_composition_cache]: [0]
+[debug.sf.draw_policy]: [force_now]
+[debug.sf.dump]: [0]
+[debug.sf.early.app.duration]: [25000000]
+[debug.sf.early.sf.duration]: [22500000]
+[debug.sf.earlyGl.app.duration]: [25000000]
+[debug.sf.earlyGl.sf.duration]: [22500000]
+[debug.sf.early_app_phase_offset_ns]: [500000]
+[debug.sf.early_gl_app_phase_offset_ns]: [15000000]
+[debug.sf.early_gl_phase_offset_ns]: [3000000]
+[debug.sf.early_phase_limit]: [3]
+[debug.sf.early_phase_offset_ns]: [500000]
+[debug.sf.enable]: [1]
+[debug.sf.enable.planner_prediction]: [false]
+[debug.sf.enable_adpf_cpu_hint]: [true]
+[debug.sf.enable_advanced_dithering]: [1]
+[debug.sf.enable_advanced_sf_phase_offset]: [1]
+[debug.sf.enable_egl_backpressure]: [1]
+[debug.sf.enable_egl_image_tracker]: [0]
+[debug.sf.enable_gl_backpressure]: [1]
+[debug.sf.enable_hgl]: [1]
+[debug.sf.enable_hwc_vds]: [0]
+[debug.sf.enable_layer_caching]: [true]
+[debug.sf.enable_small_dirty_detection]: [true]
+[debug.sf.enable_transaction_tracing]: [false]
+[debug.sf.enable_vsync_immed]: [1]
+[debug.sf.flush_behavior_immediate]: [1]
+[debug.sf.fps]: [120]
+[debug.sf.frame_rate_multiple_threshold]: [120]
+[debug.sf.gpu_comp_tiling]: [1]
+[debug.sf.gpu_freq_indeks]: [8]
+[debug.sf.gpu_freq_index]: [8]
+[debug.sf.gpuoverlay]: [0]
+[debug.sf.high_fps_early_gl_phase_offset_ns]: [6500000]
+[debug.sf.high_fps_early_phase_offset_ns]: [6100000]
+[debug.sf.high_fps_late_app_phase_offset_ns]: [1000000]
+[debug.sf.hwc.canUseABC]: [1]
+[debug.sf.hwc.min.duration]: [0]
+[debug.sf.hwc_hdcp_via_neg_vsync]: [1]
+[debug.sf.hwc_hotplug_error_via_neg_vsync]: [1]
+[debug.sf.hwc_service_name]: [drmfb]
+[debug.sf.lag_adj]: [0]
+[debug.sf.latch_unsignaled]: [0]
+[debug.sf.late.app.duration]: [25000000]
+[debug.sf.late.sf.duration]: [22500000]
+[debug.sf.layer_caching_active_layer_timeout_ms]: [1050]
+[debug.sf.layer_smoothness]: [5]
+[debug.sf.layer_timeout]: [50]
+[debug.sf.log_expensive_rendering]: [0]
+[debug.sf.max_frame_rate]: [120]
+[debug.sf.max_igbp_buffers]: [3]
+[debug.sf.max_igbp_list_size]: [8]
+[debug.sf.min-frame_rate_multiple_threshold]: [2]
+[debug.sf.multithreaded_present]: [1]
+[debug.sf.nativedump]: [false]
+[debug.sf.perf_fps_early_gl_phase_offset_ns]: [10000000]
+[debug.sf.perf_mode]: [1]
+[debug.sf.phase_offset_threshold_for_next_vsync_ns]: [12100000]
+[debug.sf.pipeline_composition_mode]: [locked]
+[debug.sf.pipeline_sync_strict]: [true]
+[debug.sf.predict_composition_strategy]: [1]
+[debug.sf.predict_hwc_composition_strategy]: [0]
+[debug.sf.present_time_offset_ns]: [0]
+[debug.sf.recompute_visible_regions]: [0]
+[debug.sf.recomputecrop]: [0]
+[debug.sf.region_sampling_period_ns]: [200000000]
+[debug.sf.region_sampling_timer_timeout_ns]: [200000000]
+[debug.sf.sa_enable]: [1]
+[debug.sf.sa_log]: [0]
+[debug.sf.scroll_boost_refreshrate]: [120]
+[debug.sf.send_early_power_session_hint]: [true]
+[debug.sf.send_late_power_session_hint]: [true]
+[debug.sf.set_binder_thread_rt]: [1]
+[debug.sf.set_idle_timer_ms]: [3000]
+[debug.sf.showbackground]: [0]
+[debug.sf.showcpu]: [0]
+[debug.sf.showentropy]: [0]
+[debug.sf.showfps]: [0]
+[debug.sf.showgpu]: [0]
+[debug.sf.showopengl]: [0]
+[debug.sf.showram]: [0]
+[debug.sf.showswap]: [0]
+[debug.sf.showthermal]: [0]
+[debug.sf.showtouchscreen]: [0]
+[debug.sf.showupdates]: [0]
+[debug.sf.showvulkan]: [0]
+[debug.sf.showzram]: [0]
+[debug.sf.swapinterval]: [1]
+[debug.sf.treat_170m_as_sRGB]: [0]
+[debug.sf.use_frame_rate_priority]: [1]
+[debug.sf.use_phase_offsets_as_durations]: [1]
+[debug.sf.viewmotion]: [0]
+[debug.sf.vsync.native]: [0]
+[debug.sf.vsync_reactor]: [1]
+[debug.sf.vsync_reactor_apply_phase_offsets]: [1]
+[debug.sf_frame_rate_multiple_fences]: [1]
+[debug.show_refresh_rate_overlay_spinner]: [0]
+[debug.singlecore.processing]: [0]
+[debug.skia.enable_reuse_scratch_textures]: [1]
+[debug.skia.max_memory_usage_mb]: [512]
+[debug.skia.num_render_threads]: [8]
+[debug.skia.render_thread_priority]: [1]
+[debug.skia.threaded_mode]: [true]
+[debug.smart_scheduling]: [1]
+[debug.sqlite.busy_timeout]: [1250]
+[debug.sqlite.close_idle_connections]: [true]
+[debug.sqlite.idle_connection_timeout]: [30000]
+[debug.sqlite.journalmode]: [PERSIST]
+[debug.sqlite.journalsizelimit]: [1048576]
+[debug.sqlite.lookaside]: [1200_120]
+[debug.sqlite.mmap_size]: [2097152]
+[debug.sqlite.no_double_quoted_strs]: [false]
+[debug.sqlite.syncmode]: [NORMAL]
+[debug.sqlite.wal.autocheckpoint]: [350]
+[debug.sqlite.wal.poolsize]: [1048576]
+[debug.sqlite.wal.syncmode]: [NORMAL]
+[debug.sqlite.wal.truncatesize]: [1048576]
+[debug.stagefright.c2inputsurface]: [-1]
+[debug.stagefright.ccodec]: [4]
+[debug.stagefright.omx_default_rank]: [0]
+[debug.stagefright.omx_default_rank.sw-audio]: [0]
+[debug.strncmp.property]: [1]
+[debug.surface_flinger.enable_frame_rate_override]: [120.0]
+[debug.surface_flinger.enable_sdr_dimming]: [1]
+[debug.surface_flinger.protected_contents]: [false]
+[debug.surface_flinger.refresh_rate_switching]: [1]
+[debug.surface_flinger.vsync_event_phase_offset_ns]: [3000000]
+[debug.surface_flinger.vsync_sf_event_phase_offset_ns]: [3000000]
+[debug.syncopts]: [1]
+[debug.sys.boot]: [390]
+[debug.sys.feedback.all.failed.log.upload]: [1]
+[debug.sys.feedback.attach.log]: [fanslog/tranfeedback/b3ff08c856a917bb54b3a788f22189ea/]
+[debug.sys.feedback.attach.media]: [fanslog/tranfeedbackpicture/b3ff08c856a917bb54b3a788f22189ea/]
+[debug.sys.feedback.attach.url]: [https://sz-sw-fan.oss-cn-shenzhen.aliyuncs.com/]
+[debug.systemui.latency_tracking]: [0]
+[debug.systemuicompilerfilter]: [everything]
+[debug.thermal.throttle.support]: [yes]
+[debug.thermal_zone.battery_hotplug_control]: [2]
+[debug.thermal_zone.cpu_hotplug_control]: [0]
+[debug.thermal_zone.display_hotplug_control]: [2]
+[debug.thermal_zone.gpu_hotplug_control]: [0]
+[debug.threadedOpt]: [1]
+[debug.tracing.battery_status]: [0]
+[debug.tracing.device_state]: [0:DEFAULT]
+[debug.tracing.mcc]: [510]
+[debug.tracing.mnc]: [89]
+[debug.tracing.plug_type]: [2]
+[debug.tracing.screen_brightness]: [0.005393023]
+[debug.tracing.screen_state]: [2]
+[debug.ui.default_gralloc]: [4]
+[debug.ui.default_mapper]: [4]
+[debug.ums.hardware]: [true]
+[debug.use_app_native]: [1]
+[debug.usejit]: [true]
+[debug.vendor.nhmonitor.delay30dump]: [true]
+[debug.vendor.nhmonitor.status]: [false]
+[debug.vendor.sys.cameraserver_inuse]: [null]
+[debug.vendor.sys.country_for_cam]: [ID]
+[debug.vendor.sys.oobe.camera_skin]: [brown]
+[debug.vulkan.enable_msaa]: [false]
+[debug.wave.perfmonitor.mode]: [0]
+[dev.bootcomplete]: [1]
+[dev.mnt.blk.data]: [sdc65]
+[dev.mnt.blk.data.user.0]: [sdc65]
+[dev.mnt.blk.data_mirror.cur_profiles]: [sdc65]
+[dev.mnt.blk.data_mirror.data_ce.null]: [sdc65]
+[dev.mnt.blk.data_mirror.data_ce.null.0]: [sdc65]
+[dev.mnt.blk.data_mirror.data_de.null]: [sdc65]
+[dev.mnt.blk.data_mirror.misc_ce.null]: [sdc65]
+[dev.mnt.blk.data_mirror.misc_de.null]: [sdc65]
+[dev.mnt.blk.data_mirror.ref_profiles]: [sdc65]
+[dev.mnt.blk.data_mirror.storage_area]: [sdc65]
+[dev.mnt.blk.metadata]: [sdc17]
+[dev.mnt.blk.mnt.vendor.nvcfg]: [sdc7]
+[dev.mnt.blk.mnt.vendor.nvdata]: [sdc8]
+[dev.mnt.blk.mnt.vendor.persist]: [sdc18]
+[dev.mnt.blk.mnt.vendor.protect_f]: [sdc19]
+[dev.mnt.blk.mnt.vendor.protect_s]: [sdc20]
+[dev.mnt.blk.odm_dlkm]: [sdc63]
+[dev.mnt.blk.product]: [sdc63]
+[dev.mnt.blk.root]: [sdc63]
+[dev.mnt.blk.system_ext]: [sdc63]
+[dev.mnt.blk.tr_carrier]: [sdc63]
+[dev.mnt.blk.tr_company]: [sdc63]
+[dev.mnt.blk.tr_mi]: [sdc63]
+[dev.mnt.blk.tr_overlayfs]: [sdc63]
+[dev.mnt.blk.tr_preload]: [sdc63]
+[dev.mnt.blk.tr_product]: [sdc63]
+[dev.mnt.blk.tr_region]: [sdc63]
+[dev.mnt.blk.tr_theme]: [sdc63]
+[dev.mnt.blk.tranfs]: [sdc64]
+[dev.mnt.blk.vendor]: [sdc63]
+[dev.mnt.blk.vendor_dlkm]: [sdc63]
+[dev.mnt.dev.data]: [dm-76]
+[dev.mnt.dev.data.user.0]: [dm-76]
+[dev.mnt.dev.data_mirror.cur_profiles]: [dm-76]
+[dev.mnt.dev.data_mirror.data_ce.null]: [dm-76]
+[dev.mnt.dev.data_mirror.data_ce.null.0]: [dm-76]
+[dev.mnt.dev.data_mirror.data_de.null]: [dm-76]
+[dev.mnt.dev.data_mirror.misc_ce.null]: [dm-76]
+[dev.mnt.dev.data_mirror.misc_de.null]: [dm-76]
+[dev.mnt.dev.data_mirror.ref_profiles]: [dm-76]
+[dev.mnt.dev.data_mirror.storage_area]: [dm-76]
+[dev.mnt.dev.metadata]: [sdc17]
+[dev.mnt.dev.mnt.vendor.nvcfg]: [sdc7]
+[dev.mnt.dev.mnt.vendor.nvdata]: [sdc8]
+[dev.mnt.dev.mnt.vendor.persist]: [sdc18]
+[dev.mnt.dev.mnt.vendor.protect_f]: [sdc19]
+[dev.mnt.dev.mnt.vendor.protect_s]: [sdc20]
+[dev.mnt.dev.odm_dlkm]: [dm-21]
+[dev.mnt.dev.product]: [dm-19]
+[dev.mnt.dev.root]: [dm-16]
+[dev.mnt.dev.system_ext]: [dm-17]
+[dev.mnt.dev.tr_carrier]: [dm-26]
+[dev.mnt.dev.tr_company]: [dm-25]
+[dev.mnt.dev.tr_mi]: [dm-22]
+[dev.mnt.dev.tr_overlayfs]: [dm-29]
+[dev.mnt.dev.tr_preload]: [dm-28]
+[dev.mnt.dev.tr_product]: [dm-27]
+[dev.mnt.dev.tr_region]: [dm-24]
+[dev.mnt.dev.tr_theme]: [dm-23]
+[dev.mnt.dev.tranfs]: [sdc64]
+[dev.mnt.dev.vendor]: [dm-18]
+[dev.mnt.dev.vendor_dlkm]: [dm-20]
+[dev.mnt.rootdisk.data]: [sdc]
+[dev.mnt.rootdisk.data.user.0]: [sdc]
+[dev.mnt.rootdisk.data_mirror.cur_profiles]: [sdc]
+[dev.mnt.rootdisk.data_mirror.data_ce.null]: [sdc]
+[dev.mnt.rootdisk.data_mirror.data_ce.null.0]: [sdc]
+[dev.mnt.rootdisk.data_mirror.data_de.null]: [sdc]
+[dev.mnt.rootdisk.data_mirror.misc_ce.null]: [sdc]
+[dev.mnt.rootdisk.data_mirror.misc_de.null]: [sdc]
+[dev.mnt.rootdisk.data_mirror.ref_profiles]: [sdc]
+[dev.mnt.rootdisk.data_mirror.storage_area]: [sdc]
+[dev.mnt.rootdisk.metadata]: [sdc]
+[dev.mnt.rootdisk.mnt.vendor.nvcfg]: [sdc]
+[dev.mnt.rootdisk.mnt.vendor.nvdata]: [sdc]
+[dev.mnt.rootdisk.mnt.vendor.persist]: [sdc]
+[dev.mnt.rootdisk.mnt.vendor.protect_f]: [sdc]
+[dev.mnt.rootdisk.mnt.vendor.protect_s]: [sdc]
+[dev.mnt.rootdisk.odm_dlkm]: [sdc]
+[dev.mnt.rootdisk.product]: [sdc]
+[dev.mnt.rootdisk.root]: [sdc]
+[dev.mnt.rootdisk.system_ext]: [sdc]
+[dev.mnt.rootdisk.tr_carrier]: [sdc]
+[dev.mnt.rootdisk.tr_company]: [sdc]
+[dev.mnt.rootdisk.tr_mi]: [sdc]
+[dev.mnt.rootdisk.tr_overlayfs]: [sdc]
+[dev.mnt.rootdisk.tr_preload]: [sdc]
+[dev.mnt.rootdisk.tr_product]: [sdc]
+[dev.mnt.rootdisk.tr_region]: [sdc]
+[dev.mnt.rootdisk.tr_theme]: [sdc]
+[dev.mnt.rootdisk.tranfs]: [sdc]
+[dev.mnt.rootdisk.vendor]: [sdc]
+[dev.mnt.rootdisk.vendor_dlkm]: [sdc]
+[graphics.gpu.profiler.support]: [true]
+[gsm.current.phone-type]: [1,1,1]
+[gsm.network.type]: [Unknown,LTE,Unknown]
+[gsm.operator.alpha]: [Telkomsel,3,]
+[gsm.operator.iso-country]: [id,id,]
+[gsm.operator.isroaming]: [false,false,false]
+[gsm.operator.numeric]: [51010,51089,]
+[gsm.sim.operator.alpha]: [Telkomsel,3]
+[gsm.sim.operator.iso-country]: [id,id]
+[gsm.sim.operator.numeric]: [51010,51089]
+[gsm.sim.preiccid_0]: [8962100]
+[gsm.sim.preiccid_1]: [8962899]
+[gsm.sim.preiccid_2]: []
+[gsm.sim.state]: [LOADED,LOADED,ABSENT]
+[gsm.sim1.type]: [20]
+[gsm.sim2.num.simlock]: []
+[gsm.sim2.type]: [20]
+[gsm.sim3.type]: []
+[gsm.slot1.num.pin1]: [3]
+[gsm.slot1.num.pin2]: [3]
+[gsm.slot1.num.puk1]: [10]
+[gsm.slot1.num.puk2]: [10]
+[gsm.slot2.num.pin1]: [3]
+[gsm.slot2.num.pin2]: [3]
+[gsm.slot2.num.puk1]: [10]
+[gsm.slot2.num.puk2]: [10]
+[gsm.slot3.num.pin1]: []
+[gsm.slot3.num.pin2]: []
+[gsm.slot3.num.puk1]: []
+[gsm.slot3.num.puk2]: []
+[gsm.version.baseband]: [MOLY.LR13.R2.MP.V184.P36]
+[gsm.version.ril-impl]: [android reference-ril 1.0]
+[hbt.debug]: [off]
+[hwservicemanager.ready]: [true]
+[init.svc.aconfigd]: [stopped]
+[init.svc.aconfigd-mainline-init]: [stopped]
+[init.svc.aconfigd-platform-init]: [stopped]
+[init.svc.adbd]: [running]
+[init.svc.aee-reinit_v2]: [stopped]
+[init.svc.aee.log-1-1]: [stopped]
+[init.svc.aee_aed64_v2]: [running]
+[init.svc.aee_set_md_ver_prop_v2]: [stopped]
+[init.svc.agpsd]: [running]
+[init.svc.android-hardware-media-c2-hal-1-2]: [running]
+[init.svc.apexd]: [stopped]
+[init.svc.apexd-bootstrap]: [stopped]
+[init.svc.apexd-snapshotde]: [stopped]
+[init.svc.art_boot]: [stopped]
+[init.svc.artd]: [stopped]
+[init.svc.audio_parameter_parser_service]: [running]
+[init.svc.audioserver]: [running]
+[init.svc.avatarpipe]: [running]
+[init.svc.bat_authencali]: [stopped]
+[init.svc.batterywarning]: [running]
+[init.svc.bluetooth-1-1]: [running]
+[init.svc.bootanim]: [stopped]
+[init.svc.boringssl_self_test32]: [stopped]
+[init.svc.boringssl_self_test32_vendor]: [stopped]
+[init.svc.boringssl_self_test64]: [stopped]
+[init.svc.boringssl_self_test64_vendor]: [stopped]
+[init.svc.boringssl_self_test_apex32]: [stopped]
+[init.svc.boringssl_self_test_apex64]: [stopped]
+[init.svc.bpfloader]: [stopped]
+[init.svc.camerahalserver]: [running]
+[init.svc.cameraserver]: [running]
+[init.svc.ccci_mdinit]: [running]
+[init.svc.chg_sence]: [running]
+[init.svc.connsyslogger]: [running]
+[init.svc.credstore]: [running]
+[init.svc.derive_classpath]: [stopped]
+[init.svc.derive_sdk]: [stopped]
+[init.svc.deviceauthen_hal_service]: [running]
+[init.svc.dmesgd]: [stopped]
+[init.svc.drm]: [running]
+[init.svc.eara-io]: [running]
+[init.svc.emdlogger]: [running]
+[init.svc.fpexts_hal]: [running]
+[init.svc.fpsgo]: [running]
+[init.svc.fuelgauged]: [running]
+[init.svc.fuelgauged_nvram]: [stopped]
+[init.svc.gatekeeperd]: [running]
+[init.svc.gbe]: [running]
+[init.svc.get_ufs_error]: [stopped]
+[init.svc.getgameserver]: [running]
+[init.svc.gpu]: [running]
+[init.svc.hang_monitor]: [stopped]
+[init.svc.health-hal-2-1]: [running]
+[init.svc.heapprofd]: [stopped]
+[init.svc.hiber]: [running]
+[init.svc.hidl_memory]: [running]
+[init.svc.hwservicemanager]: [running]
+[init.svc.idmap2d]: [stopped]
+[init.svc.incidentd]: [running]
+[init.svc.insmod_sh]: [stopped]
+[init.svc.installd]: [running]
+[init.svc.ipsec_mon]: [stopped]
+[init.svc.keystore2]: [running]
+[init.svc.lbs_dbg_ext]: [running]
+[init.svc.lbs_hidl_service]: [running]
+[init.svc.lmkd]: [running]
+[init.svc.logd]: [running]
+[init.svc.logd-auditctl]: [stopped]
+[init.svc.logd-reinit]: [stopped]
+[init.svc.media]: [running]
+[init.svc.media.swcodec]: [running]
+[init.svc.mediacodec]: [running]
+[init.svc.mediadrm]: [running]
+[init.svc.mediaextractor]: [running]
+[init.svc.mediametrics]: [running]
+[init.svc.memfusion]: [running]
+[init.svc.mf_nowb_sh]: [stopped]
+[init.svc.misctrl]: [stopped]
+[init.svc.mnld]: [running]
+[init.svc.mobicore]: [running]
+[init.svc.mobile_log_d]: [running]
+[init.svc.mtk.plpath.utils.link]: [stopped]
+[init.svc.mtk_secure_element_hal_service]: [running]
+[init.svc.netd]: [running]
+[init.svc.netdagent]: [running]
+[init.svc.netdiag]: [running]
+[init.svc.neuralnetworks_hal_service_shim_mtk]: [running]
+[init.svc.nfc_hal_service]: [running]
+[init.svc.nvram-hidl-1-1]: [running]
+[init.svc.nvram_daemon]: [stopped]
+[init.svc.nwk_opt-hal-1-0]: [running]
+[init.svc.odsign]: [stopped]
+[init.svc.osi]: [running]
+[init.svc.otad-async]: [stopped]
+[init.svc.otad-sync]: [stopped]
+[init.svc.paytrigger_hal_service]: [running]
+[init.svc.perfetto_persistent_sysui_tracing_for_bugreport]: [stopped]
+[init.svc.pnpmgr]: [running]
+[init.svc.power-hal-1-0]: [running]
+[init.svc.pq-2-2]: [running]
+[init.svc.prng_seeder]: [running]
+[init.svc.rpmbservice]: [running]
+[init.svc.rss_hwm_reset]: [stopped]
+[init.svc.servicemanager]: [running]
+[init.svc.smartcharging]: [running]
+[init.svc.spd_cpu_set_sh]: [stopped]
+[init.svc.statsd]: [running]
+[init.svc.stflashtool]: [stopped]
+[init.svc.storage_feature_cloudctl]: [running]
+[init.svc.storaged]: [running]
+[init.svc.stucklogo]: [stopped]
+[init.svc.surfaceflinger]: [running]
+[init.svc.system_suspend]: [running]
+[init.svc.tasksetEnd_sh]: [stopped]
+[init.svc.tasksetStart_sh]: [stopped]
+[init.svc.taskset_sh]: [stopped]
+[init.svc.tee-1-1]: [running]
+[init.svc.terservice]: [stopped]
+[init.svc.thermal_core]: [running]
+[init.svc.thermal_space]: [running]
+[init.svc.thermald]: [running]
+[init.svc.tne]: [running]
+[init.svc.tnevservice]: [running]
+[init.svc.tombstoned]: [running]
+[init.svc.traced]: [running]
+[init.svc.traced_perf]: [stopped]
+[init.svc.traced_probes]: [running]
+[init.svc.tran_pdb]: [stopped]
+[init.svc.tran_tinymix]: [stopped]
+[init.svc.trancriticalparavfy_service]: [running]
+[init.svc.tranlog]: [running]
+[init.svc.transtorage]: [running]
+[init.svc.trustonic_check_keybox_service]: [stopped]
+[init.svc.ueventd]: [running]
+[init.svc.update_engine]: [running]
+[init.svc.update_verifier]: [stopped]
+[init.svc.usbd]: [stopped]
+[init.svc.v3avpud]: [running]
+[init.svc.vendor.tranlogconfig]: [running]
+[init.svc.virtualizationservice]: [stopped]
+[init.svc.vndservicemanager]: [running]
+[init.svc.vold]: [running]
+[init.svc.volte_imsm_93]: [running]
+[init.svc.volte_md_status]: [running]
+[init.svc.vtservice]: [running]
+[init.svc.vtservice_hidl]: [running]
+[init.svc.wfca]: [running]
+[init.svc.wificond]: [running]
+[init.svc.wlan_assistant]: [running]
+[init.svc.wmt_launcher]: [running]
+[init.svc.wmt_loader]: [stopped]
+[init.svc.wpa_supplicant]: [running]
+[init.svc.zygote]: [running]
+[init.svc.zygote_secondary]: [running]
+[init.userspace_reboot.is_supported]: [true]
+[kcmdline.binder]: [c]
+[kcmdline.loaded]: [1]
+[log.tag]: [I]
+[log.tag.APM_AudioPolicyManager]: [D]
+[log.tag.SQLiteLog]: [SUPPRESS]
+[log.tag.SQLiteStatements]: [SUPPRESS]
+[log.tag.SQLiteTime]: [SUPPRESS]
+[log.tag.stats_log]: [OFF]
+[logd.ready]: [true]
+[media.c2.dmabuf.padding]: [3072]
+[media.stagefright.thumbnail.prefer_hw_codecs]: [true]
+[mediatek.wlan.ctia]: [0]
+[net.bt.name]: [Android]
+[net.lte.data.roaming.setting1]: [false]
+[net.lte.data.roaming.setting2]: [false]
+[nfc.firstBoot]: [false]
+[nfc.initialized]: [true]
+[odsign.key.done]: [1]
+[odsign.verification.done]: [1]
+[odsign.verification.success]: [1]
+[os.charging_animation_type]: [45]
+[os.charging_animation_wire_power]: [0]
+[os.charging_animation_wireless_power]: [0]
+[os.eye.protect.mode]: [1]
+[os.notch.support]: [2]
+[partition.odm_dlkm.verified]: [2]
+[partition.odm_dlkm.verified.check_at_most_once]: [0]
+[partition.odm_dlkm.verified.hash_alg]: [sha256]
+[partition.odm_dlkm.verified.root_digest]: [b1bded42187eec1ef39529b10efec7eadf78e21781c6ac8d84d6d3006e6f1d9c]
+[partition.product.verified]: [2]
+[partition.product.verified.check_at_most_once]: [0]
+[partition.product.verified.hash_alg]: [sha256]
+[partition.product.verified.root_digest]: [c1c11372b4085772062151751baffa40acc53ecd4ab714a9e8cc91499e57e02b]
+[partition.system.verified]: [2]
+[partition.system.verified.check_at_most_once]: [0]
+[partition.system.verified.hash_alg]: [sha256]
+[partition.system.verified.root_digest]: [bd1eb197cf39043b0d2788609d6fca7df7ce0baf3d3cc9869c2f18e77faf42a5]
+[partition.system_ext.verified]: [2]
+[partition.system_ext.verified.check_at_most_once]: [0]
+[partition.system_ext.verified.hash_alg]: [sha256]
+[partition.system_ext.verified.root_digest]: [37114d315748ae65a98629dc1b0d8c514a015b4f240361ab56dd93d1c19e507e]
+[partition.vendor.verified]: [2]
+[partition.vendor.verified.check_at_most_once]: [0]
+[partition.vendor.verified.hash_alg]: [sha256]
+[partition.vendor.verified.root_digest]: [3c268edb0ca9a5c09517a47300e7bcdc1d1b5826d93e492e3a741dfc5abb6b0a]
+[partition.vendor_dlkm.verified]: [2]
+[partition.vendor_dlkm.verified.check_at_most_once]: [0]
+[partition.vendor_dlkm.verified.hash_alg]: [sha256]
+[partition.vendor_dlkm.verified.root_digest]: [d4133bc2109f61ab5e6afa7b789b7c683801b5aa2685fab6ee3ab4b9a5152dfa]
+[persist.adb.nonblocking_ffs]: [0]
+[persist.device_config.aconfig_flags.accessibility.enable_magnifier_thumbnail]: [false]
+[persist.device_config.aconfig_flags.activity_manager_native_boot.modern_queue_enabled]: [true]
+[persist.device_config.aconfig_flags.bluetooth.INIT_gd_hal_snoop_logger_filtering]: [true]
+[persist.device_config.aconfig_flags.bluetooth.INIT_gd_hal_snoop_logger_socket]: [true]
+[persist.device_config.aconfig_flags.bluetooth.audio_policy_ag_enabled]: [true]
+[persist.device_config.aconfig_flags.bluetooth.audio_policy_hf_enabled]: [true]
+[persist.device_config.aconfig_flags.bluetooth.le_audio_enabled_by_default]: [false]
+[persist.device_config.aconfig_flags.bluetooth.location_denylist_advertising_data]: [⊈0016AAFE40/00FFFFFFF0,⊆0016AAFE/00FFFFFF,⊆00FF4C0002/00FFFFFFFF]
+[persist.device_config.aconfig_flags.bluetooth.location_denylist_mac]: []
+[persist.device_config.aconfig_flags.bluetooth.location_denylist_name]: []
+[persist.device_config.aconfig_flags.bluetooth.scan_timeout_millis]: [300000]
+[persist.device_config.aconfig_flags.companion.enable_context_sync_telecom]: [false]
+[persist.device_config.aconfig_flags.configuration.beta_launch]: [false]
+[persist.device_config.aconfig_flags.configuration.beta_public_launch]: [false]
+[persist.device_config.aconfig_flags.configuration.demo_flag]: [false]
+[persist.device_config.aconfig_flags.configuration.droidfood_launch]: [false]
+[persist.device_config.aconfig_flags.configuration.flag]: [true]
+[persist.device_config.aconfig_flags.configuration.flag_five]: [false]
+[persist.device_config.aconfig_flags.configuration.flag_four]: [false]
+[persist.device_config.aconfig_flags.configuration.flag_six]: [false]
+[persist.device_config.aconfig_flags.configuration.flag_three]: [false]
+[persist.device_config.aconfig_flags.configuration.flag_two]: [false]
+[persist.device_config.aconfig_flags.configuration.public_launch]: [false]
+[persist.device_config.aconfig_flags.configuration.rescue_party_throttle_duration_min]: [10]
+[persist.device_config.aconfig_flags.connectivity.data_stall_consecutive_dns_timeout_threshold]: [5]
+[persist.device_config.aconfig_flags.connectivity.dhcp_init_reboot_enabled]: [false]
+[persist.device_config.aconfig_flags.connectivity.dhcp_init_reboot_version]: [0]
+[persist.device_config.aconfig_flags.connectivity.dhcp_ip_conflict_detect_version]: [0]
+[persist.device_config.aconfig_flags.connectivity.dhcp_rapid_commit_enabled]: [false]
+[persist.device_config.aconfig_flags.connectivity.dhcp_rapid_commit_version]: [1]
+[persist.device_config.aconfig_flags.connectivity.dhcp_restart_configuration_delay]: [1000]
+[persist.device_config.aconfig_flags.connectivity.dhcp_server_decline_version]: [0]
+[persist.device_config.aconfig_flags.connectivity.ipclient_accept_ipv6_link_local_dns_version]: [0]
+[persist.device_config.aconfig_flags.connectivity.ipclient_multicast_ns_version]: [0]
+[persist.device_config.aconfig_flags.edgetpu_native.allowlist_app11]: []
+[persist.device_config.aconfig_flags.edgetpu_native.allowlist_app12]: []
+[persist.device_config.aconfig_flags.edgetpu_native.allowlist_app4]: []
+[persist.device_config.aconfig_flags.edgetpu_native.allowlist_app5]: []
+[persist.device_config.aconfig_flags.edgetpu_native.allowlist_app6]: []
+[persist.device_config.aconfig_flags.edgetpu_native.allowlist_app7]: []
+[persist.device_config.aconfig_flags.lmkd_native.thrashing_limit_critical]: [300]
+[persist.device_config.aconfig_flags.nearby.nearby_enable_presence_broadcast_legacy]: [false]
+[persist.device_config.aconfig_flags.nearby.nearby_nano_app_min_version]: [1]
+[persist.device_config.aconfig_flags.nearby.nearby_support_test_app]: [false]
+[persist.device_config.aconfig_flags.netd_native.dns_event_subsample_map]: [default:6 0:400 2:110 4:110 7:110]
+[persist.device_config.aconfig_flags.netd_native.doh]: [1]
+[persist.device_config.aconfig_flags.netd_native.dot_connect_timeout_ms]: [30000]
+[persist.device_config.aconfig_flags.netd_native.dot_query_timeout_ms]: [-1]
+[persist.device_config.aconfig_flags.netd_native.dot_revalidation_threshold]: [-1]
+[persist.device_config.aconfig_flags.netd_native.dot_validation_latency_factor]: [3]
+[persist.device_config.aconfig_flags.netd_native.dot_validation_latency_offset_ms]: [100]
+[persist.device_config.aconfig_flags.netd_native.dot_xport_unusable_threshold]: [-1]
+[persist.device_config.aconfig_flags.netd_native.max_cache_entries]: [640]
+[persist.device_config.aconfig_flags.netd_native.max_queries_global]: [2500]
+[persist.device_config.aconfig_flags.netd_native.no_retry_after_cancel]: [0]
+[persist.device_config.aconfig_flags.netd_native.parallel_lookup]: [0]
+[persist.device_config.aconfig_flags.netd_native.sort_nameservers]: [0]
+[persist.device_config.aconfig_flags.nnapi_native.current_feature_level]: [7]
+[persist.device_config.aconfig_flags.nnapi_native.telemetry_enable]: [false]
+[persist.device_config.aconfig_flags.remote_key_provisioning_native.enable_rkpd]: [false]
+[persist.device_config.aconfig_flags.runtime_native.metrics.reporting-mods]: [2]
+[persist.device_config.aconfig_flags.runtime_native.metrics.reporting-mods-server]: [2]
+[persist.device_config.aconfig_flags.runtime_native.metrics.reporting-num-mods]: [100]
+[persist.device_config.aconfig_flags.runtime_native.metrics.reporting-num-mods-server]: [100]
+[persist.device_config.aconfig_flags.runtime_native.metrics.reporting-spec]: [1,5,30,60,600]
+[persist.device_config.aconfig_flags.runtime_native.metrics.reporting-spec-server]: [1,10,60,3600,*]
+[persist.device_config.aconfig_flags.runtime_native.metrics.write-to-statsd]: [true]
+[persist.device_config.aconfig_flags.runtime_native.usap_aggressive_refill]: [true]
+[persist.device_config.aconfig_flags.runtime_native.usap_pool_refill_delay_ms]: [0]
+[persist.device_config.aconfig_flags.runtime_native.usap_pool_size_max]: [16]
+[persist.device_config.aconfig_flags.runtime_native.usap_pool_size_min]: [8]
+[persist.device_config.aconfig_flags.runtime_native.usap_prefer_idle]: [false]
+[persist.device_config.aconfig_flags.runtime_native.usap_priority_boost]: [true]
+[persist.device_config.aconfig_flags.runtime_native.usap_refill_threshold]: [2]
+[persist.device_config.aconfig_flags.runtime_native.use_app_image_startup_cache]: [true]
+[persist.device_config.aconfig_flags.runtime_native_boot.disable_lock_profiling]: [true]
+[persist.device_config.aconfig_flags.runtime_native_boot.enable_generational_cc]: [true]
+[persist.device_config.aconfig_flags.runtime_native_boot.enable_perfetto]: [false]
+[persist.device_config.aconfig_flags.runtime_native_boot.enable_readahead]: [false]
+[persist.device_config.aconfig_flags.runtime_native_boot.force_disable_uffd_gc]: [false]
+[persist.device_config.aconfig_flags.runtime_native_boot.iorap_blacklisted_packages]: []
+[persist.device_config.aconfig_flags.runtime_native_boot.iorap_perfetto_enable]: [false]
+[persist.device_config.aconfig_flags.runtime_native_boot.iorap_readahead_enable]: [false]
+[persist.device_config.aconfig_flags.runtime_native_boot.iorapd_options]: []
+[persist.device_config.aconfig_flags.runtime_native_boot.is_uffd_gc_enabled]: [true]
+[persist.device_config.aconfig_flags.runtime_native_boot.use_generational_gc]: [true]
+[persist.device_config.aconfig_flags.storage_native_boot.charging_required]: [false]
+[persist.device_config.aconfig_flags.storage_native_boot.dirty_reclaim_rate]: [0.5]
+[persist.device_config.aconfig_flags.storage_native_boot.fuse_enabled]: [1]
+[persist.device_config.aconfig_flags.storage_native_boot.lifetime_threshold]: [70]
+[persist.device_config.aconfig_flags.storage_native_boot.low_battery_level]: [20.0]
+[persist.device_config.aconfig_flags.storage_native_boot.min_gc_sleeptime]: [5000]
+[persist.device_config.aconfig_flags.storage_native_boot.min_segments_threshold]: [512]
+[persist.device_config.aconfig_flags.storage_native_boot.segment_reclaim_weight]: [2.0]
+[persist.device_config.aconfig_flags.storage_native_boot.smart_idle_maint_enabled]: [true]
+[persist.device_config.aconfig_flags.storage_native_boot.smart_idle_maint_period]: [60]
+[persist.device_config.aconfig_flags.storage_native_boot.take_over_get_content]: [false]
+[persist.device_config.aconfig_flags.storage_native_boot.target_dirty_ratio]: [80]
+[persist.device_config.aconfig_flags.storage_native_boot.transcode_compat_stale]: []
+[persist.device_config.aconfig_flags.surface_flinger_native_boot.SkiaTracingFeature__use_skia_tracing]: [false]
+[persist.device_config.aconfig_flags.surface_flinger_native_boot.max_frame_buffer_acquired_buffers]: [4]
+[persist.device_config.nnapi_native.current_feature_level]: [7]
+[persist.device_config.nnapi_native.telemetry_enable]: [false]
+[persist.device_config.runtime_native.metrics.reporting-mods]: [2]
+[persist.device_config.runtime_native.metrics.reporting-mods-server]: [2]
+[persist.device_config.runtime_native.metrics.reporting-num-mods]: [100]
+[persist.device_config.runtime_native.metrics.reporting-num-mods-server]: [100]
+[persist.device_config.runtime_native.metrics.reporting-spec]: [1,5,30,60,600]
+[persist.device_config.runtime_native.metrics.reporting-spec-server]: [1,10,60,3600,*]
+[persist.device_config.runtime_native.metrics.write-to-statsd]: [true]
+[persist.device_config.runtime_native.usap_aggressive_refill]: [true]
+[persist.device_config.runtime_native.usap_pool_refill_delay_ms]: [0]
+[persist.device_config.runtime_native.usap_pool_size_max]: [16]
+[persist.device_config.runtime_native.usap_pool_size_min]: [8]
+[persist.device_config.runtime_native.usap_prefer_idle]: [false]
+[persist.device_config.runtime_native.usap_priority_boost]: [true]
+[persist.device_config.runtime_native.usap_refill_threshold]: [2]
+[persist.device_config.runtime_native.use_app_image_startup_cache]: [true]
+[persist.device_config.runtime_native_boot.disable_lock_profiling]: [true]
+[persist.device_config.runtime_native_boot.enable_generational_cc]: [true]
+[persist.device_config.runtime_native_boot.enable_perfetto]: [false]
+[persist.device_config.runtime_native_boot.enable_readahead]: [false]
+[persist.device_config.runtime_native_boot.force_disable_uffd_gc]: [false]
+[persist.device_config.runtime_native_boot.iorap_blacklisted_packages]: []
+[persist.device_config.runtime_native_boot.iorap_perfetto_enable]: [false]
+[persist.device_config.runtime_native_boot.iorap_readahead_enable]: [false]
+[persist.device_config.runtime_native_boot.iorapd_options]: []
+[persist.device_config.runtime_native_boot.is_uffd_gc_enabled]: [true]
+[persist.device_config.runtime_native_boot.use_generational_gc]: [true]
+[persist.graphics.egl]: []
+[persist.hyperion_hda.enabled]: [1]
+[persist.log.tag.AT]: [I]
+[persist.log.tag.AdnRecord]: [I]
+[persist.log.tag.AdnRecordCache]: [I]
+[persist.log.tag.AdnRecordLoader]: [I]
+[persist.log.tag.AirplaneHandler]: [I]
+[persist.log.tag.BufferQueueDump]: [I]
+[persist.log.tag.BufferQueueProducer]: [I]
+[persist.log.tag.C2K_RIL-DATA]: [I]
+[persist.log.tag.CapaSwitch]: [I]
+[persist.log.tag.CarrierExpressServiceImpl]: [I]
+[persist.log.tag.CarrierExpressServiceImplExt]: [I]
+[persist.log.tag.CountryDetector]: [I]
+[persist.log.tag.DSSelector]: [I]
+[persist.log.tag.DSSelectorOP01]: [I]
+[persist.log.tag.DSSelectorOP02]: [I]
+[persist.log.tag.DSSelectorOP09]: [I]
+[persist.log.tag.DSSelectorOP18]: [I]
+[persist.log.tag.DSSelectorOm]: [I]
+[persist.log.tag.DSSelectorUtil]: [I]
+[persist.log.tag.DataDispatcher]: [I]
+[persist.log.tag.DcFcMgr]: [I]
+[persist.log.tag.EccNumberPreference]: [I]
+[persist.log.tag.EccNumberSource]: [I]
+[persist.log.tag.ExternalSimMgr]: [I]
+[persist.log.tag.GraphicBuffer]: [I]
+[persist.log.tag.GsmCallTkrHlpr]: [I]
+[persist.log.tag.GsmCdmaConn]: [I]
+[persist.log.tag.GsmCdmaPhone]: [I]
+[persist.log.tag.IMSRILRequest]: [I]
+[persist.log.tag.IMS_RILA]: [I]
+[persist.log.tag.IccCardProxy]: [I]
+[persist.log.tag.IccPhoneBookIM]: [I]
+[persist.log.tag.IccProvider]: [I]
+[persist.log.tag.ImsApp]: [I]
+[persist.log.tag.ImsBaseCommands]: [I]
+[persist.log.tag.ImsCall]: [I]
+[persist.log.tag.ImsCallProfile]: [I]
+[persist.log.tag.ImsCallSession]: [I]
+[persist.log.tag.ImsEcbm]: [I]
+[persist.log.tag.ImsEcbmProxy]: [I]
+[persist.log.tag.ImsManager]: [I]
+[persist.log.tag.ImsPhone]: [I]
+[persist.log.tag.ImsPhoneBase]: [I]
+[persist.log.tag.ImsPhoneCall]: [I]
+[persist.log.tag.ImsService]: [I]
+[persist.log.tag.ImsVTProvider]: [I]
+[persist.log.tag.IsimFileHandler]: [I]
+[persist.log.tag.IsimRecords]: [I]
+[persist.log.tag.MTKSST]: [D]
+[persist.log.tag.MtkAdnRecord]: [I]
+[persist.log.tag.MtkCsimFH]: [I]
+[persist.log.tag.MtkDc]: [I]
+[persist.log.tag.MtkDcc]: [I]
+[persist.log.tag.MtkDct]: [I]
+[persist.log.tag.MtkEmbmsAdaptor]: [I]
+[persist.log.tag.MtkFactory]: [I]
+[persist.log.tag.MtkGsmCdmaConn]: [I]
+[persist.log.tag.MtkIccCardProxy]: [I]
+[persist.log.tag.MtkIccPHBIM]: [I]
+[persist.log.tag.MtkIccProvider]: [I]
+[persist.log.tag.MtkImsManager]: [I]
+[persist.log.tag.MtkImsService]: [I]
+[persist.log.tag.MtkIsimFH]: [I]
+[persist.log.tag.MtkPhoneNotifr]: [I]
+[persist.log.tag.MtkPhoneNumberUtils]: [I]
+[persist.log.tag.MtkPhoneSwitcher]: [D]
+[persist.log.tag.MtkRecordLoader]: [I]
+[persist.log.tag.MtkRetryManager]: [I]
+[persist.log.tag.MtkRuimFH]: [I]
+[persist.log.tag.MtkSIMFH]: [I]
+[persist.log.tag.MtkSIMRecords]: [I]
+[persist.log.tag.MtkSmsCbHeader]: [I]
+[persist.log.tag.MtkSmsManager]: [I]
+[persist.log.tag.MtkSmsMessage]: [I]
+[persist.log.tag.MtkSpnOverride]: [I]
+[persist.log.tag.MtkSubCtrl]: [I]
+[persist.log.tag.MtkUiccCard]: [I]
+[persist.log.tag.MtkUiccCardApp]: [I]
+[persist.log.tag.MtkUiccCtrl]: [I]
+[persist.log.tag.MtkUsimFH]: [I]
+[persist.log.tag.MwiRIL]: [I]
+[persist.log.tag.NetAgentService]: [I]
+[persist.log.tag.NetAgent_IO]: [I]
+[persist.log.tag.NetLnkEventHdlr]: [I]
+[persist.log.tag.NetworkPolicy]: [I]
+[persist.log.tag.NetworkStats]: [I]
+[persist.log.tag.OperatorUtils]: [I]
+[persist.log.tag.PQ_DS]: [I]
+[persist.log.tag.Phone]: [I]
+[persist.log.tag.PhoneConfigurationSettings]: [I]
+[persist.log.tag.PhoneFactory]: [I]
+[persist.log.tag.PowerHalAddressUitls]: [I]
+[persist.log.tag.PowerHalMgrImpl]: [I]
+[persist.log.tag.PowerHalMgrServiceImpl]: [I]
+[persist.log.tag.PowerHalWifiMonitor]: [I]
+[persist.log.tag.ProxyController]: [I]
+[persist.log.tag.RFX]: [I]
+[persist.log.tag.RIL]: [I]
+[persist.log.tag.RIL-Fusion]: [I]
+[persist.log.tag.RIL-Netlink]: [I]
+[persist.log.tag.RIL-Parcel]: [I]
+[persist.log.tag.RIL-SocListen]: [I]
+[persist.log.tag.RIL-Socket]: [I]
+[persist.log.tag.RILC]: [I]
+[persist.log.tag.RILC-OP]: [I]
+[persist.log.tag.RILD]: [I]
+[persist.log.tag.RILMD2-SS]: [I]
+[persist.log.tag.RILMUXD]: [I]
+[persist.log.tag.RIL_UIM_SOCKET]: [I]
+[persist.log.tag.RTC_DAC]: [I]
+[persist.log.tag.RadioManager]: [I]
+[persist.log.tag.RfxAction]: [I]
+[persist.log.tag.RfxChannelMgr]: [I]
+[persist.log.tag.RfxCloneMgr]: [I]
+[persist.log.tag.RfxContFactory]: [I]
+[persist.log.tag.RfxController]: [I]
+[persist.log.tag.RfxDebugInfo]: [I]
+[persist.log.tag.RfxDisThread]: [I]
+[persist.log.tag.RfxFragEnc]: [I]
+[persist.log.tag.RfxHandlerMgr]: [I]
+[persist.log.tag.RfxIdToMsgId]: [I]
+[persist.log.tag.RfxIdToStr]: [I]
+[persist.log.tag.RfxMainThread]: [I]
+[persist.log.tag.RfxMclDisThread]: [I]
+[persist.log.tag.RfxMclMessenger]: [I]
+[persist.log.tag.RfxMclStatusMgr]: [I]
+[persist.log.tag.RfxMessage]: [I]
+[persist.log.tag.RfxObject]: [I]
+[persist.log.tag.RfxOpUtils]: [I]
+[persist.log.tag.RfxRilAdapter]: [I]
+[persist.log.tag.RfxRilUtils]: [I]
+[persist.log.tag.RfxRoot]: [I]
+[persist.log.tag.RfxStatusMgr]: [I]
+[persist.log.tag.RfxTimer]: [I]
+[persist.log.tag.RilClient]: [I]
+[persist.log.tag.RilOemClient]: [I]
+[persist.log.tag.RilOpProxy]: [I]
+[persist.log.tag.RmcCapa]: [I]
+[persist.log.tag.RmcCdmaSimRequest]: [I]
+[persist.log.tag.RmcCdmaSimUrc]: [I]
+[persist.log.tag.RmcCommSimOpReq]: [I]
+[persist.log.tag.RmcCommSimReq]: [I]
+[persist.log.tag.RmcCommSimUrc]: [I]
+[persist.log.tag.RmcDcCommon]: [I]
+[persist.log.tag.RmcDcPdnManager]: [I]
+[persist.log.tag.RmcDcReqHandler]: [I]
+[persist.log.tag.RmcDcUtility]: [I]
+[persist.log.tag.RmcEccNumberUrcHandler]: [I]
+[persist.log.tag.RmcEmbmsReq]: [I]
+[persist.log.tag.RmcEmbmsUrc]: [I]
+[persist.log.tag.RmcGsmSimRequest]: [I]
+[persist.log.tag.RmcGsmSimUrc]: [I]
+[persist.log.tag.RmcImsCtlReqHdl]: [I]
+[persist.log.tag.RmcImsCtlUrcHdl]: [I]
+[persist.log.tag.RmcNwHdlr]: [D]
+[persist.log.tag.RmcNwRTReqHdlr]: [D]
+[persist.log.tag.RmcNwReqHdlr]: [D]
+[persist.log.tag.RmcOemHandler]: [I]
+[persist.log.tag.RmcOpRadioReq]: [I]
+[persist.log.tag.RmcPhbReq]: [I]
+[persist.log.tag.RmcPhbUrc]: [I]
+[persist.log.tag.RmcRadioReq]: [I]
+[persist.log.tag.RmcRatSwHdlr]: [D]
+[persist.log.tag.RmcWp]: [I]
+[persist.log.tag.RtcCapa]: [I]
+[persist.log.tag.RtcCommSimCtrl]: [I]
+[persist.log.tag.RtcDC]: [I]
+[persist.log.tag.RtcEccNumberController]: [I]
+[persist.log.tag.RtcEmbmsAt]: [I]
+[persist.log.tag.RtcEmbmsUtil]: [I]
+[persist.log.tag.RtcIms]: [I]
+[persist.log.tag.RtcImsConference]: [I]
+[persist.log.tag.RtcImsConfigController]: [I]
+[persist.log.tag.RtcImsDialog]: [I]
+[persist.log.tag.RtcModeCont]: [I]
+[persist.log.tag.RtcNwCtrl]: [I]
+[persist.log.tag.RtcPhb]: [I]
+[persist.log.tag.RtcRadioCont]: [I]
+[persist.log.tag.RtcRatSwCtrl]: [D]
+[persist.log.tag.RtcWp]: [I]
+[persist.log.tag.SIMRecords]: [I]
+[persist.log.tag.SimSwitchOP01]: [I]
+[persist.log.tag.SimSwitchOP02]: [I]
+[persist.log.tag.SimSwitchOP18]: [I]
+[persist.log.tag.SlotQueueEntry]: [I]
+[persist.log.tag.SpnOverride]: [I]
+[persist.log.tag.SurfaceControl]: [I]
+[persist.log.tag.Telecom]: [I]
+[persist.log.tag.Telephony]: [I]
+[persist.log.tag.UiccCard]: [I]
+[persist.log.tag.UiccController]: [I]
+[persist.log.tag.UxUtility]: [I]
+[persist.log.tag.VT]: [I]
+[persist.log.tag.VsimAdaptor]: [I]
+[persist.log.tag.WORLDMODE]: [I]
+[persist.log.tag.WfoApp]: [I]
+[persist.log.tag.WpfaCcciDataHeaderEncoder]: [I]
+[persist.log.tag.WpfaCcciReader]: [I]
+[persist.log.tag.WpfaCcciSender]: [I]
+[persist.log.tag.WpfaControlMsgHandler]: [I]
+[persist.log.tag.WpfaDriver]: [I]
+[persist.log.tag.WpfaDriverAccept]: [I]
+[persist.log.tag.WpfaDriverAdapter]: [I]
+[persist.log.tag.WpfaDriverDeReg]: [I]
+[persist.log.tag.WpfaDriverMessage]: [I]
+[persist.log.tag.WpfaDriverRegFilter]: [I]
+[persist.log.tag.WpfaDriverULIpPkt]: [I]
+[persist.log.tag.WpfaDriverUtilis]: [I]
+[persist.log.tag.WpfaDriverVersion]: [I]
+[persist.log.tag.WpfaFilterRuleReqHandler]: [I]
+[persist.log.tag.WpfaParsing]: [I]
+[persist.log.tag.WpfaRingBuffer]: [I]
+[persist.log.tag.WpfaRuleContainer]: [I]
+[persist.log.tag.WpfaRuleRegister]: [I]
+[persist.log.tag.WpfaShmAccessController]: [I]
+[persist.log.tag.WpfaShmReadMsgHandler]: [I]
+[persist.log.tag.WpfaShmSynchronizer]: [I]
+[persist.log.tag.WpfaShmWriteMsgHandler]: [I]
+[persist.log.tag.bluetooth]: []
+[persist.log.tag.libPowerHal]: [I]
+[persist.log.tag.mtkpower@impl]: [I]
+[persist.log.tag.mtkpower_client]: [I]
+[persist.log.tag.wpfa_iptable_android]: [I]
+[persist.logd.size]: [65536]
+[persist.nfc.lastFirstBoot.time]: [1781060679704]
+[persist.nfc.restart.times]: [2]
+[persist.nfc.settings_wallet_support]: [true]
+[persist.nfc.snoop_log_mode]: [filtered]
+[persist.nfc.vendor_debug_enabled]: [false]
+[persist.product.lucid.disabled]: [1]
+[persist.radio.airplane_mode_on]: [0]
+[persist.radio.allow_mock_modem]: [false]
+[persist.radio.multisim.config]: [tsts]
+[persist.sys.apm.recent_keep_alive_support]: [1]
+[persist.sys.boot.reason]: []
+[persist.sys.boot.reason.history]: [shutdown,,1781060641
+cold,rtc,1781055795
+cold,powerkey,1780901153]
+[persist.sys.bootanim.play_sound]: [0]
+[persist.sys.bootfail_recovery.support]: [1]
+[persist.sys.dalvik.vm.lib.2]: [libart.so]
+[persist.sys.dex2oat.threads]: [4]
+[persist.sys.dexopt.aggressive_dex2oat.enable]: [true]
+[persist.sys.displayinset.top]: [0]
+[persist.sys.dmf.support]: [1]
+[persist.sys.edge.support]: [0]
+[persist.sys.edge.support_nr]: [0]
+[persist.sys.exceptionreport.support]: [1]
+[persist.sys.fflag.override.settings_enable_monitor_phantom_procs]: [true]
+[persist.sys.fuse]: [true]
+[persist.sys.fuse.passthrough.enable]: [true]
+[persist.sys.gdpr_version]: [20210705V3]
+[persist.sys.gps.lpp]: [2]
+[persist.sys.gpu.working_thread_priority]: [true]
+[persist.sys.lmk.reportkills]: [true]
+[persist.sys.locale]: [en-US]
+[persist.sys.manual.cloud.support]: [1]
+[persist.sys.mdlog_dumpback]: [2]
+[persist.sys.nvcolor]: [H39]
+[persist.sys.oobe]: [2]
+[persist.sys.oobe.devicelock]: [2]
+[persist.sys.oobe_country]: [ID]
+[persist.sys.opt.animation_distance]: [true]
+[persist.sys.ota_version]: [X6853-15.1.2.165SP06(OP001PF001AZ)]
+[persist.sys.perf.cached_packages.support]: [true]
+[persist.sys.perf.pre_start_app.support]: [true]
+[persist.sys.powerhal.interactive]: [1]
+[persist.sys.sandaccessor.api]: [2]
+[persist.sys.settings_gdpr_version]: [20210705V3]
+[persist.sys.settings_is_flash_rom]: [false]
+[persist.sys.sim_locked]: [false]
+[persist.sys.skyroam.support.simo]: [1]
+[persist.sys.split_screen_setting_tran_os_version]: [2]
+[persist.sys.sru.log]: [false]
+[persist.sys.starting_surface.support]: [0]
+[persist.sys.strictmode.visual]: []
+[persist.sys.surface_throttling_bypass]: [1]
+[persist.sys.thub.core.versioncode]: [350102001]
+[persist.sys.thub.core.versionname]: [35.1.2.1]
+[persist.sys.time.offset]: [25200000]
+[persist.sys.timezone]: [Asia/Jakarta]
+[persist.sys.tota]: [0]
+[persist.sys.tran.aegean.debug]: [00000]
+[persist.sys.tran.aegean.enable]: [1]
+[persist.sys.tran.aegean.enable.abn]: [1]
+[persist.sys.tran.aegean.enable.cg]: [1]
+[persist.sys.tran.aegean.enable.ta]: [1]
+[persist.sys.tran.agares.boot_enable]: [1]
+[persist.sys.tran.agares.bp_enable]: [1]
+[persist.sys.tran.agares.bp_exception_enable]: [1]
+[persist.sys.tran.agares.enable]: [1]
+[persist.sys.tran.agares.vd_enable]: [0]
+[persist.sys.tran.applaunch.tracker.support]: [1]
+[persist.sys.tran.brightness.gammalinear.convert]: [1]
+[persist.sys.tran.device.name]: [Infinix NOTE 40]
+[persist.sys.tran.dexopt.cancel]: [1]
+[persist.sys.tran.healthstandard.support]: [1]
+[persist.sys.tran.hiber.ff_max_delay_time]: [3000]
+[persist.sys.tran.hiber.ff_min_delay_time]: [1500]
+[persist.sys.tran.hstd.wake.support]: [1]
+[persist.sys.tran.limit.appmemory.debug]: [0]
+[persist.sys.tran.limit.appmemory.support]: [100]
+[persist.sys.tran.lucid.disabled]: [0]
+[persist.sys.tran.pocket_doze.custom_time]: [30]
+[persist.sys.tran.pocket_doze.support]: [1]
+[persist.sys.tran_alc_support]: [1]
+[persist.sys.tran_assist_power_wakeup]: [true]
+[persist.sys.tran_led_note_support]: [1]
+[persist.sys.tran_led_support]: [1]
+[persist.sys.transsion.led_color_setting]: [0]
+[persist.sys.transsion.led_mode_setting]: [1]
+[persist.sys.transsion.led_setting_enable]: [0]
+[persist.sys.transsion.led_start_boot_enable]: [1]
+[persist.sys.usb.config]: [adb]
+[persist.sys.user_experience]: [true]
+[persist.sys.usic.support]: [true]
+[persist.traced.enable]: [1]
+[persist.tran.ai.net.support]: [1]
+[persist.tran.ai.net.ui_auto.support]: [1]
+[persist.tran.layercontrol.support]: [1]
+[persist.tran.power.hs.support]: [1]
+[persist.tran.videocallpowersave.support]: [1]
+[persist.tran_cast_window_count]: [2]
+[persist.vendor.aee.db.count]: [4]
+[persist.vendor.aee.fatal_db.count]: [4]
+[persist.vendor.aee.log.status]: [1]
+[persist.vendor.aee.perfetto]: [0]
+[persist.vendor.aee.tracing_on]: [0]
+[persist.vendor.aeev.boot.reason.status]: [done]
+[persist.vendor.aeev.core.direct]: [disable]
+[persist.vendor.aeev.core.dump]: [disable]
+[persist.vendor.aeev.db.count]: [4]
+[persist.vendor.aeev.fatal_db.count]: [4]
+[persist.vendor.aeev.last.boot.reason]: [shutdown,]
+[persist.vendor.aeev.log.status]: [1]
+[persist.vendor.aeev.mini.dump]: [disable]
+[persist.vendor.aeev.perfetto]: [0]
+[persist.vendor.anr.dumpthr]: [1]
+[persist.vendor.camera.tran.camkit.videoEnhance]: [0]
+[persist.vendor.connsys.chipid]: [0x6789]
+[persist.vendor.connsys.dynamic.dump]: [0]
+[persist.vendor.connsys.fm_chipid]: [mt6631_6635]
+[persist.vendor.connsys.patch.version]: [251231172902000]
+[persist.vendor.connsys.wifi_fw_ver]: [251231172902000]
+[persist.vendor.gsm.netin.period]: [N/A]
+[persist.vendor.ims_support]: [1]
+[persist.vendor.log.tel_log_ctrl]: [1]
+[persist.vendor.md_c2k_cap_dep_check]: [0]
+[persist.vendor.mdrsra_v2_support]: [1]
+[persist.vendor.memfusion_appcompact_enable]: [false]
+[persist.vendor.memfusion_ui_enable]: [true]
+[persist.vendor.mims_support]: [2]
+[persist.vendor.mtk.aee.filter]: [0]
+[persist.vendor.mtk.aee.mode]: [4]
+[persist.vendor.mtk.aeev.mode]: [4]
+[persist.vendor.mtk.provision.int.01]: [26,0;27,1;66,0;]
+[persist.vendor.mtk.provision.int.11]: [26,0;27,1;66,0;]
+[persist.vendor.mtk.vilte.enable]: [3]
+[persist.vendor.mtk.volte.enable]: [3]
+[persist.vendor.mtk_ct_volte_support]: [3]
+[persist.vendor.mtk_dynamic_ims_switch]: [1]
+[persist.vendor.mtk_wfc_support]: [1]
+[persist.vendor.pms_removable]: [1]
+[persist.vendor.pnpmgr.enable]: [1]
+[persist.vendor.pnpmgr.gamemode.enable]: [1]
+[persist.vendor.pnpmgr.gamerecord.enable]: [1]
+[persist.vendor.powerhal.kswapd0_bind_enable]: [0]
+[persist.vendor.powerhal.thermal_ux_temp_max]: [55000]
+[persist.vendor.powerhal.thermal_ux_temp_min]: [38000]
+[persist.vendor.radio.airplane.mode.on]: [false]
+[persist.vendor.radio.c_capability_slot]: [0]
+[persist.vendor.radio.fd.counter]: [150]
+[persist.vendor.radio.fd.off.counter]: [50]
+[persist.vendor.radio.fd.off.r8.counter]: [50]
+[persist.vendor.radio.fd.r8.counter]: [150]
+[persist.vendor.radio.msimmode]: [tsts]
+[persist.vendor.radio.mtk_dsbp_support]: [2]
+[persist.vendor.radio.mtk_ps2_rat]: [L/W/G]
+[persist.vendor.radio.mtk_ps3_rat]: [W/G]
+[persist.vendor.radio.nitz_oper_code_0]: [51010]
+[persist.vendor.radio.nitz_oper_code_1]: [51089]
+[persist.vendor.radio.nitz_oper_lname_0]: [Telkomsel]
+[persist.vendor.radio.nitz_oper_lname_1]: [3SinyalKuatHemat]
+[persist.vendor.radio.nitz_oper_sname_0]: []
+[persist.vendor.radio.nitz_oper_sname_1]: [3SinyalKuatHemat]
+[persist.vendor.radio.oem_urc_enable]: [0]
+[persist.vendor.radio.pendcapswt]: [-1]
+[persist.vendor.radio.raf1]: [81930]
+[persist.vendor.radio.raf2]: [81928]
+[persist.vendor.radio.raf3]: [65544]
+[persist.vendor.radio.sim.mode]: [7]
+[persist.vendor.radio.simswitch]: [1]
+[persist.vendor.radio.smart.data.switch]: [1]
+[persist.vendor.radio.terminal-based.clir_m]: [4,4]
+[persist.vendor.radio.terminal-based.clir_n]: [0,0]
+[persist.vendor.radio.terminal-based.cw]: [disabled_tbcw,disabled_tbcw]
+[persist.vendor.radio.tsd.multisimmode]: [2]
+[persist.vendor.radio.volte_state]: [3]
+[persist.vendor.service.atci.sim]: [0]
+[persist.vendor.ss.error_code]: [831]
+[persist.vendor.ss.modem_version]: [1]
+[persist.vendor.ss.ud.code_m]: [1]
+[persist.vendor.ss.ud.code_n]: [2]
+[persist.vendor.ss.ud.error_code]: [0]
+[persist.vendor.swapfile_enable]: [false]
+[persist.vendor.swapfile_size_mb]: [8192]
+[persist.vendor.sys.pq.adl.idx]: [1]
+[persist.vendor.sys.pq.disp.aal.bypass]: [0]
+[persist.vendor.sys.pq.disp.c3d.bypass]: [0]
+[persist.vendor.sys.pq.disp.ccorr.bypass]: [0]
+[persist.vendor.sys.pq.disp.ccorr.silky.brightness]: [0]
+[persist.vendor.sys.pq.disp.color.bypass]: [0]
+[persist.vendor.sys.pq.disp.dither.bypass]: [0]
+[persist.vendor.sys.pq.disp.dither.color.detect]: [0]
+[persist.vendor.sys.pq.disp.gamma.bypass]: [0]
+[persist.vendor.sys.pq.disp.gamma.silky.brightness]: [0]
+[persist.vendor.sys.pq.disp.tdshp.bypass]: [0]
+[persist.vendor.sys.pq.gamma.index]: [7]
+[persist.vendor.sys.pq.hd10p.adaptive.en]: [1]
+[persist.vendor.sys.pq.hdr.en]: [1]
+[persist.vendor.sys.pq.hdr_vivid.en]: [1]
+[persist.vendor.sys.pq.hfg.en]: [2]
+[persist.vendor.sys.pq.iso.shp.en]: [1]
+[persist.vendor.sys.pq.mdp.ccorr.en]: [1]
+[persist.vendor.sys.pq.mdp.color.dbg]: [1]
+[persist.vendor.sys.pq.mdp.color.idx]: [1]
+[persist.vendor.sys.pq.mdp.dre.en]: [1]
+[persist.vendor.sys.pq.mdp.hdrvivid.vp.dre.en]: [1]
+[persist.vendor.sys.pq.mdp.hdrvp.dre.en]: [1]
+[persist.vendor.sys.pq.mdp.vp.aispq.en]: [1]
+[persist.vendor.sys.pq.modeindex]: [0]
+[persist.vendor.sys.pq.picmode]: [0
+]
+[persist.vendor.sys.pq.shp.idx]: [2]
+[persist.vendor.sys.pq.shp.strength]: [persist.vendor.sys.pq.shp.strength]
+[persist.vendor.sys.pq.ultrares.en]: [1]
+[persist.vendor.sys.pq.ultrares.strength]: [0]
+[persist.vendor.sys.pq.userpicmode]: [0
+]
+[persist.vendor.tran.check_silence.support]: [1]
+[persist.vendor.tran.trigger.cloud.sensor.light]: [com.transsion.aod.util.AodPocketManager.AfterCallback_0]
+[persist.vendor.uxcompaction_enable]: [true]
+[persist.vendor.vilte_support]: [1]
+[persist.vendor.viwifi_support]: [1]
+[persist.vendor.volte_support]: [1]
+[persist.vendor.vonr_setting_support]: [1]
+[persist.vendor.xfrm_support]: [1]
+[persist.vendor.zram_bdev_add_once]: [0]
+[persist.wm.extensions.enabled]: [true]
+[pm.dexopt.ab-ota]: [speed-profile]
+[pm.dexopt.bg-dexopt]: [speed-profile]
+[pm.dexopt.boot-after-mainline-update]: [verify]
+[pm.dexopt.boot-after-ota]: [verify]
+[pm.dexopt.cmdline]: [verify]
+[pm.dexopt.first-boot]: [verify]
+[pm.dexopt.inactive]: [verify]
+[pm.dexopt.install]: [speed-profile]
+[pm.dexopt.install-bulk]: [speed-profile]
+[pm.dexopt.install-bulk-downgraded]: [verify]
+[pm.dexopt.install-bulk-secondary]: [verify]
+[pm.dexopt.install-bulk-secondary-downgraded]: [verify]
+[pm.dexopt.install-fast]: [skip]
+[pm.dexopt.post-boot]: [verify]
+[pm.dexopt.shared]: [speed]
+[remote_provisioning.hostname]: [remoteprovisioning.googleapis.com]
+[ril.csim.mlpl_mspl_ver2]: [,]
+[ril.ecclist]: [112,911,113,118,110,115,117,119,129,999]
+[ril.ecclist1]: [112,911,113,115,118,110,117,119,129,999]
+[ril.ecclist2]: [112,911,113,118,110,115,117,119,129,999]
+[ro.actionable_compatible_property.enabled]: [true]
+[ro.adb.secure]: [1]
+[ro.aegean.cgroup.support]: [1]
+[ro.airtransfer.nfc.support]: [1]
+[ro.allow.mock.location]: [0]
+[ro.anti_theft]: [1]
+[ro.apex.updatable]: [true]
+[ro.app_lock_sr_ps_0004_001.support]: [1]
+[ro.appsflyer.preinstall.path]: [/data/appfly/pre_install.appsflyer]
+[ro.audio.silent]: [0]
+[ro.audio.usb.period_us]: [16000]
+[ro.audiolink_support]: [1]
+[ro.avatarpipe.tmoji_aod]: [1]
+[ro.avatarpipe.whitelist]: [1]
+[ro.base_build]: [noah]
+[ro.baseband]: [unknown]
+[ro.bind_iotcard_service]: [1]
+[ro.bluetooth.low_latency_for_buds.support]: [true]
+[ro.board.first_api_level]: [31]
+[ro.board.platform]: [mt6789]
+[ro.boot.anti_rollback_status]: [1]
+[ro.boot.atm]: [disabled]
+[ro.boot.avb_img_ver]: [0]
+[ro.boot.avb_version]: [1.2]
+[ro.boot.blow_disbrom]: [0]
+[ro.boot.boot_devices]: [bootdevice, soc/11270000.ufshci, 11270000.ufshci]
+[ro.boot.bootreason]: [reboot]
+[ro.boot.dtb_idx]: [0]
+[ro.boot.dtbo_idx]: [0]
+[ro.boot.dynamic_partitions]: [true]
+[ro.boot.efusemode]: [hw]
+[ro.boot.flash.locked]: [1]
+[ro.boot.force_normal_boot]: [1]
+[ro.boot.hardware]: [mt6789]
+[ro.boot.mode]: [normal]
+[ro.boot.otp_ver]: [0]
+[ro.boot.phandle]: []
+[ro.boot.product.hardware.sku]: [tsts]
+[ro.boot.sec_da_ver]: [3]
+[ro.boot.sec_img_ver]: [3]
+[ro.boot.serialno]: [1154137425005666]
+[ro.boot.slot_suffix]: [_a]
+[ro.boot.tran.lcmepc.params]: [104147413533433530375541383210]
+[ro.boot.vbmeta.avb_version]: [1.2]
+[ro.boot.vbmeta.device]: [PARTUUID=00000009-39c2-4488-9bb0-00cb43c9ccd4]
+[ro.boot.vbmeta.device_state]: [locked]
+[ro.boot.vbmeta.digest]: [0449364aa457a49f28b2656a4e0cdc2a80c099ac42c370d74ee051c86ea7eb7a]
+[ro.boot.vbmeta.hash_alg]: [sha256]
+[ro.boot.vbmeta.size]: [15552]
+[ro.boot.verifiedbootstate]: [green]
+[ro.boot.veritymode]: [enforcing]
+[ro.boot.veritymode.managed]: [yes]
+[ro.bootimage.build.date]: [Thu Sep 18 17:16:52 UTC 2025]
+[ro.bootimage.build.date.utc]: [1758215812]
+[ro.bootimage.build.fingerprint]: [Android/gsi_arm64/generic_arm64:12/SGR1.250618.002.A3/14126436:user/release-keys]
+[ro.bootimage.build.id]: [SGR1.250618.002.A3]
+[ro.bootimage.build.tags]: [release-keys]
+[ro.bootimage.build.type]: [user]
+[ro.bootimage.build.version.incremental]: [14126436]
+[ro.bootimage.build.version.release]: [12]
+[ro.bootimage.build.version.release_or_codename]: [12]
+[ro.bootimage.build.version.sdk]: [31]
+[ro.bootloader]: [unknown]
+[ro.bootmode]: [normal]
+[ro.build.ab_update]: [true]
+[ro.build.backported_fixes.alias_bitset.long_list]: [2]
+[ro.build.characteristics]: [default]
+[ro.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.build.date.utc]: [1774497976]
+[ro.build.description]: [sys_tssi_64_armv82_infinix-user 15 AP3A.240905.015.A2 985968 dev-keys]
+[ro.build.display.id]: [X6853-15.1.2.165SP06(OP001PF001AZ)]
+[ro.build.fingerprint]: [Infinix/X6853-OP/Infinix-X6853:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.build.flavor]: [sys_tssi_64_armv82_infinix-user]
+[ro.build.host]: [srv99186-0326]
+[ro.build.id]: [AP3A.240905.015.A2]
+[ro.build.product]: [tssi_64_armv82_infinix]
+[ro.build.tags]: [release-keys]
+[ro.build.type]: [user]
+[ro.build.user]: [buildsrv-ci]
+[ro.build.version.all_codenames]: [REL]
+[ro.build.version.base_os]: []
+[ro.build.version.codename]: [REL]
+[ro.build.version.incremental]: [165005]
+[ro.build.version.known_codenames]: [Base,Base11,Cupcake,Donut,Eclair,Eclair01,EclairMr1,Froyo,Gingerbread,GingerbreadMr1,Honeycomb,HoneycombMr1,HoneycombMr2,IceCreamSandwich,IceCreamSandwichMr1,JellyBean,JellyBeanMr1,JellyBeanMr2,Kitkat,KitkatWatch,Lollipop,LollipopMr1,M,N,NMr1,O,OMr1,P,Q,R,S,Sv2,Tiramisu,UpsideDownCake,VanillaIceCream]
+[ro.build.version.min_supported_target_sdk]: [28]
+[ro.build.version.preview_sdk]: [0]
+[ro.build.version.preview_sdk_fingerprint]: [REL]
+[ro.build.version.release]: [15]
+[ro.build.version.release_or_codename]: [15]
+[ro.build.version.release_or_preview_display]: [15]
+[ro.build.version.sdk]: [35]
+[ro.build.version.security_patch]: [2026-04-01]
+[ro.build.version.trunk]: [15]
+[ro.camera.sound.forced]: [0]
+[ro.childmode.support]: [1]
+[ro.cloudserver.clouddisk.support]: [1]
+[ro.com.google.acsa]: [true]
+[ro.com.google.clientidbase]: [android-transsion]
+[ro.com.google.gmsversion]: [15_202503]
+[ro.com.google.lens.oem_camera_package]: [com.transsion.camera]
+[ro.config.alarm_alert]: [Rise_Slowly.ogg]
+[ro.config.alarm_vol_default]: [13]
+[ro.config.isolated_compilation_enabled]: [true]
+[ro.config.media_vol_default]: [13]
+[ro.config.notification_lra]: [Acclivity.he]
+[ro.config.notification_sound]: [Acclivity.ogg]
+[ro.config.per_app_memcg]: [false]
+[ro.config.ringtone]: [Elegant.ogg&Elegant.ogg]
+[ro.config.schedule_sound]: [Alarm.ogg]
+[ro.config.system_vol_default]: [15]
+[ro.config.timer_alert]: [Hasty.ogg]
+[ro.config.vc_call_vol_default]: [11]
+[ro.control_privapp_permissions]: [enforce]
+[ro.crypto.metadata.enabled]: [true]
+[ro.crypto.state]: [encrypted]
+[ro.crypto.type]: [file]
+[ro.crypto.volume.filenames_mode]: [aes-256-cts]
+[ro.dalvik.vm.enable_uffd_gc]: [true]
+[ro.dalvik.vm.native.bridge]: [0]
+[ro.debuggable]: [0]
+[ro.display_tran_nr_advance_icon.support]: [1]
+[ro.dynamically_stk_icon_support]: [1]
+[ro.encrypt_mpesa_notification_support]: [1]
+[ro.esports.thermal_config.support]: [1]
+[ro.facebook.partnerid]: [transsion:4edab295-658e-4565-a2a8-bef997858d60]
+[ro.faceid.applock.unsupport]: [1]
+[ro.faceid.hal.support]: [1]
+[ro.faceid.low_battery_light]: [1]
+[ro.faceid.support]: [1]
+[ro.faceid.version]: [2]
+[ro.fingerprint_support]: [1]
+[ro.fingerprint_wakeup_performance_opt]: [1]
+[ro.force.debuggable]: [0]
+[ro.frp.pst]: [/dev/block/by-name/frp]
+[ro.fuse.bpf.is_running]: [false]
+[ro.gesture_file_transfer_support]: [1]
+[ro.globalsearch.easypic.support]: [1]
+[ro.hardware]: [mt6789]
+[ro.hardware.egl]: [meow]
+[ro.hardware.gatekeeper]: [trustonic]
+[ro.hardware.gralloc]: [common]
+[ro.hardware.hwcomposer]: [mtk_common]
+[ro.hardware.vulkan]: [mali]
+[ro.healthstandard.support]: [1]
+[ro.heartrate_oximetry_240830_sr_sa_0005_003_support]: [1]
+[ro.hwui.use_vulkan]: []
+[ro.hyperion.hap.support]: [1]
+[ro.hyperion.hda.support]: [2]
+[ro.iorapd.enable]: [false]
+[ro.iot_card_support]: [1]
+[ro.kernel.version]: [5.10]
+[ro.kernel.zio]: [38,108,105,16]
+[ro.keyguard_light_on_off_screen_anim]: [0]
+[ro.keyguard_theme_anim_support]: [1]
+[ro.kom_telephony_support]: [0]
+[ro.ktv.mode.support]: [true]
+[ro.launcher.dual_clock.support]: [1]
+[ro.launcher_smartwidget_15.1.0_features.support]: [1]
+[ro.lmk.kill_heaviest_task]: [true]
+[ro.lmk.kill_timeout_ms]: [100]
+[ro.lmk.psi_complete_stall_ms]: [150]
+[ro.lmk.swap_free_low_percentage]: [20]
+[ro.lmk.swap_util_max]: [90]
+[ro.lmk.thrashing_limit]: [30]
+[ro.lmk.thrashing_limit_decay]: [50]
+[ro.local_highlight_support]: [1]
+[ro.lockscreen_240606_ar_sa_0008_001]: [1]
+[ro.logd.auditd.events]: [false]
+[ro.logd.auditd.main]: [false]
+[ro.logd.kernel]: [false]
+[ro.mainline.version]: [2025-04]
+[ro.mediatek.rsc_name]: [default]
+[ro.mediatek.version.branch]: [alps-mp-v0.mssi1]
+[ro.mediatek.version.build.branch]: []
+[ro.mediatek.version.release]: [alps-mp-v0.mp1.rc-V13.29_reallytek.v0mp1rc.k6991v1.64_P17]
+[ro.mediatek.wlan.p2p]: [1]
+[ro.mediatek.wlan.wsc]: [1]
+[ro.mtk_perf_fast_start_win]: [1]
+[ro.mtk_perf_response_time]: [1]
+[ro.mtk_perf_simple_start_win]: [1]
+[ro.music_gesture_support]: [1]
+[ro.navigationbar_240606_sr_sa_0020_001_support]: [1]
+[ro.network_sharing_support]: [1]
+[ro.odm.build.date]: [Thu Mar 26 09:39:09 CST 2026]
+[ro.odm.build.date.utc]: [1774489149]
+[ro.odm.build.fingerprint]: [Infinix/X6853-OP/Infinix-X6853:12/SP1A.210812.016/260326V925:user/release-keys]
+[ro.odm.build.version.incremental]: [260326V925]
+[ro.odm_dlkm.build.date]: [Thu Mar 26 09:39:09 CST 2026]
+[ro.odm_dlkm.build.date.utc]: [1774489149]
+[ro.odm_dlkm.build.fingerprint]: [Infinix/X6853-OP/Infinix-X6853:12/SP1A.210812.016/260326V925:user/release-keys]
+[ro.odm_dlkm.build.id]: [SP1A.210812.016]
+[ro.odm_dlkm.build.tags]: [release-keys]
+[ro.odm_dlkm.build.type]: [user]
+[ro.odm_dlkm.build.version.incremental]: [260326V925]
+[ro.odm_dlkm.build.version.release]: [12]
+[ro.odm_dlkm.build.version.release_or_codename]: [12]
+[ro.odm_dlkm.build.version.sdk]: [31]
+[ro.opa.eligible_device]: [true]
+[ro.opengles.version]: [196610]
+[ro.optical_fingerprint_support]: [1]
+[ro.os.aam.path]: [/tr_product/etc/transsion_prebuilt/aam_config.json]
+[ro.os.all_call_record]: [1]
+[ro.os.appsflyer.preinstall.path]: [/tr_preload/etc/transsion_prebuilt/pre_install.appsflyer]
+[ro.os.caller.incoming.ringtone]: [1]
+[ro.os.dialer_ai_auto_answer]: [1]
+[ro.os.dialer_flash_call_support]: [1]
+[ro.os.game_ella.support]: [1]
+[ro.os.game_light_not.support]: [1]
+[ro.os.qc_151_new_feature.support]: [1]
+[ro.os.raiseforcall.support]: [1]
+[ro.os.recent.blur]: [1]
+[ro.os.remove_uninstall_support]: [1]
+[ro.os.tran_folder_close_interrupt]: [1]
+[ro.os.tran_hide_status_bar_for_land_recent]: [1]
+[ro.os.tran_recent_dismiss_single_task_spring_support]: [1]
+[ro.os.tran_recent_swipeup_region]: [1]
+[ro.os.videoshow.support]: [1]
+[ro.os_3rd_calls_block_support]: [1]
+[ro.os_ai_notification_summary_sr_sa_0003_001_support]: [1]
+[ro.os_ai_writing.support]: [1]
+[ro.os_alldegree_flashlight_support]: [1]
+[ro.os_anti_addiction_support]: [1]
+[ro.os_app_lock_support]: [1]
+[ro.os_ask_ai.support]: [1]
+[ro.os_background_video_support]: [1]
+[ro.os_badge_rule_support]: [1]
+[ro.os_call_reject_control_support]: [1]
+[ro.os_careset_support]: [1]
+[ro.os_carlcare_number_support]: [1]
+[ro.os_charge_display_type]: [1]
+[ro.os_charge_res_support]: [1]
+[ro.os_charging_animation_support]: [1]
+[ro.os_circle_to_search]: [1]
+[ro.os_cloud_server_support]: [1]
+[ro.os_customized_split_screen_support]: [1]
+[ro.os_displaycutout_support]: [1]
+[ro.os_dragdrop_support]: [true]
+[ro.os_dual_app_support]: [1]
+[ro.os_dynamicbar_ai_translation_support]: [1]
+[ro.os_dynamicbar_support]: [1]
+[ro.os_face_unlock_antitouch_support]: [1]
+[ro.os_fingerprint_take_photo_support]: [1]
+[ro.os_floatingtoolbar_version]: [3]
+[ro.os_floatwindow_inputdispatch]: [1]
+[ro.os_freeform_optimization_support]: [1]
+[ro.os_game_anti_interference.support]: [1]
+[ro.os_game_barrage_support]: [1]
+[ro.os_game_bypass_charging_support]: [1]
+[ro.os_game_data_support]: [1]
+[ro.os_game_enhancement_support]: [1]
+[ro.os_game_esportsvirtualctrl.support]: [1]
+[ro.os_game_fps_refresh_rate_match.support]: [1]
+[ro.os_game_hide_icon.support]: [1]
+[ro.os_game_hot.support]: [1]
+[ro.os_game_list_update_support]: [1]
+[ro.os_game_lock_support]: [1]
+[ro.os_game_magic_voice.support]: [1]
+[ro.os_game_network_acceleration.support]: [1]
+[ro.os_game_noti_list.support]: [1]
+[ro.os_game_screenshot]: [1]
+[ro.os_game_tp_esports10.support]: [1]
+[ro.os_gamemode_support]: [1]
+[ro.os_gesture_answer_support]: [1]
+[ro.os_hide_app_support]: [1]
+[ro.os_inadvertent_support]: [1]
+[ro.os_incall_notificationbar_support]: [1]
+[ro.os_incoming_flashlight_support]: [1]
+[ro.os_install_overlay_support]: [1]
+[ro.os_jupiter_support]: [1]
+[ro.os_keyguard_clock_support]: [1]
+[ro.os_keyguard_theme_support]: [1]
+[ro.os_kolun_exocr_support]: [1]
+[ro.os_kolun_support]: [1]
+[ro.os_lock_screen_wrong_support]: [1]
+[ro.os_lockscreen_notify_support]: [1]
+[ro.os_lockscreen_pop_support]: [1]
+[ro.os_magic_button_support]: [1]
+[ro.os_mgz_service_feature_swipe]: [1]
+[ro.os_mgz_service_model_strategy]: [1]
+[ro.os_mgz_service_pkg]: [com.transsion.magazineservice.xos]
+[ro.os_mgz_service_support]: [1]
+[ro.os_mgz_service_swipe_enable]: [1]
+[ro.os_mgz_service_wp_switch]: [1]
+[ro.os_micro_gesture_functions_support]: [1]
+[ro.os_micro_is_lite_support]: [0]
+[ro.os_microintelligence_support]: [1]
+[ro.os_mute_notification_support]: [true]
+[ro.os_netratstall_support]: [0]
+[ro.os_network_rule_support]: [1]
+[ro.os_note_ai_bg_support]: [1]
+[ro.os_note_ai_draw_support]: [1]
+[ro.os_note_canvas_support]: [1]
+[ro.os_note_fans_link_support]: [0]
+[ro.os_note_sunia_pen_support]: [0]
+[ro.os_notification_mode_optimization_support]: [1]
+[ro.os_notification_ui_support]: [1]
+[ro.os_notify_center_support]: [1]
+[ro.os_oem_unlock_data_support]: [1]
+[ro.os_oemunlock_abnormal]: [1]
+[ro.os_oemunlock_install_verify]: [1]
+[ro.os_openwith_wps_support]: [1]
+[ro.os_package_protect_support]: [1]
+[ro.os_permission_protect_support]: [1]
+[ro.os_privacy_hub_support]: [1]
+[ro.os_privacyhub_applock_palmid_support]: [1]
+[ro.os_quick_hide_support]: [1]
+[ro.os_rcs_smartmessage_support]: [1]
+[ro.os_repair_mode_support]: [1]
+[ro.os_sandaccessor_support]: [1]
+[ro.os_sc_auto_repair]: [1]
+[ro.os_sc_install_range]: [50_20900]
+[ro.os_screen_buttons_support]: [1]
+[ro.os_screenrecord_apk]: [1]
+[ro.os_screenrecord_sr_sa_0019_009_support]: [1]
+[ro.os_screenshot_ver]: [v2]
+[ro.os_securitycom_support]: [1]
+[ro.os_share_privacy_support]: [1]
+[ro.os_slider_panel_support]: [1]
+[ro.os_smartpanel_convenient_file_support]: [1]
+[ro.os_smartpanel_def_status]: [1]
+[ro.os_smartpanel_support]: [1]
+[ro.os_smartpanel_support_apploadext]: [1]
+[ro.os_smartscan_document_scan]: [1]
+[ro.os_smartscan_medicine_verification_support]: [1]
+[ro.os_smartscan_recharge_support]: [1]
+[ro.os_social_turbo_disable_soundchange_80]: [0]
+[ro.os_social_turbo_record]: [1]
+[ro.os_social_turbo_soundchange]: [1]
+[ro.os_sos_support]: [1]
+[ro.os_supershot_apk]: [1]
+[ro.os_switch_traffic_card_optimization_support]: [1]
+[ro.os_system_track_dir]: [/data/ot/]
+[ro.os_system_track_support]: [1]
+[ro.os_third_call_optimization_support]: [1]
+[ro.os_third_calls_optimiza_support]: [1]
+[ro.os_third_wallpaper_show_enable_default]: [1]
+[ro.os_threefingerslideup_support]: [1]
+[ro.os_thunderback_support]: [1]
+[ro.os_thunderback_systemui_support]: [1]
+[ro.os_triplefingerscreenshot_support]: [1]
+[ro.os_turboomode_support]: [1]
+[ro.os_videomode_support]: [1]
+[ro.os_white_navigation_bar_support]: [1]
+[ro.os_zeroscreen.support]: [1]
+[ro.outdoorboost_241209_sr_sa_0003_001.support]: [1]
+[ro.pc_connection_support]: [1]
+[ro.pc_mouse_button_support]: [1]
+[ro.postinstall.fstab.prefix]: [/system]
+[ro.prebuilt.path]: [tr_preload/etc/transsion_prebuilt/]
+[ro.product.ab_ota_partitions]: [boot,product,system,system_ext,vendor]
+[ro.product.aurora1_3_support]: [0]
+[ro.product.board]: [Infinix-X6853]
+[ro.product.bootimage.brand]: [Android]
+[ro.product.bootimage.device]: [generic_arm64]
+[ro.product.bootimage.manufacturer]: [unknown]
+[ro.product.bootimage.model]: [GSI on ARM64]
+[ro.product.bootimage.name]: [gsi_arm64]
+[ro.product.brand]: [Infinix]
+[ro.product.build.date]: [Thu Mar 26 09:56:44 CST 2026]
+[ro.product.build.date.utc]: [1774490204]
+[ro.product.build.fingerprint]: [Infinix/X6853-OP/Infinix-X6853:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.product.build.id]: [AP3A.240905.015.A2]
+[ro.product.build.no_bionic_page_size_macro]: [true]
+[ro.product.build.tags]: [release-keys]
+[ro.product.build.type]: [user]
+[ro.product.build.version.incremental]: [165005]
+[ro.product.build.version.release]: [15]
+[ro.product.build.version.release_or_codename]: [15]
+[ro.product.build.version.sdk]: [35]
+[ro.product.cast_connect_memory_update]: [1]
+[ro.product.cast_connect_support]: [1]
+[ro.product.cpu.abi]: [arm64-v8a]
+[ro.product.cpu.abilist]: [arm64-v8a,armeabi-v7a,armeabi]
+[ro.product.cpu.abilist32]: [armeabi-v7a,armeabi]
+[ro.product.cpu.abilist64]: [arm64-v8a]
+[ro.product.cpu.pagesize.max]: [16384]
+[ro.product.default_theme_local_support]: [1]
+[ro.product.device]: [Infinix-X6853]
+[ro.product.drag_in_multi_window.support]: [1]
+[ro.product.first_api_level]: [34]
+[ro.product.freeze.gc.support]: [1]
+[ro.product.gift.debug_sys]: [0]
+[ro.product.gift.support]: [1]
+[ro.product.lightning_multi_window.support]: [1]
+[ro.product.locale]: [en-US]
+[ro.product.manufacturer]: [INFINIX]
+[ro.product.marketname]: [Infinix NOTE 40]
+[ro.product.model]: [Infinix X6853]
+[ro.product.mol.support]: [1]
+[ro.product.multitask_anim_arc.support]: [1]
+[ro.product.name]: [X6853-OP]
+[ro.product.necessity_fun.support]: [1]
+[ro.product.odm.brand]: [Infinix]
+[ro.product.odm.device]: [Infinix-X6853]
+[ro.product.odm.manufacturer]: [INFINIX]
+[ro.product.odm.model]: [Infinix X6853]
+[ro.product.odm.name]: [X6853-OP]
+[ro.product.odm_dlkm.brand]: [Infinix]
+[ro.product.odm_dlkm.device]: [Infinix-X6853]
+[ro.product.odm_dlkm.manufacturer]: [INFINIX]
+[ro.product.odm_dlkm.model]: [Infinix X6853]
+[ro.product.odm_dlkm.name]: [X6853-OP]
+[ro.product.otad.support]: [1]
+[ro.product.product.brand]: [Infinix]
+[ro.product.product.device]: [Infinix-X6853]
+[ro.product.product.manufacturer]: [INFINIX]
+[ro.product.product.model]: [Infinix X6853]
+[ro.product.product.name]: [X6853-OP]
+[ro.product.product.tran.device.name.default]: [Infinix NOTE 40]
+[ro.product.sru.support]: [1]
+[ro.product.succ.bbcollect.log.support]: [1]
+[ro.product.succ.crash.support]: [1]
+[ro.product.succ.mem.support]: [1]
+[ro.product.succ.support]: [1]
+[ro.product.system.brand]: [Infinix]
+[ro.product.system.device]: [FULL-64-ARMV82]
+[ro.product.system.manufacturer]: [INFINIX]
+[ro.product.system.model]: []
+[ro.product.system.name]: [TSSI]
+[ro.product.system_ext.brand]: [Infinix]
+[ro.product.system_ext.device]: [Infinix-X6853]
+[ro.product.system_ext.manufacturer]: [INFINIX]
+[ro.product.system_ext.model]: [Infinix X6853]
+[ro.product.system_ext.name]: [X6853-OP]
+[ro.product.tb_check_relative_event.support]: [1]
+[ro.product.tb_notifi_pkg_extend.support]: [1]
+[ro.product.thundback_dual_app.support]: [1]
+[ro.product.thunderback_sr.support]: [1]
+[ro.product.thunderback_unpersist_process.support]: [1]
+[ro.product.tr_carrier.brand]: [TRANSSION]
+[ro.product.tr_carrier.device]: [COMMON]
+[ro.product.tr_carrier.manufacturer]: [TRANSSION]
+[ro.product.tr_carrier.name]: [TSSI]
+[ro.product.tr_company.brand]: [TRANSSION]
+[ro.product.tr_company.device]: [COMMON]
+[ro.product.tr_company.manufacturer]: [TRANSSION]
+[ro.product.tr_company.name]: [TSSI]
+[ro.product.tr_mi.brand]: [TRANSSION]
+[ro.product.tr_mi.device]: [COMMON]
+[ro.product.tr_mi.manufacturer]: [TRANSSION]
+[ro.product.tr_mi.name]: [TSSI]
+[ro.product.tr_overlayfs.brand]: [Infinix]
+[ro.product.tr_overlayfs.device]: [FULL-64-ARMV82]
+[ro.product.tr_overlayfs.manufacturer]: [INFINIX]
+[ro.product.tr_overlayfs.model]: []
+[ro.product.tr_overlayfs.name]: [TSSI]
+[ro.product.tr_preload.brand]: [TRANSSION]
+[ro.product.tr_preload.device]: [COMMON]
+[ro.product.tr_preload.manufacturer]: [TRANSSION]
+[ro.product.tr_preload.name]: [TSSI]
+[ro.product.tr_product.brand]: [Infinix]
+[ro.product.tr_product.device]: [Infinix-X6853]
+[ro.product.tr_product.manufacturer]: [INFINIX]
+[ro.product.tr_product.model]: [Infinix X6853]
+[ro.product.tr_product.name]: [X6853-OP]
+[ro.product.tr_region.brand]: [TRANSSION]
+[ro.product.tr_region.device]: [COMMON]
+[ro.product.tr_region.manufacturer]: [TRANSSION]
+[ro.product.tr_region.name]: [TSSI]
+[ro.product.tr_theme.brand]: [TRANSSION]
+[ro.product.tr_theme.device]: [COMMON]
+[ro.product.tr_theme.manufacturer]: [TRANSSION]
+[ro.product.tr_theme.name]: [TSSI]
+[ro.product.tran.version.release]: [X6853-15.1.2.165SP06(BASE001PF001AZ)]
+[ro.product.tran_air_transfer_support]: [1]
+[ro.product.tran_ime_vib_support]: [1]
+[ro.product.tran_keyguard_ime_menu.support]: [1]
+[ro.product.tran_pq_support]: [1]
+[ro.product.tran_pq_version]: [1]
+[ro.product.trandreamanimation.support]: [1]
+[ro.product.transched.support]: [1]
+[ro.product.transchedmetrics.support]: [1]
+[ro.product.transsion.autoReboot]: [true]
+[ro.product.trantabe.apr.support]: [1]
+[ro.product.trantabe.dexfix.support]: [1]
+[ro.product.trantabe.install.support]: [1]
+[ro.product.trantabe.recovery.support]: [1]
+[ro.product.trantabe.rollback.support]: [1]
+[ro.product.trantabe.support]: [1]
+[ro.product.vendor.brand]: [Infinix]
+[ro.product.vendor.device]: [Infinix-X6853]
+[ro.product.vendor.manufacturer]: [INFINIX]
+[ro.product.vendor.model]: [Infinix X6853]
+[ro.product.vendor.name]: [X6853-OP]
+[ro.product.vendor_dlkm.brand]: [Infinix]
+[ro.product.vendor_dlkm.device]: [Infinix-X6853]
+[ro.product.vendor_dlkm.manufacturer]: [INFINIX]
+[ro.product.vendor_dlkm.model]: [Infinix X6853]
+[ro.product.vendor_dlkm.name]: [X6853-OP]
+[ro.property_service.version]: [2]
+[ro.quick_charge_support]: [1]
+[ro.quick_start_support]: [1]
+[ro.repair.version]: [1]
+[ro.revision]: [0]
+[ro.rlk_multi_gsensor_support]: [1]
+[ro.secure]: [1]
+[ro.serialno]: [1154137425005666]
+[ro.setupwizard.rotation_locked]: [true]
+[ro.sf.lcd_density]: [480]
+[ro.sharevia_240605_sr_sa_0035_001_support]: [1]
+[ro.sharevia_sr_sa_0006_005_support]: [1]
+[ro.sleep_master]: [1]
+[ro.smartcaller_support]: [1]
+[ro.soc.manufacturer]: [Mediatek]
+[ro.soc.model]: [MT6789]
+[ro.split_screen_15.1.0_task.support]: [1]
+[ro.split_screen_240606_sr_sa_0016_003.support]: [1]
+[ro.split_screen_240606_sr_sa_0016_004.support]: [1]
+[ro.support_show_surface_behind_keyguard_immediately]: [0]
+[ro.surface_flinger.force_hwc_copy_for_virtual_displays]: [true]
+[ro.surface_flinger.game_default_frame_rate_override]: [60]
+[ro.surface_flinger.has_HDR_display]: [false]
+[ro.surface_flinger.has_wide_color_display]: [true]
+[ro.surface_flinger.max_frame_buffer_acquired_buffers]: [6]
+[ro.surface_flinger.primary_display_orientation]: [ORIENTATION_0]
+[ro.surface_flinger.protected_contents]: [true]
+[ro.surface_flinger.set_idle_timer_ms]: [600]
+[ro.sys.new_launcher_interrupt_animation_support]: [1]
+[ro.sys.tran.aicore_llm_support]: [1]
+[ro.sys.tran.assist_highpower_wakeup]: [true]
+[ro.sys.tran.assist_power_wakeup_support]: [true]
+[ro.sys.tran.assist_support]: [true]
+[ro.sys.tran.assist_voiceprint_support]: [aispeech]
+[ro.sys.tran.assist_vow_support]: [true]
+[ro.sys.tran.radioconfig.support]: [0]
+[ro.sys.tran.uxdetectorrest]: [1]
+[ro.sys.usb.bicr]: [no]
+[ro.sys.usb.charging.only]: [yes]
+[ro.sys.usb.mtp.whql.enable]: [0]
+[ro.sys.usb.storage.type]: [mtp]
+[ro.system.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.system.build.date.utc]: [1774497976]
+[ro.system.build.fingerprint]: [Infinix/TSSI/FULL-64-ARMV82:15/AP3A.240905.015.A2/260326V865:user/release-keys]
+[ro.system.build.id]: [AP3A.240905.015.A2]
+[ro.system.build.tags]: [release-keys]
+[ro.system.build.type]: [user]
+[ro.system.build.version.incremental]: [260326V865]
+[ro.system.build.version.release]: [15]
+[ro.system.build.version.release_or_codename]: [15]
+[ro.system.build.version.sdk]: [35]
+[ro.system.product.cpu.abilist]: [arm64-v8a,armeabi-v7a,armeabi]
+[ro.system.product.cpu.abilist32]: [armeabi-v7a,armeabi]
+[ro.system.product.cpu.abilist64]: [arm64-v8a]
+[ro.system.tran.version.release]: [INFINIX-V-64-ARMV82-260326V865DevT]
+[ro.system_ext.build.date]: [Thu Mar 26 09:56:44 CST 2026]
+[ro.system_ext.build.date.utc]: [1774490204]
+[ro.system_ext.build.fingerprint]: [Infinix/X6853-OP/Infinix-X6853:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.system_ext.build.id]: [AP3A.240905.015.A2]
+[ro.system_ext.build.tags]: [release-keys]
+[ro.system_ext.build.type]: [user]
+[ro.system_ext.build.version.incremental]: [165005]
+[ro.system_ext.build.version.release]: [15]
+[ro.system_ext.build.version.release_or_codename]: [15]
+[ro.system_ext.build.version.sdk]: [35]
+[ro.system_theme_241204_sr_sa_0006_0001_support]: [1]
+[ro.tapping_wake_support]: [1]
+[ro.tecno.manual_guide_multi_bom_default]: [Q]
+[ro.tecno.manual_guide_multi_country_support]: [1]
+[ro.tecno.manual_guide_support]: [MANUAL_GUIDE_PDF_PATH]
+[ro.telephony.default_network]: [9,9,9,9]
+[ro.telephony.iwlan_operation_mode]: [AP-assisted]
+[ro.telephony.sim.count]: [3]
+[ro.teop.scene_support]: [1]
+[ro.teop.support]: [1]
+[ro.tgpa.support]: [1]
+[ro.thub.core.support]: [1]
+[ro.thunderback.version]: [51]
+[ro.tkv_name]: [tkv.prop]
+[ro.tr_carrier.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.tr_carrier.build.date.utc]: [1774497976]
+[ro.tr_carrier.build.fingerprint]: [TRANSSION/TSSI/COMMON:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.tr_carrier.build.id]: [AP3A.240905.015.A2]
+[ro.tr_carrier.build.tags]: [release-keys]
+[ro.tr_carrier.build.type]: [user]
+[ro.tr_carrier.build.version.incremental]: [165005]
+[ro.tr_carrier.build.version.release]: [15]
+[ro.tr_carrier.build.version.release_or_codename]: [15]
+[ro.tr_carrier.build.version.sdk]: [35]
+[ro.tr_company.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.tr_company.build.date.utc]: [1774497976]
+[ro.tr_company.build.fingerprint]: [TRANSSION/TSSI/COMMON:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.tr_company.build.id]: [AP3A.240905.015.A2]
+[ro.tr_company.build.tags]: [release-keys]
+[ro.tr_company.build.type]: [user]
+[ro.tr_company.build.version.incremental]: [165005]
+[ro.tr_company.build.version.release]: [15]
+[ro.tr_company.build.version.release_or_codename]: [15]
+[ro.tr_company.build.version.sdk]: [35]
+[ro.tr_mi.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.tr_mi.build.date.utc]: [1774497976]
+[ro.tr_mi.build.fingerprint]: [TRANSSION/TSSI/COMMON:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.tr_mi.build.id]: [AP3A.240905.015.A2]
+[ro.tr_mi.build.tags]: [release-keys]
+[ro.tr_mi.build.type]: [user]
+[ro.tr_mi.build.version.incremental]: [165005]
+[ro.tr_mi.build.version.release]: [15]
+[ro.tr_mi.build.version.release_or_codename]: [15]
+[ro.tr_mi.build.version.sdk]: [35]
+[ro.tr_overlayfs.build.date]: [Thu Mar 26 09:59:31 CST 2026]
+[ro.tr_overlayfs.build.date.utc]: [1774490371]
+[ro.tr_overlayfs.build.fingerprint]: [Infinix/TSSI/FULL-64-ARMV82:15/AP3A.240905.015.A2/260326V865:user/release-keys]
+[ro.tr_overlayfs.build.id]: [AP3A.240905.015.A2]
+[ro.tr_overlayfs.build.tags]: [release-keys]
+[ro.tr_overlayfs.build.type]: [user]
+[ro.tr_overlayfs.build.version.incremental]: [260326V865]
+[ro.tr_overlayfs.build.version.release]: [15]
+[ro.tr_overlayfs.build.version.release_or_codename]: [15]
+[ro.tr_overlayfs.build.version.sdk]: [35]
+[ro.tr_preload.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.tr_preload.build.date.utc]: [1774497976]
+[ro.tr_preload.build.fingerprint]: [TRANSSION/TSSI/COMMON:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.tr_preload.build.id]: [AP3A.240905.015.A2]
+[ro.tr_preload.build.tags]: [release-keys]
+[ro.tr_preload.build.type]: [user]
+[ro.tr_preload.build.version.incremental]: [165005]
+[ro.tr_preload.build.version.release]: [15]
+[ro.tr_preload.build.version.release_or_codename]: [15]
+[ro.tr_preload.build.version.sdk]: [35]
+[ro.tr_product.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.tr_product.build.date.utc]: [1774497976]
+[ro.tr_product.build.fingerprint]: [Infinix/X6853-OP/Infinix-X6853:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.tr_product.build.id]: [AP3A.240905.015.A2]
+[ro.tr_product.build.tags]: [release-keys]
+[ro.tr_product.build.type]: [user]
+[ro.tr_product.build.version.incremental]: [165005]
+[ro.tr_product.build.version.release]: [15]
+[ro.tr_product.build.version.release_or_codename]: [15]
+[ro.tr_product.build.version.sdk]: [34]
+[ro.tr_region.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.tr_region.build.date.utc]: [1774497976]
+[ro.tr_region.build.fingerprint]: [TRANSSION/TSSI/COMMON:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.tr_region.build.id]: [AP3A.240905.015.A2]
+[ro.tr_region.build.tags]: [release-keys]
+[ro.tr_region.build.type]: [user]
+[ro.tr_region.build.version.incremental]: [165005]
+[ro.tr_region.build.version.release]: [15]
+[ro.tr_region.build.version.release_or_codename]: [15]
+[ro.tr_region.build.version.sdk]: [35]
+[ro.tr_theme.build.date]: [Thu Mar 26 12:06:16 CST 2026]
+[ro.tr_theme.build.date.utc]: [1774497976]
+[ro.tr_theme.build.fingerprint]: [TRANSSION/TSSI/COMMON:15/AP3A.240905.015.A2/165005:user/release-keys]
+[ro.tr_theme.build.id]: [AP3A.240905.015.A2]
+[ro.tr_theme.build.tags]: [release-keys]
+[ro.tr_theme.build.type]: [user]
+[ro.tr_theme.build.version.incremental]: [165005]
+[ro.tr_theme.build.version.release]: [15]
+[ro.tr_theme.build.version.release_or_codename]: [15]
+[ro.tr_theme.build.version.sdk]: [35]
+[ro.tran.aipowerlab.support]: [1]
+[ro.tran.aosp.freezer.no.support]: [1]
+[ro.tran.apex.dump.support]: [1]
+[ro.tran.bom]: [X6853_H895_QSUV]
+[ro.tran.brightnessbar.synchronization.support]: [1]
+[ro.tran.default_local_wallpaper_support]: [1]
+[ro.tran.dfrc.support]: [1]
+[ro.tran.display.colormode.support]: [1]
+[ro.tran.dm.apex.support]: [true]
+[ro.tran.dual_sys_support]: [1]
+[ro.tran.ecc_remake2_support]: [1]
+[ro.tran.fileprotect.support]: [1]
+[ro.tran.fling.support]: [1]
+[ro.tran.game.lock.brightness.support]: [1]
+[ro.tran.game_guard.support]: [0]
+[ro.tran.hiber.support]: [1]
+[ro.tran.jnifatal.support]: [1]
+[ro.tran.memleakdetect.support]: [1]
+[ro.tran.oes.support]: [1]
+[ro.tran.partition.extend]: [true]
+[ro.tran.pirp.support]: [2]
+[ro.tran.powerhub.support]: [1]
+[ro.tran.quantus.support]: [1]
+[ro.tran.region.name]: [Open]
+[ro.tran.regulatory_compliance_support]: [1]
+[ro.tran.screenrotation.support]: [1]
+[ro.tran.sounds_V3.10_support]: [1]
+[ro.tran.sw.market]: [op]
+[ro.tran.touch.ctl]: [1]
+[ro.tran.tp_switch.support]: [1]
+[ro.tran.tr_preload.support]: [1]
+[ro.tran.tr_preload.version]: [OP-220417V1]
+[ro.tran.tr_product.support]: [1]
+[ro.tran.tr_product.version]: [OP-220417V1]
+[ro.tran.tr_region.version]: [OP-220417V1]
+[ro.tran.usf.support]: [1]
+[ro.tran_90hz_refresh_rate.not_support]: [0]
+[ro.tran_afr_ping_pong.support]: [1]
+[ro.tran_ai.support]: [1]
+[ro.tran_ai_charging_event_track]: [1]
+[ro.tran_always_show_custom_ca_icon]: [1]
+[ro.tran_antenna_switch.support]: [0]
+[ro.tran_anti_monitor_support]: [1]
+[ro.tran_anti_nv_recover_support]: [3]
+[ro.tran_anti_rpmb_support]: [1]
+[ro.tran_anti_spec_support]: [3]
+[ro.tran_aod_v3_support]: [1]
+[ro.tran_app_brightness_limit.support]: [1]
+[ro.tran_app_brightness_limit_V2.support]: [1]
+[ro.tran_appm.support]: [1]
+[ro.tran_arcore.support]: [true]
+[ro.tran_bandwidth_alloc2_support]: [1]
+[ro.tran_battery_warning_hint_off]: [1]
+[ro.tran_batterylab_support]: [1]
+[ro.tran_cam_quickup_support]: [1]
+[ro.tran_chat_icon_show_support]: [0]
+[ro.tran_chooser_rank_support]: [1]
+[ro.tran_coloricon.support]: [1]
+[ro.tran_crack_monitor_support]: [1]
+[ro.tran_custom_high_mode_custom.support]: [1]
+[ro.tran_custom_refresh_rate_config.support]: [1]
+[ro.tran_default_auto_refresh.support]: [1]
+[ro.tran_default_refresh_mode]: [10000]
+[ro.tran_defrag.support]: [1]
+[ro.tran_defrag2.support]: [1]
+[ro.tran_demophone_sim_support]: [0]
+[ro.tran_doze_brightness_support]: [1]
+[ro.tran_dts.support]: [1]
+[ro.tran_dynamic_sar.support]: [1]
+[ro.tran_elevator_mode.support]: [1]
+[ro.tran_emergency_message_support]: [1]
+[ro.tran_emergency_prevents_touch]: [1]
+[ro.tran_face.lock_check_eye]: [1]
+[ro.tran_fake_vsync.support]: [1]
+[ro.tran_flash_call.support]: [0]
+[ro.tran_game_ims_support]: [0]
+[ro.tran_garbage_paging_support]: [0]
+[ro.tran_geniex_entrance_support]: [1]
+[ro.tran_geniex_support]: [1]
+[ro.tran_gl_sar.support]: [1]
+[ro.tran_google_dialer_support]: [0]
+[ro.tran_gotii_entrance_support]: [1]
+[ro.tran_gvioce_support]: [true]
+[ro.tran_hbm_v2_oled.level]: []
+[ro.tran_high_brightness_mode.support]: [1]
+[ro.tran_hook_rtt.support]: [1]
+[ro.tran_intercept.support]: [1]
+[ro.tran_intercept_v2.support]: [1]
+[ro.tran_lift_wake_up_support]: [1]
+[ro.tran_livetranscribe.support]: [true]
+[ro.tran_livewallpaper.support]: [1]
+[ro.tran_low_battery_60hz_refresh_rate.support]: [0]
+[ro.tran_low_storage_support]: [1]
+[ro.tran_mdps_afr_restrict_support]: [1]
+[ro.tran_mic_mute_check_support]: [1]
+[ro.tran_mms_timeout_support]: [0]
+[ro.tran_modem_platform]: [95]
+[ro.tran_monitor_display_support]: [1]
+[ro.tran_multi_level_charge_count]: [3]
+[ro.tran_multi_link_support]: [1]
+[ro.tran_nightmode_scene_no_144hz.support]: [0]
+[ro.tran_not_disable_band_support]: [0]
+[ro.tran_oobe_support]: [1]
+[ro.tran_os_version_quality_level]: [stable]
+[ro.tran_palm_find_1.2.0_support]: [1]
+[ro.tran_palm_find_support]: [1]
+[ro.tran_pt_remote_lock_support]: [1]
+[ro.tran_rcs_support]: [1]
+[ro.tran_rdc_timer_v2_support]: [1]
+[ro.tran_reduce_noise_support]: [1]
+[ro.tran_reduce_noise_switch_dl]: [1]
+[ro.tran_reduce_noise_switch_on]: [0]
+[ro.tran_refresh_rate_video_detector.support]: [1]
+[ro.tran_remove_format_private.support]: [1]
+[ro.tran_rm2.support]: [1]
+[ro.tran_roaming_mode_support]: [1]
+[ro.tran_screen_timeout_never_not_support]: [1]
+[ro.tran_sdata_switch.support]: [1]
+[ro.tran_security_input_support]: [1]
+[ro.tran_signal_predict_support]: [1]
+[ro.tran_silver_pkg]: [gotii]
+[ro.tran_smart_5g_gt_support]: [1]
+[ro.tran_sms_filter_support]: [1]
+[ro.tran_sms_filter_support_v1_1]: [1]
+[ro.tran_sms_retry_support]: [0]
+[ro.tran_sniffer_support]: [1]
+[ro.tran_split_screen.v2]: [1]
+[ro.tran_split_screen_snap_mode.support]: [1]
+[ro.tran_stk_athena.support]: [1]
+[ro.tran_stk_mpesa_support]: [1]
+[ro.tran_super_fast_charge_switch.support]: [1]
+[ro.tran_telecom_security.support]: [1]
+[ro.tran_thermal_cc_support]: [1]
+[ro.tran_trusted_device_c_support]: [1]
+[ro.tran_trusted_device_v2_support]: [1]
+[ro.tran_ultra_power_v2_support]: [1]
+[ro.tran_ultrasound_elliptic_support]: [1]
+[ro.tran_update_apn_support]: [1]
+[ro.tran_ups_alloc_enhance_support]: [1]
+[ro.tran_ups_datarat_alwaysshow_support]: [1]
+[ro.tran_ups_datarat_plus_support]: [1]
+[ro.tran_ups_datastall_support]: [1]
+[ro.tran_ups_oos_support]: [1]
+[ro.tran_ups_preferred_nw_support]: [1]
+[ro.tran_ups_ratstall_support]: [1]
+[ro.tran_ups_smooth_support]: [1]
+[ro.tran_viration_time_support]: [1]
+[ro.tran_vsim_tne_support]: [1]
+[ro.tran_wifi_bt_coext.optimize]: [1]
+[ro.tran_wifi_sar.support]: [1]
+[ro.tran_wireless_reverse_charge.support]: [1]
+[ro.tran_wlan_assistant.support]: [1]
+[ro.tran_wlan_assistant_cell.support]: [1]
+[ro.trancare.performance]: [1]
+[ro.trancare.server]: [1]
+[ro.tranfac.support]: [1]
+[ro.tranlog.support]: [1]
+[ro.tranos.build.version]: [xos15.1.2.165]
+[ro.tranos.type]: [xos]
+[ro.tranos.version]: [xos15.1.2]
+[ro.tranos_accessibility_support]: [1]
+[ro.tranos_audiomode_support]: [1]
+[ro.tranos_compatible_support]: [1]
+[ro.tranos_featuremanager_support]: [1]
+[ro.tranos_fingerprint_support]: [1]
+[ro.tranos_flamboyant_permission_support]: [1]
+[ro.tranos_floatingtoolbar_support]: [1]
+[ro.tranos_hidenavigationbar_support]: [1]
+[ro.tranos_hola_support]: [1]
+[ro.tranos_keyguardgesture_support]: [1]
+[ro.tranos_notificationaccess_support]: [1]
+[ro.tranos_onehandmode_support]: [1]
+[ro.tranos_osupdateoverlay_support]: [1]
+[ro.tranos_pedometer_support]: [1]
+[ro.tranos_typeface_240606_SR_SA_0010_001.support]: [1]
+[ro.tranos_typeface_support]: [1]
+[ro.transsion.aftersales.support]: [1]
+[ro.transsion.agares.scene.default.close]: [1]
+[ro.transsion.agares.support]: [1]
+[ro.transsion.agares.vd_support]: [0]
+[ro.transsion.anti_touch.pocketmode.support]: [1]
+[ro.transsion.anti_touch.screenon.wake_reason.support]: [1]
+[ro.transsion.appturbo.support]: [0]
+[ro.transsion.back_gesture.anti_accidental_touch]: [1]
+[ro.transsion.backlight.level]: [255]
+[ro.transsion.backlight.opt.v2.config.support]: [1]
+[ro.transsion.backlight.opt.v2.override.support]: [1]
+[ro.transsion.backlight.optimization]: [1]
+[ro.transsion.coredump.filter]: [0x27]
+[ro.transsion.cpubooster.group]: [1]
+[ro.transsion.cpubooster.heavy_loading.support]: [1]
+[ro.transsion.default_browser_support]: [1]
+[ro.transsion.enable_gms_secondary_dex2oat]: [true]
+[ro.transsion.enable_uxscroll_hint]: [1]
+[ro.transsion.fastslowslide.support]: [1]
+[ro.transsion.frame_override.support]: [1]
+[ro.transsion.gc_group_opt.support]: [true]
+[ro.transsion.launcher_boost_scene_support]: [1]
+[ro.transsion.laydown_screenoff_support]: [0]
+[ro.transsion.lightsensor_optimiz_support]: [1]
+[ro.transsion.magellan.120l2.support]: [0]
+[ro.transsion.magellan.120l3.support]: [0]
+[ro.transsion.magellan.120l4.support]: [0]
+[ro.transsion.magellan.120la.support]: [0]
+[ro.transsion.magellan.120mini.support]: [0]
+[ro.transsion.magellan.gesture.detect.support]: [1]
+[ro.transsion.magellan.level]: [G100]
+[ro.transsion.magellan.support]: [1]
+[ro.transsion.notify.screenon]: [1]
+[ro.transsion.perio.support]: [1]
+[ro.transsion.sf.fling.boost.support]: [1]
+[ro.transsion.standby_handler]: [1]
+[ro.transsion.tne.support]: [true]
+[ro.transsion.tp_large.mistouch.support]: [1]
+[ro.transsion.tran_refresh_rate.support]: [1]
+[ro.transsion.tranfs.path]: [/tranfs]
+[ro.transsion_async_animation_support]: [1]
+[ro.transsion_disable_launcher_unlock_support]: [1]
+[ro.transsion_enable_lite_launcher_unlock_support]: [1]
+[ro.transsion_icon_consistent_support]: [1]
+[ro.transsion_launch_start_exit_support]: [2]
+[ro.transsion_launcher_gaussian_blur_support]: [2]
+[ro.transsion_power_keyguard_animation_support]: [2]
+[ro.transsion_recent_animation_support]: [2]
+[ro.transsion_remote_anim_support]: [1]
+[ro.transsion_spacesaver.support]: [1]
+[ro.transsion_unlock_mode_support]: [2]
+[ro.treble.enabled]: [true]
+[ro.usb_connect_support]: [1]
+[ro.vendor.aee.build.info]: [customer]
+[ro.vendor.aee.convert64]: [1]
+[ro.vendor.aee.enforcing]: [no]
+[ro.vendor.api_level]: [31]
+[ro.vendor.audio.usndantitouch]: [true]
+[ro.vendor.build.date]: [Thu Mar 26 09:39:09 CST 2026]
+[ro.vendor.build.date.utc]: [1774489149]
+[ro.vendor.build.dont_use_vabc]: [true]
+[ro.vendor.build.fingerprint]: [Infinix/X6853-OP/Infinix-X6853:12/SP1A.210812.016/260326V925:user/release-keys]
+[ro.vendor.build.id]: [SP1A.210812.016]
+[ro.vendor.build.security_patch]: [2026-02-01]
+[ro.vendor.build.tags]: [release-keys]
+[ro.vendor.build.type]: [user]
+[ro.vendor.build.version.incremental]: [260326V925]
+[ro.vendor.build.version.release]: [12]
+[ro.vendor.build.version.release_or_codename]: [12]
+[ro.vendor.build.version.sdk]: [31]
+[ro.vendor.camera_tran_fake_stereo_support]: [1]
+[ro.vendor.camera_tran_hal_server_support]: [1]
+[ro.vendor.camkit_enabled]: [1]
+[ro.vendor.cloudengine.support]: [1]
+[ro.vendor.composer_version]: [2.1]
+[ro.vendor.connsys.dedicated.log]: [1]
+[ro.vendor.connsys.dedicated.log.port]: [bt,wifi,gps,mcu]
+[ro.vendor.customer_logpath]: [/data]
+[ro.vendor.datacenter.support]: [1]
+[ro.vendor.have_aee_feature]: [1]
+[ro.vendor.init.sensor.rc]: [init.sensor_2_0.rc]
+[ro.vendor.jpeg_decode_sw_opt]: [1]
+[ro.vendor.low_latency_sched_enable]: [false]
+[ro.vendor.md_apps.load_date]: [2026/02/11 02:36:41 GMT +08:00]
+[ro.vendor.md_apps.load_gencfg]: [GEN95_USER]
+[ro.vendor.md_apps.load_type]: [user]
+[ro.vendor.md_apps.load_verno]: [MOLY.LR13.R2.MP.V184.P36]
+[ro.vendor.md_apps.support]: [1]
+[ro.vendor.md_auto_setup_ims]: [1]
+[ro.vendor.md_mims_support]: [3]
+[ro.vendor.md_prop_ver]: [1]
+[ro.vendor.mediatek.platform]: [MT6789]
+[ro.vendor.mediatek.version.branch]: [alps-mp-s0.mp1]
+[ro.vendor.mediatek.version.release]: [alps-mp-s0.mp1.rc-V17.23_reallytek.s0mp1rc.k61v1.64.bsp_P31]
+[ro.vendor.memfusion.support]: [1]
+[ro.vendor.memfusion2_1.support]: [true]
+[ro.vendor.memfusion2_2.support]: [true]
+[ro.vendor.mtk.bt_sap_enable]: [true]
+[ro.vendor.mtk.sensor.support]: [yes]
+[ro.vendor.mtk_aal_support]: [1]
+[ro.vendor.mtk_agps_app]: [1]
+[ro.vendor.mtk_aod_support]: [1]
+[ro.vendor.mtk_audio_alac_support]: [1]
+[ro.vendor.mtk_audio_ape_support]: [1]
+[ro.vendor.mtk_blulight_def_support]: [1]
+[ro.vendor.mtk_c2k_lte_mode]: [0]
+[ro.vendor.mtk_cam_security_support]: [0]
+[ro.vendor.mtk_camera_app_version]: [3]
+[ro.vendor.mtk_config_max_dram_size]: []
+[ro.vendor.mtk_eccci_c2k]: [1]
+[ro.vendor.mtk_emmc_support]: [1]
+[ro.vendor.mtk_external_sim_only_slots]: [4]
+[ro.vendor.mtk_external_sim_support]: [1]
+[ro.vendor.mtk_fast_charging_support]: [1]
+[ro.vendor.mtk_fd_support]: [1]
+[ro.vendor.mtk_flv_playback_support]: [1]
+[ro.vendor.mtk_gps_support]: [1]
+[ro.vendor.mtk_gwsd_capability]: [1]
+[ro.vendor.mtk_gwsd_support]: [1]
+[ro.vendor.mtk_hifiaudio_support]: [1]
+[ro.vendor.mtk_log_hide_gps]: [0]
+[ro.vendor.mtk_lte_support]: [1]
+[ro.vendor.mtk_md_world_mode_support]: [1]
+[ro.vendor.mtk_modem_monitor_support]: [1]
+[ro.vendor.mtk_nfc_addon_support]: [1]
+[ro.vendor.mtk_nn_quant_preferred]: [1]
+[ro.vendor.mtk_non_dsda_rsim_support]: [1]
+[ro.vendor.mtk_omacp_support]: [1]
+[ro.vendor.mtk_pq_color_mode]: [1]
+[ro.vendor.mtk_pq_support]: [2]
+[ro.vendor.mtk_protocol1_rat_config]: [Lf/Lt/W/G]
+[ro.vendor.mtk_ps1_rat]: [Lf/Lt/W/G]
+[ro.vendor.mtk_ril_mode]: [c6m_1rild]
+[ro.vendor.mtk_sec_video_path_support]: [1]
+[ro.vendor.mtk_single_bin_modem_support]: [1]
+[ro.vendor.mtk_slow_motion_support]: [1]
+[ro.vendor.mtk_svp_on_mtee_support]: [2]
+[ro.vendor.mtk_tb_wifi_3g_mode]: [0]
+[ro.vendor.mtk_telephony_add_on_policy]: [0]
+[ro.vendor.mtk_trustonic_tee_support]: [1]
+[ro.vendor.mtk_uicc_clf]: [1]
+[ro.vendor.mtk_video_hevc_enc_support]: [1]
+[ro.vendor.mtk_wappush_support]: [1]
+[ro.vendor.mtk_wfd_support]: [1]
+[ro.vendor.num_md_protocol]: [3]
+[ro.vendor.powerdata.support]: [1]
+[ro.vendor.powerhal.cloud]: [1]
+[ro.vendor.powerhal.encode]: [1]
+[ro.vendor.powerhal.thermal_ux_support]: [1]
+[ro.vendor.powerhal_fling_mode_support]: [1]
+[ro.vendor.pq.disp_lcm_name_support]: [1]
+[ro.vendor.pq.mtk_aal_support]: [1]
+[ro.vendor.pq.mtk_ai_scence_pq_support]: [0]
+[ro.vendor.pq.mtk_ai_sdr_to_hdr_support]: [0]
+[ro.vendor.pq.mtk_backlight_smooth_support]: [0]
+[ro.vendor.pq.mtk_blulight_def_support]: [1]
+[ro.vendor.pq.mtk_caltm_support]: [1]
+[ro.vendor.pq.mtk_clearzoom_support]: [1]
+[ro.vendor.pq.mtk_dc_support]: [0]
+[ro.vendor.pq.mtk_disp_c3d_support]: [0]
+[ro.vendor.pq.mtk_disp_ccorr_support]: [1]
+[ro.vendor.pq.mtk_disp_color_support]: [1]
+[ro.vendor.pq.mtk_disp_game_pq_support]: [0]
+[ro.vendor.pq.mtk_disp_gamma_support]: [1]
+[ro.vendor.pq.mtk_disp_tdshp_support]: [0]
+[ro.vendor.pq.mtk_dre30_support]: [0]
+[ro.vendor.pq.mtk_ds_support]: [0]
+[ro.vendor.pq.mtk_hdr10_plus_recording_support]: [0]
+[ro.vendor.pq.mtk_hfg_support]: [1]
+[ro.vendor.pq.mtk_mdp_ccorr_support]: [0]
+[ro.vendor.pq.mtk_mdp_lite_pq_support]: [0]
+[ro.vendor.pq.mtk_pq_interface_support]: [0]
+[ro.vendor.pq.mtk_pq_video_whitelist_support]: [0]
+[ro.vendor.pq.mtk_scltm_support]: [0]
+[ro.vendor.pq.mtk_ultra_dimming_support]: [0]
+[ro.vendor.pq.mtk_ultra_resolution_support]: [0]
+[ro.vendor.pq.mtk_video_transition]: [0]
+[ro.vendor.pq.tran_disp_ccm_cali_support]: [1]
+[ro.vendor.pq.tran_disp_ccm_preheat_support]: [0]
+[ro.vendor.pq.tran_disp_lcm_code_check_mask]: [16]
+[ro.vendor.pq.tran_disp_lcm_code_check_mask2]: [192]
+[ro.vendor.pq.tran_disp_lcm_code_length]: [30]
+[ro.vendor.pq.tran_disp_lcm_code_support]: [1]
+[ro.vendor.pq.tran_disp_lcm_number]: [2]
+[ro.vendor.pref_scale_enable_cfg]: [1]
+[ro.vendor.product.cpu.abilist]: [arm64-v8a,armeabi-v7a,armeabi]
+[ro.vendor.product.cpu.abilist32]: [armeabi-v7a,armeabi]
+[ro.vendor.product.cpu.abilist64]: [arm64-v8a]
+[ro.vendor.sim_me_lock_mode]: [3]
+[ro.vendor.soc.model]: [MT6789]
+[ro.vendor.soc.model.external_name]: [MT6789U]
+[ro.vendor.soc.model.part_name]: [MT6789U]
+[ro.vendor.soc.model_ready]: [1]
+[ro.vendor.sys.current_rsc_path]: [/system/etc/rsc/default]
+[ro.vendor.tran.als.screenrgb.check]: [1]
+[ro.vendor.tran.alscali.ml]: [1]
+[ro.vendor.tran.alscali.ml.algotype]: [Cutout]
+[ro.vendor.tran.alscali.ml.screentype]: [UnderScreen]
+[ro.vendor.tran.alscali.ml.vendortype]: [SensorTek]
+[ro.vendor.tran.alscali.ml.version]: [V1_0_0]
+[ro.vendor.tran.alscali.readnv.version]: [3]
+[ro.vendor.tran.arb_avb_img_version]: [3]
+[ro.vendor.tran.arb_group_0_version]: [3]
+[ro.vendor.tran.arb_group_1_version]: [3]
+[ro.vendor.tran.arb_pl_version]: [3]
+[ro.vendor.tran.audio_event_tracking.support]: [1]
+[ro.vendor.tran.audiotimeout]: [true]
+[ro.vendor.tran.blow_disbrom_level]: [11]
+[ro.vendor.tran.ecc_remake_support]: [1]
+[ro.vendor.tran.fp.support]: [1]
+[ro.vendor.tran.freeze.detect.support]: [1]
+[ro.vendor.tran.hbm.battery.temp.clr]: [400]
+[ro.vendor.tran.hbm.battery.temp.trig]: [430]
+[ro.vendor.tran.hbm.thermal-patch]: [/devices/platform/thermal-ntc1]
+[ro.vendor.tran.hbm.thermal.temp.clr]: [42000]
+[ro.vendor.tran.hbm.thermal.temp.trig]: [44000]
+[ro.vendor.tran.keystoredb.protect.support]: [1]
+[ro.vendor.tran.midtest.als.ml_algoType]: [Cutout]
+[ro.vendor.tran.midtest.als.ml_screenType]: [UnderScreen]
+[ro.vendor.tran.midtest.als.ml_support]: [1]
+[ro.vendor.tran.midtest.als.ml_vendorType]: [SensorTek]
+[ro.vendor.tran.midtest.als.ml_version]: [V1_0_0]
+[ro.vendor.tran.midtest.camera_als_ic]: [alspdt17]
+[ro.vendor.tran.midtest.dual_camera_arcsoft]: [1]
+[ro.vendor.tran.midtest.dual_camera_support]: [1]
+[ro.vendor.tran.midtest.first_dummy_cameraID]: [3]
+[ro.vendor.tran.midtest.front_two_camera_dummy]: [1]
+[ro.vendor.tran.midtest.gyroscope_support]: [1]
+[ro.vendor.tran.midtest.ls.0lux.max]: [40]
+[ro.vendor.tran.midtest.ls.R2G2B2gamma.max]: [3]
+[ro.vendor.tran.midtest.ls.R2G2B2gamma.min]: [1.5]
+[ro.vendor.tran.midtest.ls.R3G3B3gamma.max]: [1.5]
+[ro.vendor.tran.midtest.ls.R3G3B3gamma.min]: [0.5]
+[ro.vendor.tran.midtest.ls.factor.max]: [2500]
+[ro.vendor.tran.midtest.ls.factor.min]: [250]
+[ro.vendor.tran.midtest.ls.k.max]: [100]
+[ro.vendor.tran.midtest.ls.k.min]: [0]
+[ro.vendor.tran.midtest.mtk_dual_mic_support]: [1]
+[ro.vendor.tran.midtest.nfc2_support]: [1]
+[ro.vendor.tran.midtest.ps.cali.diff3]: [20]
+[ro.vendor.tran.midtest.ps.diff3.max]: [2000]
+[ro.vendor.tran.midtest.ps.diff5.max]: [1000]
+[ro.vendor.tran.midtest.ps.diff5.min]: [20]
+[ro.vendor.tran.midtest.ps.noise.max]: [5000]
+[ro.vendor.tran.midtest.ps.noise.min]: [0]
+[ro.vendor.tran.midtest.reverse_charge]: [1]
+[ro.vendor.tran.midtest.reverse_charge_threshold]: [6]
+[ro.vendor.tran.midtest.rfc_charge_support]: [1]
+[ro.vendor.tran.midtest.sdcard_remove]: [1]
+[ro.vendor.tran.midtest.second_dummy_cameraID]: [0]
+[ro.vendor.tran.midtest.sensor2_support]: [1]
+[ro.vendor.tran.midtest.tran_audio_number_of_mic]: []
+[ro.vendor.tran.midtest.ultrasound_proximity]: [1]
+[ro.vendor.tran.midtest.wireless_charge_support]: [1]
+[ro.vendor.tran.otg_lpo_support]: [1]
+[ro.vendor.tran.proinfo.memtrace.support.dramtest]: [yes]
+[ro.vendor.tran.proinfo.memtrace.support.emmctest]: [yes]
+[ro.vendor.tran.proinfo.memtrace.support.kene]: [yes]
+[ro.vendor.tran.shutdown.emergency.support]: [1]
+[ro.vendor.tran.single_light_sensor]: [1]
+[ro.vendor.tran.sw_c2cotg_support]: [1]
+[ro.vendor.tran.sw_otg_support]: [1]
+[ro.vendor.tran.ta.crashdebug.support]: [1]
+[ro.vendor.tran.trans_pay_tee]: [1]
+[ro.vendor.tran.trans_typecheadset]: [1]
+[ro.vendor.tran.version.release]: [X6853-H895QSUV-U-BASE-260326V925DevT]
+[ro.vendor.tran.xml.support]: [1]
+[ro.vendor.tran_audio_esportspro.support]: [1]
+[ro.vendor.tran_hook_rtt.support]: [1]
+[ro.vendor.trancare.support]: [1]
+[ro.vendor.trancare.uxdetector]: [1]
+[ro.vendor.trancare.uxdetectorrest]: [1]
+[ro.vendor.transched.support]: [1]
+[ro.vendor.transsion.hbm_mode_hal.support]: [1]
+[ro.vendor.vnd.current_rsc_path]: [/vendor/etc/rsc/default]
+[ro.vendor.wifi.sap.concurrent.iface]: [ap1]
+[ro.vendor.wifi.sap.interface]: [ap0]
+[ro.vendor.wlan.standalone.log]: [y]
+[ro.vendor_dlkm.build.date]: [Thu Mar 26 09:39:09 CST 2026]
+[ro.vendor_dlkm.build.date.utc]: [1774489149]
+[ro.vendor_dlkm.build.fingerprint]: [Infinix/X6853-OP/Infinix-X6853:12/SP1A.210812.016/260326V925:user/release-keys]
+[ro.vendor_dlkm.build.id]: [SP1A.210812.016]
+[ro.vendor_dlkm.build.tags]: [release-keys]
+[ro.vendor_dlkm.build.type]: [user]
+[ro.vendor_dlkm.build.version.incremental]: [260326V925]
+[ro.vendor_dlkm.build.version.release]: [12]
+[ro.vendor_dlkm.build.version.release_or_codename]: [12]
+[ro.vendor_dlkm.build.version.sdk]: [31]
+[ro.virtual_ab.compression.enabled]: [true]
+[ro.virtual_ab.enabled]: [true]
+[ro.virtual_ab.userspace.snapshots.enabled]: [true]
+[ro.vndk.version]: [31]
+[ro.wifi.channels]: []
+[ro.xhide_support]: [1]
+[ro.xoslauncher_support]: [1]
+[ro.zygote]: [zygote64_32]
+[ro.zygote.preload.enable]: [0]
+[security.perf_harden]: [1]
+[selinux.restorecon_recursive]: [/data/misc_ce/999]
+[service.sf.present_timestamp]: [1]
+[servicemanager.ready]: [true]
+[setupwizard.theme]: [glif_v3_light]
+[sys.apm.limit_block_mode]: [1]
+[sys.apm.process_priority_config]: [1]
+[sys.apm.recent_keep_alive_support]: [1]
+[sys.appm_v]: [3]
+[sys.avatarpipe.enabled]: [1]
+[sys.avatarpipe.enabled_native]: [1]
+[sys.boot.reason]: [shutdown,]
+[sys.boot.reason.last]: [shutdown,]
+[sys.boot_completed]: [1]
+[sys.bootstat.first_boot_completed]: [1]
+[sys.camera_start_optimize]: [1]
+[sys.fps_monitor_v]: [3]
+[sys.fuse.transcode_enabled]: [true]
+[sys.griffin.allow_gms_start_other]: [1]
+[sys.griffin.app_lite]: [1]
+[sys.griffin.clean_special_sys]: [0]
+[sys.griffin.core]: [1]
+[sys.griffin.limit_call_force_stop]: [1]
+[sys.griffin.pm]: [1]
+[sys.griffin.resmonitor2]: [1]
+[sys.griffin.support]: [1]
+[sys.griffin.update_online]: [1]
+[sys.griffin.version]: [2.1]
+[sys.griffin_stopped_support]: [0]
+[sys.healthstandard.support]: [1]
+[sys.init.perf_lsm_hooks]: [1]
+[sys.intelligent_optimization_update]: [1]
+[sys.ipo.disable]: [1]
+[sys.ipo.pwrdncap]: [2]
+[sys.is_first_boot]: [0]
+[sys.logical.height]: [2436]
+[sys.logical.width]: [1080]
+[sys.manual.clean.kill.os.support]: [1]
+[sys.manual.clean.support]: [1]
+[sys.oem_unlock_allowed]: [0]
+[sys.onehand.state]: [0]
+[sys.onekeyclean_support]: [1]
+[sys.os_volume_down_inject]: [0:0:0]
+[sys.os_volume_up_inject]: [0:0:0]
+[sys.pm_buriedpoint.support]: [1]
+[sys.pm_process_compute.support]: [1]
+[sys.pm_remove_cpukill.support]: [1]
+[sys.proc.died.reason.support]: [1]
+[sys.proc.strat.reason.support]: [1]
+[sys.proc_mgr.support]: [1]
+[sys.product.keepalive_support]: [0]
+[sys.pss_clean_support]: [false]
+[sys.pxlw.iris.support]: [0]
+[sys.resource_override.change_timestamp]: [-1]
+[sys.rss_hwm_reset.on]: [0]
+[sys.sensor_rotation]: [1]
+[sys.skyroam.calling]: [0]
+[sys.skyroam.ifname.ims]: []
+[sys.skyroam.osi.status]: [running]
+[sys.skyroam.osi.type]: [gsim]
+[sys.skyroam.osi.version]: [3.5.1.52]
+[sys.skyroam.prsim]: [0]
+[sys.skyroam.rsim]: [-1]
+[sys.skyroam.silver.f1]: [5078]
+[sys.skyroam.silver.plmn]: [51089]
+[sys.skyroam.silver.vc]: [5078]
+[sys.skyroam.silver.vn]: [3.2.078]
+[sys.skyroam.sim.slot]: [unknow,unknow]
+[sys.skyroam.simo.vc]: [40]
+[sys.skyroam.srg.status]: [1]
+[sys.skyroam.support.client]: [3]
+[sys.skyroam.support.simo]: [1]
+[sys.skyroam.vsim]: [-1]
+[sys.skyroam.vsim.apdu.status]: [0]
+[sys.skyroam.vsim.client]: [0]
+[sys.skyroam.vsim.plug.status]: [out]
+[sys.skyroam.vsim.status]: [INIT_SUCCESS]
+[sys.skyroam.vsim_support]: [0]
+[sys.statisticalsales.flag]: [1]
+[sys.stucklogo.version]: [3.365]
+[sys.surfaceflinger.idle_reduce_framerate_enable]: [yes]
+[sys.sysctl.extra_free_kbytes]: [30830]
+[sys.system_server.start_count]: [1]
+[sys.system_server.start_elapsed]: [10382]
+[sys.system_server.start_uptime]: [10382]
+[sys.telephony.kom.enable]: [0]
+[sys.trace.traced_started]: [1]
+[sys.tran.BOOT_COMPLETED]: [1]
+[sys.tran.aegean.cpu.set.sbg]: [0-3]
+[sys.tran.health.std.support]: [1]
+[sys.tran.hstd.wake.support]: [1]
+[sys.tran.tracker.died.process]: [100]
+[sys.tran.tracker.local.died.process]: [0]
+[sys.tran.tracker.recent.task.process.adjust]: [1]
+[sys.tran.tracker.recent.task.process.debug]: [0]
+[sys.tran_aod_is_standby]: [0]
+[sys.tran_localechange_optimize]: [1]
+[sys.trancare.performance]: [1]
+[sys.trancare.performance.latency]: [1]
+[sys.tranengine.boot.completed]: [1]
+[sys.tranfac.ro.cmd.verified]: [0]
+[sys.tranpm.support]: [1]
+[sys.tranpm.version]: [41]
+[sys.transsion.nvcolor]: [H39]
+[sys.update_engine.error_code]: [0]
+[sys.update_engine.merge_status]: [0]
+[sys.update_engine.progress]: [0.0]
+[sys.update_engine.status]: [0]
+[sys.usb.config]: [mtp,adb]
+[sys.usb.configfs]: [1]
+[sys.usb.controller]: [musb-hdrc]
+[sys.usb.ffs.aio_compat]: [0]
+[sys.usb.ffs.bufsize_16k]: [1]
+[sys.usb.state]: [mtp,adb]
+[sys.use_memfd]: [false]
+[sys.user.0.ce_available]: [true]
+[sys.wifitracing.started]: [1]
+[telephony.active_modems.max_count]: [3]
+[vendor.MB.running]: [0]
+[vendor.af.dynamic.sleeptime.enable]: [true]
+[vendor.af.pausewait.enable]: [false]
+[vendor.af.threshold.src_and_effect_count]: [5]
+[vendor.bluetooth.ldac.abr]: [true]
+[vendor.bluetooth.state]: [0]
+[vendor.boostfwk.aosp_fling]: [1]
+[vendor.boostfwk.aosp_move]: [1]
+[vendor.boostfwk.fling_distance_dp]: [20]
+[vendor.boostfwk.launcher_use_interaction]: [1]
+[vendor.boostfwk.preanimation]: [0]
+[vendor.boostfwk.rescue.strength]: [60]
+[vendor.boostfwk.transsion.enable]: [1]
+[vendor.boostfwk.transsion.frameprefetcher]: [1]
+[vendor.boostfwk.version]: [4]
+[vendor.cdma.ril.uicc.mccmnc.2]: []
+[vendor.connsys.adie.chipid]: [0x6631]
+[vendor.connsys.bt_fw_ver]: [t-neptune-main-soc2_2-2118-MOET_SOC2_2_E1_MT6631_ASIC_MINIROM-20251231172902]
+[vendor.connsys.driver.ready]: [yes]
+[vendor.connsys.formeta.ready]: [yes]
+[vendor.debug.mtk.aee.status64]: [free]
+[vendor.debug.mtk.aeev.modem.version]: [MOLY.LR13.R2.MP.V184.P36]
+[vendor.debug.mtk.aeev.status64]: [free]
+[vendor.debug.pq.acaltm.dbg]: [0]
+[vendor.debug.pq.adl.dbg]: [0]
+[vendor.debug.pq.cz.isp.tuning]: [0]
+[vendor.debug.pq.dre.dbg]: [0]
+[vendor.debug.pq.dre.demowin.x]: [536805376]
+[vendor.debug.pq.dre.isp.tuning]: [0]
+[vendor.debug.pq.dredriver.blk]: [0]
+[vendor.debug.pq.dredriver.dbg]: [0]
+[vendor.debug.pq.dshp.en]: [1]
+[vendor.debug.pq.hdr.dbg]: [0]
+[vendor.debug.pq.hdr_vivid.dbg]: [0]
+[vendor.debug.pq.hdrdriver.dbg]: [0]
+[vendor.debug.pq.hdrvividdriver.dbg]: [0]
+[vendor.debug.pq.hfg.isp.tuning]: [0]
+[vendor.debug.pq.level]: [0]
+[vendor.debug.pq.shp.en]: [1]
+[vendor.debug.seninf.hs_trail]: [0]
+[vendor.debug.trancam.vipscheduler]: [1]
+[vendor.gps.clock.type]: [21]
+[vendor.gps.gps.version]: [0x6789]
+[vendor.gsm.external.sim.connected]: [1]
+[vendor.gsm.external.sim.timeout]: [13,13,13]
+[vendor.gsm.gcf.testmode]: [0]
+[vendor.gsm.modem.vsim.capability]: [2,2,2]
+[vendor.gsm.project.baseband]: [TK_MD(LWCG_R2_6789)]
+[vendor.gsm.ril.eboot]: [0]
+[vendor.gsm.ril.fulluicctype]: [USIM]
+[vendor.gsm.ril.fulluicctype.2]: [USIM]
+[vendor.gsm.ril.fulluicctype.3]: []
+[vendor.gsm.ril.uicc.mccmnc]: [51010]
+[vendor.gsm.ril.uicc.mccmnc.1]: [51089]
+[vendor.gsm.ril.uicc.mccmnc.2]: []
+[vendor.gsm.ril.uicctype]: [USIM]
+[vendor.gsm.ril.uicctype.2]: [USIM]
+[vendor.gsm.ril.uicctype.3]: []
+[vendor.gsm.serial]: [H895_S1_256G+8G_V1.2                    10P]
+[vendor.gsm.sim.extended.format1]: [0]
+[vendor.gsm.sim.extended.format2]: [0]
+[vendor.gsm.sim.extended.format3]: [0]
+[vendor.gsm.sim.retry.pin1]: [3]
+[vendor.gsm.sim.retry.pin1.2]: [3]
+[vendor.gsm.sim.retry.pin1.3]: []
+[vendor.gsm.sim.retry.pin2]: [3]
+[vendor.gsm.sim.retry.pin2.2]: [3]
+[vendor.gsm.sim.retry.pin2.3]: []
+[vendor.gsm.sim.retry.puk1]: [10]
+[vendor.gsm.sim.retry.puk1.2]: [10]
+[vendor.gsm.sim.retry.puk1.3]: []
+[vendor.gsm.sim.retry.puk2]: [10]
+[vendor.gsm.sim.retry.puk2.2]: [10]
+[vendor.gsm.sim.retry.puk2.3]: []
+[vendor.gsm.sim.ril.phbready]: [true,true]
+[vendor.gsm.sim.ril.testsim]: [0]
+[vendor.gsm.sim.ril.testsim.2]: [0]
+[vendor.gsm.sim.slot.lock.card.valid]: [0]
+[vendor.gsm.sim.slot.lock.card.valid.2]: [0]
+[vendor.gsm.sim.slot.lock.card.valid.3]: [2]
+[vendor.gsm.sim.slot.lock.device.lock.remain.count]: [10]
+[vendor.gsm.sim.slot.lock.policy]: [3]
+[vendor.gsm.sim.slot.lock.service.capability]: [0]
+[vendor.gsm.sim.slot.lock.service.capability.2]: [0]
+[vendor.gsm.sim.slot.lock.service.capability.3]: [4]
+[vendor.gsm.sim.slot.lock.state]: [0]
+[vendor.ims.eims.pdn.info]: [ims_1_0,]
+[vendor.media.heif.feature.off]: [1]
+[vendor.media.heif.highThreshold]: [20]
+[vendor.mtk.atci.boot_completed]: [1]
+[vendor.mtk.camera.app.fd.video]: [1]
+[vendor.mtk.md.sbp]: [0]
+[vendor.mtk.md1.status]: [ready]
+[vendor.mtk.nvram.ready]: [1]
+[vendor.net.ims.volte.pid]: [1538]
+[vendor.prop.pnp.cpu.state]: [MTK default running]
+[vendor.prop.pnp.driver.state]: [on]
+[vendor.prop.pnp.fpsgo.boost]: [enable]
+[vendor.prop.pnp.fpsgo.driver.state]: [on]
+[vendor.prop.pnp.fpsgo.feature.state]: [0x1f031]
+[vendor.prop.pnp.fpsgo.state]: [running]
+[vendor.prop.pnp.version]: [3.1]
+[vendor.ril.active.md]: [9]
+[vendor.ril.apc.support]: [1]
+[vendor.ril.call.emci_support]: [0]
+[vendor.ril.cdma.3g.dualact]: [1]
+[vendor.ril.cdma.card.type.1]: [2]
+[vendor.ril.cdma.card.type.2]: [2]
+[vendor.ril.cdma.card.type.3]: [255]
+[vendor.ril.certificate]: [0]
+[vendor.ril.data.allow_data_slot]: [1]
+[vendor.ril.data.legacy_allow_mode]: [-1]
+[vendor.ril.data.pdn_info1]: []
+[vendor.ril.data.prefer_data_slot]: [1]
+[vendor.ril.data.preferred_data_mode]: [1]
+[vendor.ril.disable.eboot]: [0]
+[vendor.ril.ecc.service.category.list]: []
+[vendor.ril.ecc.service.category.list.1]: []
+[vendor.ril.ecc.service.category.list.2]: []
+[vendor.ril.enablecapability]: [0]
+[vendor.ril.fd.mode]: [1]
+[vendor.ril.ipo.radiooff]: [0]
+[vendor.ril.mtk]: [1]
+[vendor.ril.mtk_hvolte_indicator]: [0,0,0]
+[vendor.ril.mux.ee.md1]: [0]
+[vendor.ril.mux.report.case]: [0]
+[vendor.ril.mux.start]: [0]
+[vendor.ril.muxreport.run]: [0]
+[vendor.ril.no.smsc.1]: [0]
+[vendor.ril.no.smsc.2]: [0]
+[vendor.ril.no.smsc.3]: [0]
+[vendor.ril.nr.type]: [0]
+[vendor.ril.nw.signalstrength.lte.1]: [-118,-5]
+[vendor.ril.nw.signalstrength.lte.2]: [-87,15]
+[vendor.ril.nw.signalstrength.lte.3]: [2147483647,214748364]
+[vendor.ril.nw.worldmode.activemode]: [1]
+[vendor.ril.nw.worldmode.keep_3g_mode]: [0]
+[vendor.ril.rc.session.id1]: [-1]
+[vendor.ril.recovery.simaftersale0]: [0]
+[vendor.ril.recovery.simaftersale1]: [0]
+[vendor.ril.sim.onoff.state1]: [11]
+[vendor.ril.sim.onoff.state2]: [11]
+[vendor.ril.sim.onoff.state3]: [11]
+[vendor.ril.sim.onoff.support]: [1]
+[vendor.ril.simswitch.no_reset_support]: [1]
+[vendor.ril.simswitch.tpluswsupport]: [1]
+[vendor.ril.special.ecclist]: [110,115,117,119,129]
+[vendor.ril.special.ecclist1]: [117,119,129]
+[vendor.ril.special.ecclist2]: []
+[vendor.ril.usim.gsm_mcc_mnc0]: [51010]
+[vendor.ril.usim.gsm_mcc_mnc1]: [51089]
+[vendor.service.nvram_init]: [Ready]
+[vendor.service.nvram_restore]: [Ready]
+[vendor.sys.pnpmgr.state]: [running]
+[vendor.sys.vm.extrafreekbytes]: [30830]
+[vendor.sys.vm.watermarkscalefactor]: [10]
+[vendor.tee.googlekey.status]: [ok]
+[vendor.wlan.driver.version]: [1_0_1]
+[vendor.wlan.firmware.version]: [t-neptune-main-soc2_2-2118-MOET_SOC2_2_E1_MT6631_ASIC_MINIROM-20251231172902]
+[vold.has_adoptable]: [1]
+[vold.has_compress]: [0]
+[vold.has_quota]: [1]
+[vold.has_reserved]: [1]
+
+--- Memory ---
+MemTotal:        7866536 kB
+MemFree:         1379924 kB
+MemAvailable:    4026116 kB
+Buffers:            3416 kB
+Cached:          2653772 kB
+SwapCached:         3608 kB
+Active:          2163872 kB
+Inactive:        2107996 kB
+Active(anon):     691572 kB
+Inactive(anon):  1092164 kB
+Active(file):    1472300 kB
+Inactive(file):  1015832 kB
+Unevictable:      144368 kB
+Mlocked:          144368 kB
+SwapTotal:       4309304 kB
+SwapFree:        3238308 kB
+Dirty:               408 kB
+Writeback:             0 kB
+AnonPages:       1756128 kB
+Mapped:          1007448 kB
+Shmem:             35900 kB
+KReclaimable:     338824 kB
+Slab:             533600 kB
+SReclaimable:     204432 kB
+SUnreclaim:       329168 kB
+KernelStack:       81776 kB
+ShadowCallStack:   20484 kB
+PageTables:       159204 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     8242572 kB
+Committed_AS:   259851360 kB
+VmallocTotal:   263061440 kB
+VmallocUsed:      282684 kB
+VmallocChunk:          0 kB
+Percpu:            17536 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:         638976 kB
+CmaFree:             956 kB
