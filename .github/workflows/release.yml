@@ -28,7 +28,7 @@ jobs:
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > ${{ github.workspace }}/keystore.jks
 
       - name: Build signed release APK
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleRelease --no-configuration-cache
         env:
           KEYSTORE_FILE: ${{ github.workspace }}/keystore.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
