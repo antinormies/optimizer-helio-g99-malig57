@@ -35,7 +35,10 @@ class AppConfig(context: Context) {
     enum class Profile(val value: String, val label: String) {
         BALANCED("balanced", "Balanced"),
         PERFORMANCE("performance", "Gaming");
-    }
+
+        companion object {
+            fun fromValue(v: String) = entries.firstOrNull { it.value == v } ?: BALANCED
+        }
     }
 
     companion object {
