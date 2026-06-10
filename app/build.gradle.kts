@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -25,11 +27,21 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = keyStoreFile?.let { file(it) }
+            storePassword = keyStorePassword
+            keyAlias = keyAlias
+            keyPassword = keyPassword
+        }
+    }
+
     buildTypes {
         release {
             optimization {
                 enable = false
             }
+            signingConfig = signingConfigs.findByName("release")
         }
     }
     compileOptions {
@@ -65,3 +77,27 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 }
+
+val keyStoreFile: String? = System.getenv("KEYSTORE_FILE")
+    ?: project.rootProject.file("keystore.properties")?.takeIf { it.exists() }?.let {
+        Properties().apply { load(it.inputStream()) }
+            .getProperty("keystore.file")
+    }
+
+val keyStorePassword: String? = System.getenv("KEYSTORE_PASSWORD")
+    ?: project.rootProject.file("keystore.properties")?.takeIf { it.exists() }?.let {
+        Properties().apply { load(it.inputStream()) }
+            .getProperty("keystore.password")
+    }
+
+val keyAlias: String? = System.getenv("KEY_ALIAS")
+    ?: project.rootProject.file("keystore.properties")?.takeIf { it.exists() }?.let {
+        Properties().apply { load(it.inputStream()) }
+            .getProperty("key.alias")
+    }
+
+val keyPassword: String? = System.getenv("KEY_PASSWORD")
+    ?: project.rootProject.file("keystore.properties")?.takeIf { it.exists() }?.let {
+        Properties().apply { load(it.inputStream()) }
+            .getProperty("key.password")
+    }
