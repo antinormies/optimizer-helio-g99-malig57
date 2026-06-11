@@ -70,7 +70,7 @@ The app needs ADB-level shell access to run `settings`, `setprop`, `cmd power`, 
 
 1. Install [Shizuku](https://shizuku.rikka.app/) from Play Store
 2. Start Shizuku and grant adb/root permission per its instructions
-3. Download the latest APK from [Releases](https://github.com/antinormies/OptHelioG99/releases)
+3. Download the latest APK from [Releases](https://github.com/antinormies/optimizer-helio-g99-malig57/releases)
 4. Install and open OptHelioG99
 5. Select a profile (Balanced or Gaming) and tap **Apply**
 6. Toggle **Vulkan native warmup** on/off (initializes GPU driver via C++ backend)
@@ -80,7 +80,7 @@ The app needs ADB-level shell access to run `settings`, `setprop`, `cmd power`, 
 
 ```bash
 # Linux / macOS
-git clone https://github.com/antinormies/OptHelioG99.git
+git clone https://github.com/antinormies/optimizer-helio-g99-malig57.git
 cd OptHelioG99
 
 # Apply balanced profile
@@ -117,59 +117,18 @@ ADB="" sh /data/local/tmp/opt_heliog99/scripts/optimize.sh balanced
 
 ---
 
-## Project Layout
+## Building from Source
 
+```bash
+git clone https://github.com/antinormies/optimizer-helio-g99-malig57.git
+cd OptHelioG99
+./gradlew assembleDebug
 ```
-cli/              ← Single source of truth for optimization logic
-  optimize.sh       Orchestrator — runs all 5 modules per profile
-  clear.sh          Reset all optimizations to defaults
-  modules/
-    gpu.sh          GPU composition, UBWC, EGL, MSAA, HWUI tuning
-    cpu.sh          Scheduler hints, fixed perf mode, uclamp, power HAL
-    memory.sh       ZRAM, LMK minfree, I/O prefetcher, fstrim
-    display.sh      Refresh rate, animations, overlays, VSync, doze
-    debloat.sh      XOS bloatware (Transsion packages) management
-  config/profiles/
-    balanced.conf   120 Hz, 4 render threads, GPU comp, dry-run debloat
-    performance.conf 120 Hz, 8 render threads, fixed perf mode, full debloat
 
-app/              ← Android application
-  src/main/java/.../
-    MainActivity.kt   UI with profile selector, Vulkan dashboard, log
-    shizuku/          Transport layer (ShizukuManager, AdbTransport, TransportManager)
-    modules/          ModuleOrchestrator — extracts scripts from assets, executes via transport
-    native/           VulkanBridge + VulkanDeviceInfo (JNI bridge)
-    config/AppConfig.kt  SharedPreferences persistence
-    receiver/BootReceiver.kt  Boot completed → OptimizerService
-    service/OptimizerService.kt  Foreground service for auto-apply
-  src/main/cpp/     Native C++ (NDK/CMake)
-    vulkan_backend.h/.cpp  Vulkan instance, device selection, compute queue, probe/optimize
-    vulkan_bridge.cpp       JNI glue (nativeProbeDevice, nativeOptimize)
-    gpu_tuner.h/.cpp        GPU property tuning via JNI callbacks (deprecated, now done by scripts)
-
-docs/             ← Design docs and research
-  PLAN.md           Full project plan and architecture
-  research/         Helio G99 notes, Mali-G57 notes, XOS bloat list
-  resources/        Reference materials (gitignored)
-
-test/             ← Benchmark results directory
-  benchmark-results/  Before/after performance data
-```
+Requires Android Studio, NDK, and CMake. The CLI scripts in `cli/` are bundled as Android assets during build.
 
 ---
 
 ## License
 
 This project is open source and available for anyone to use, modify, and distribute. See the [LICENSE](LICENSE) file for details (MIT license).
-
----
-
-## Building from Source
-
-```bash
-git clone https://github.com/antinormies/OptHelioG99.git
-cd OptHelioG99
-./gradlew assembleDebug
-```
-
-Requires Android Studio, NDK, and CMake. The CLI scripts in `cli/` are bundled as Android assets during build.
