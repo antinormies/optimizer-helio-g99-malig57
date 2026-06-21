@@ -77,7 +77,9 @@ for pkg in \
   com.transsion.phonemaster \
   com.transsion.batterylab \
   com.transsion.smartpanel \
-  com.transsion.multiwindow; do
+  com.transsion.multiwindow \
+  com.transsion.screencapture \
+  com.transsion.screenrecorder; do
   exec_cmd pm enable "$pkg" 2>/dev/null || true
 done
 

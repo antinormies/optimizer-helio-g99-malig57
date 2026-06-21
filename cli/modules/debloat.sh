@@ -48,8 +48,6 @@ com.transsion.scanningrecharger
 com.transsion.smartrecognition
 com.transsion.inearmonitor
 com.transsion.soundrecorder
-com.transsion.screencapture
-com.transsion.screenrecorder
 com.transsion.keyguardtheme
 com.transsion.keyguardclock
 com.transsion.aod
@@ -135,7 +133,7 @@ com.google.android.apps.docs
 
 if [ "$RESTORE" = true ]; then
   echo "  restoring previously disabled packages..."
-  for pkg in $COMMON_BLOAT $FULL_BLOAT $FULL_GOOGLE; do
+  for pkg in $COMMON_BLOAT $FULL_BLOAT $FULL_GOOGLE com.transsion.screencapture com.transsion.screenrecorder; do
     exec_cmd pm enable "$pkg" 2>/dev/null
   done
   echo "  restore done"
