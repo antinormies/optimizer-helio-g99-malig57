@@ -89,6 +89,7 @@ echo ""
 
 # --- Run modules ---
 MODULE_LIST="gpu cpu memory display debloat"
+[ "$PROFILE" = "performance" ] && MODULE_LIST="$MODULE_LIST genshin"
 
 for module in $MODULE_LIST; do
   MODULE_SCRIPT="$MODULES/${module}.sh"

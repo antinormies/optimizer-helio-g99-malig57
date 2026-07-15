@@ -52,7 +52,6 @@ com.transsion.keyguardtheme
 com.transsion.keyguardclock
 com.transsion.aod
 com.transsion.magicfont
-com.transsion.smartmessage
 com.transsion.mol
 com.transsion.notebook
 com.transsion.calculator
@@ -118,6 +117,12 @@ com.transsion.aicore.ocr
 com.transsion.aicore.cv.matting
 "
 
+# Packages that must NEVER be disabled — user-required essentials
+# The Google app (search/feed/assistant) is not bloatware and is always kept.
+KEEP="
+com.google.android.googlequicksearchbox
+"
+
 # Google replaceable apps (disabled in full mode only)
 FULL_GOOGLE="
 com.google.android.apps.googleassistant
@@ -144,6 +149,9 @@ error_count=0
 
 disable_pkg() {
   local pkg="$1"
+  case " $KEEP " in
+    *" $pkg "*) echo "  [keep] protected, skipping: $pkg"; return ;;
+  esac
   if [ "$DRY_RUN" = true ]; then
     echo "  [dry-run] would disable: $pkg"
     return
